@@ -13,6 +13,7 @@
 		D38DCECA1E61DB9500FF9126 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D38DCEC91E61DB9500FF9126 /* Assets.xcassets */; };
 		D38DCECD1E61DB9500FF9126 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D38DCECB1E61DB9500FF9126 /* LaunchScreen.storyboard */; };
 		D38DCED51E61F08300FF9126 /* TeamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCED41E61F08300FF9126 /* TeamController.swift */; };
+		D38DCED71E62054F00FF9126 /* PMMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCED61E62054F00FF9126 /* PMMenuController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D38DCECC1E61DB9500FF9126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D38DCECE1E61DB9500FF9126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D38DCED41E61F08300FF9126 /* TeamController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamController.swift; sourceTree = "<group>"; };
+		D38DCED61E62054F00FF9126 /* PMMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMMenuController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				D38DCEC41E61DB9500FF9126 /* LoginController.swift */,
 				D38DCED41E61F08300FF9126 /* TeamController.swift */,
 				D38DCEC61E61DB9500FF9126 /* Main.storyboard */,
+				D38DCED61E62054F00FF9126 /* PMMenuController.swift */,
 				D38DCEC91E61DB9500FF9126 /* Assets.xcassets */,
 				D38DCECB1E61DB9500FF9126 /* LaunchScreen.storyboard */,
 				D38DCECE1E61DB9500FF9126 /* Info.plist */,
@@ -143,6 +146,7 @@
 				D38DCEC51E61DB9500FF9126 /* LoginController.swift in Sources */,
 				D38DCED51E61F08300FF9126 /* TeamController.swift in Sources */,
 				D38DCEC31E61DB9500FF9126 /* AppDelegate.swift in Sources */,
+				D38DCED71E62054F00FF9126 /* PMMenuController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
