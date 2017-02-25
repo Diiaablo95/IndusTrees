@@ -8,14 +8,15 @@
 
 import UIKit
 
-class TeamController: UIViewController {
+class PMTeamController: UIViewController {
     
     @IBOutlet weak var memberTableView: UITableView!
-    fileprivate var teamMembers: [String]! 
+    fileprivate var teamMembers: [TeamLeader]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         self.memberTableView.dataSource = self
         self.memberTableView.delegate = self
     }
@@ -26,10 +27,10 @@ class TeamController: UIViewController {
     }
 }
 
-extension TeamController: UITableViewDataSource, UITableViewDelegate {
+extension PMTeamController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return self.teamMembers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

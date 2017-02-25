@@ -7,25 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99F2DF3F1E61E8A80044D361 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF3E1E61E8A80044D361 /* Task.swift */; };
+		99F2DF4F1E61EA8F0044D361 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF4A1E61EA8F0044D361 /* Account.swift */; };
+		99F2DF501E61EA8F0044D361 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF4B1E61EA8F0044D361 /* Employee.swift */; };
+		99F2DF511E61EA8F0044D361 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF4C1E61EA8F0044D361 /* Node.swift */; };
+		99F2DF521E61EA8F0044D361 /* ProjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF4D1E61EA8F0044D361 /* ProjectManager.swift */; };
+		99F2DF531E61EA8F0044D361 /* TeamLeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF4E1E61EA8F0044D361 /* TeamLeader.swift */; };
+		99F2DF551E61ED200044D361 /* EmployeeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF541E61ED200044D361 /* EmployeeProtocols.swift */; };
+		99F2DF571E61ED6D0044D361 /* Achivement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF561E61ED6D0044D361 /* Achivement.swift */; };
+		99F2DF591E61F06C0044D361 /* Scoreboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF581E61F06C0044D361 /* Scoreboard.swift */; };
+		99F2DF5B1E61F07C0044D361 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF5A1E61F07C0044D361 /* Tree.swift */; };
+		99F2DF5D1E6203A50044D361 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF5C1E6203A50044D361 /* Mocks.swift */; };
 		D38DCEC31E61DB9500FF9126 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCEC21E61DB9500FF9126 /* AppDelegate.swift */; };
-		D38DCEC51E61DB9500FF9126 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCEC41E61DB9500FF9126 /* LoginController.swift */; };
 		D38DCEC81E61DB9500FF9126 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D38DCEC61E61DB9500FF9126 /* Main.storyboard */; };
 		D38DCECA1E61DB9500FF9126 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D38DCEC91E61DB9500FF9126 /* Assets.xcassets */; };
 		D38DCECD1E61DB9500FF9126 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D38DCECB1E61DB9500FF9126 /* LaunchScreen.storyboard */; };
-		D38DCED51E61F08300FF9126 /* TeamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCED41E61F08300FF9126 /* TeamController.swift */; };
-		D38DCED71E62054F00FF9126 /* PMMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCED61E62054F00FF9126 /* PMMenuController.swift */; };
+		D38DCEDB1E62269900FF9126 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCED81E62269900FF9126 /* LoginController.swift */; };
+		D38DCEDC1E62269900FF9126 /* PMMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCED91E62269900FF9126 /* PMMenuController.swift */; };
+		D38DCEDD1E62269900FF9126 /* PMTeamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCEDA1E62269900FF9126 /* PMTeamController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		99F2DF3E1E61E8A80044D361 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Task.swift; path = DataLayer/Task.swift; sourceTree = "<group>"; };
+		99F2DF4A1E61EA8F0044D361 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		99F2DF4B1E61EA8F0044D361 /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		99F2DF4C1E61EA8F0044D361 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		99F2DF4D1E61EA8F0044D361 /* ProjectManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectManager.swift; sourceTree = "<group>"; };
+		99F2DF4E1E61EA8F0044D361 /* TeamLeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamLeader.swift; sourceTree = "<group>"; };
+		99F2DF541E61ED200044D361 /* EmployeeProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeProtocols.swift; sourceTree = "<group>"; };
+		99F2DF561E61ED6D0044D361 /* Achivement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Achivement.swift; path = IndusTrees/DataLayer/Achivement.swift; sourceTree = SOURCE_ROOT; };
+		99F2DF581E61F06C0044D361 /* Scoreboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scoreboard.swift; path = DataLayer/Scoreboard.swift; sourceTree = "<group>"; };
+		99F2DF5A1E61F07C0044D361 /* Tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
+		99F2DF5C1E6203A50044D361 /* Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mocks.swift; path = IndusTrees/Mocks.swift; sourceTree = "<group>"; };
 		D38DCEBF1E61DB9500FF9126 /* IndusTrees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IndusTrees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38DCEC21E61DB9500FF9126 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D38DCEC41E61DB9500FF9126 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		D38DCEC71E61DB9500FF9126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D38DCEC91E61DB9500FF9126 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D38DCECC1E61DB9500FF9126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D38DCECE1E61DB9500FF9126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D38DCED41E61F08300FF9126 /* TeamController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamController.swift; sourceTree = "<group>"; };
-		D38DCED61E62054F00FF9126 /* PMMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMMenuController.swift; sourceTree = "<group>"; };
+		D38DCED81E62269900FF9126 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		D38DCED91E62269900FF9126 /* PMMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMMenuController.swift; sourceTree = "<group>"; };
+		D38DCEDA1E62269900FF9126 /* PMTeamController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMTeamController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,9 +61,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		99F2DF3B1E61DC610044D361 /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				99F2DF3E1E61E8A80044D361 /* Task.swift */,
+				99F2DF561E61ED6D0044D361 /* Achivement.swift */,
+				99F2DF491E61EA8F0044D361 /* HRTree */,
+				99F2DF581E61F06C0044D361 /* Scoreboard.swift */,
+			);
+			name = DataLayer;
+			sourceTree = "<group>";
+		};
+		99F2DF491E61EA8F0044D361 /* HRTree */ = {
+			isa = PBXGroup;
+			children = (
+				99F2DF4A1E61EA8F0044D361 /* Account.swift */,
+				99F2DF4B1E61EA8F0044D361 /* Employee.swift */,
+				99F2DF4C1E61EA8F0044D361 /* Node.swift */,
+				99F2DF4D1E61EA8F0044D361 /* ProjectManager.swift */,
+				99F2DF4E1E61EA8F0044D361 /* TeamLeader.swift */,
+				99F2DF541E61ED200044D361 /* EmployeeProtocols.swift */,
+				99F2DF5A1E61F07C0044D361 /* Tree.swift */,
+			);
+			name = HRTree;
+			path = DataLayer/HRTree;
+			sourceTree = "<group>";
+		};
 		D38DCEB61E61DB9500FF9126 = {
 			isa = PBXGroup;
 			children = (
+				99F2DF5C1E6203A50044D361 /* Mocks.swift */,
 				D38DCEC11E61DB9500FF9126 /* IndusTrees */,
 				D38DCEC01E61DB9500FF9126 /* Products */,
 			);
@@ -58,16 +107,33 @@
 		D38DCEC11E61DB9500FF9126 /* IndusTrees */ = {
 			isa = PBXGroup;
 			children = (
+				99F2DF3B1E61DC610044D361 /* DataLayer */,
+				D38DCEDE1E6226AC00FF9126 /* Controller */,
 				D38DCEC21E61DB9500FF9126 /* AppDelegate.swift */,
-				D38DCEC41E61DB9500FF9126 /* LoginController.swift */,
-				D38DCED41E61F08300FF9126 /* TeamController.swift */,
 				D38DCEC61E61DB9500FF9126 /* Main.storyboard */,
-				D38DCED61E62054F00FF9126 /* PMMenuController.swift */,
 				D38DCEC91E61DB9500FF9126 /* Assets.xcassets */,
 				D38DCECB1E61DB9500FF9126 /* LaunchScreen.storyboard */,
 				D38DCECE1E61DB9500FF9126 /* Info.plist */,
 			);
 			path = IndusTrees;
+			sourceTree = "<group>";
+		};
+		D38DCEDE1E6226AC00FF9126 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D38DCED81E62269900FF9126 /* LoginController.swift */,
+				D38DCEDF1E62289600FF9126 /* PMController */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D38DCEDF1E62289600FF9126 /* PMController */ = {
+			isa = PBXGroup;
+			children = (
+				D38DCED91E62269900FF9126 /* PMMenuController.swift */,
+				D38DCEDA1E62269900FF9126 /* PMTeamController.swift */,
+			);
+			name = PMController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,10 +209,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D38DCEC51E61DB9500FF9126 /* LoginController.swift in Sources */,
-				D38DCED51E61F08300FF9126 /* TeamController.swift in Sources */,
+				99F2DF551E61ED200044D361 /* EmployeeProtocols.swift in Sources */,
+				D38DCEDD1E62269900FF9126 /* PMTeamController.swift in Sources */,
+				99F2DF3F1E61E8A80044D361 /* Task.swift in Sources */,
+				99F2DF4F1E61EA8F0044D361 /* Account.swift in Sources */,
+				D38DCEDB1E62269900FF9126 /* LoginController.swift in Sources */,
+				99F2DF511E61EA8F0044D361 /* Node.swift in Sources */,
+				99F2DF5D1E6203A50044D361 /* Mocks.swift in Sources */,
+				99F2DF501E61EA8F0044D361 /* Employee.swift in Sources */,
+				99F2DF521E61EA8F0044D361 /* ProjectManager.swift in Sources */,
+				99F2DF571E61ED6D0044D361 /* Achivement.swift in Sources */,
+				D38DCEDC1E62269900FF9126 /* PMMenuController.swift in Sources */,
 				D38DCEC31E61DB9500FF9126 /* AppDelegate.swift in Sources */,
-				D38DCED71E62054F00FF9126 /* PMMenuController.swift in Sources */,
+				99F2DF5B1E61F07C0044D361 /* Tree.swift in Sources */,
+				99F2DF591E61F06C0044D361 /* Scoreboard.swift in Sources */,
+				99F2DF531E61EA8F0044D361 /* TeamLeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

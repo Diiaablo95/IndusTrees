@@ -45,6 +45,7 @@
                                 <rect key="frame" x="58" y="290" width="258" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
@@ -122,7 +123,7 @@
         <!--Team Controller-->
         <scene sceneID="Hba-ia-wgj">
             <objects>
-                <viewController storyboardIdentifier="TeamController" id="qe9-6x-5rL" customClass="TeamController" customModule="IndusTrees" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TeamController" id="qe9-6x-5rL" customClass="PMTeamController" customModule="IndusTrees" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zdx-wO-xYf"/>
                         <viewControllerLayoutGuide type="bottom" id="PmX-MJ-wKX"/>
@@ -150,12 +151,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="memberTableView" destination="4AU-Uk-HeD" id="9CY-xw-Tt4"/>
+                        <outlet property="memberTableView" destination="4AU-Uk-HeD" id="UpB-EM-90x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k4g-xJ-vpO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1748" y="38"/>
+            <point key="canvasLocation" x="1580" y="-391"/>
         </scene>
     </scenes>
 </document>
