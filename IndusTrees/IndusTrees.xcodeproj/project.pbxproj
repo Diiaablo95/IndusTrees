@@ -146,7 +146,7 @@
 				TargetAttributes = {
 					D38DCEBE1E61DB9500FF9126 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = 32GQG5U36S;
+						DevelopmentTeam = 5233G37AMC;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -320,7 +320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 32GQG5U36S;
+				DEVELOPMENT_TEAM = 5233G37AMC;
 				INFOPLIST_FILE = IndusTrees/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = it.saltarelli.IndusTrees;
@@ -333,7 +333,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 32GQG5U36S;
+				DEVELOPMENT_TEAM = 5233G37AMC;
 				INFOPLIST_FILE = IndusTrees/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = it.saltarelli.IndusTrees;
