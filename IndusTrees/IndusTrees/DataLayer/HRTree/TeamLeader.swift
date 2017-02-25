@@ -6,8 +6,6 @@
 //  Copyright © 2017 CheeriOS. All rights reserved.
 //
 
-import Foundation
-
 class TeamLeader: Employee {
 
 	var team: [EmployeeType] = []

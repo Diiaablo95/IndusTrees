@@ -11,11 +11,11 @@ import Foundation
 class Mocks {
 
 	static let accounts = [
-		Account(id: 0, email: "salvato.gianluca@hostname.it",		token: "?=ajgvqsfihgsbjhasdkjsdfu"),
-		Account(id: 2, email: "vultaggio.andrea@hostname.it",		token: "?=pkinbhfsajcxmbvhuigkjvs"),
-		Account(id: 3, email: "antonino.antonio@hostname.it",		token: "?=uvjcljbvnbwqdfjhnbsdjhb"),
-		Account(id: 4, email: "saltarelli.alberto@hostname.it",		token: "?=oihkcsvdjhgijdigjvbcsvd"),
-		Account(id: 5, email: "dalenasimone@hostname.it",			token: "?=fhbrjhtbmnfvkjsdhkbausg")
+		Account(id: 0, email: "salvato.gianluca@hostname.it",	token: "?=ajgvqsfihgsbjhasdkjsdfu"),
+		Account(id: 2, email: "vultaggio.andrea@hostname.it",	token: "?=pkinbhfsajcxmbvhuigkjvs"),
+		Account(id: 3, email: "antonino.antonio@hostname.it",	token: "?=uvjcljbvnbwqdfjhnbsdjhb"),
+		Account(id: 4, email: "saltarelli.alberto@hostname.it",	token: "?=oihkcsvdjhgijdigjvbcsvd"),
+		Account(id: 5, email: "dalenasimone@hostname.it",		token: "?=fhbrjhtbmnfvkjsdhkbausg")
 	]
 
 	static let employees = [
@@ -39,7 +39,14 @@ class Mocks {
 	]
 
 
+	static let achivements = [
+		Achivement(id: 0, name: "Early delivery", description: "You delivered two days early!"),
+		Achivement(id: 1, name: "You improved yourself", description: "By accomplishing this task, you learnt a new technology!"),
+		Achivement(id: 2, name: "Accurate delivery", description: "You delivered at just the right time!")
+	]
+
+
 }
 
 
-typealias DataStore = Mocks
+typealias DataStore = Mocks														

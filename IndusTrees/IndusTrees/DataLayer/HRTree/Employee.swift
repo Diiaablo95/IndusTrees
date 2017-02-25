@@ -6,11 +6,20 @@
 //  Copyright © 2017 CheeriOS. All rights reserved.
 //
 
-import Foundation
+protocol TimeTraceable {
+	var presenceTime: Int64 { get }
+}
 
-protocol EmployeeType: Improvable, Evaluatable {
+protocol Prizable {
+	var achivements: Set<Achivement> { get set }
+}
+
+protocol EmployeeType: Improvable, Evaluatable, TimeTraceable {
 	var account: Account { get }
 }
+
+
+
 
 
 extension Improvable {
@@ -23,10 +32,14 @@ extension Evaluatable {
 	mutating func subtract(score: Int) { self.currentScore -= score }
 }
 
-protocol Prizable {
-	func receive(notification: Notification)
-	func receive(achivement: Achivement)
+extension Prizable {
+	mutating func receive(achivement: Achivement) { self.achivements.insert(achivement) }
 }
+
+
+
+
+
 
 
 class Employee: EmployeeType, Improvable, Evaluatable/*: Node */{
@@ -37,6 +50,7 @@ class Employee: EmployeeType, Improvable, Evaluatable/*: Node */{
 
 	var currentExp: Int64
 	var currentScore: Int64
+	var presenceTime: Int64
 
 	let startLevel: Int
 	var achivements: [Achivement] = []
@@ -46,21 +60,27 @@ class Employee: EmployeeType, Improvable, Evaluatable/*: Node */{
 		self.startLevel = level
 		self.currentScore = score
 		self.currentExp = Employee.scoreFunction(for: level)
+		self.presenceTime = 0
 //		super.init(id: self.account.id)
 	}
 
 	static func scoreFunction(for level: Int) -> Int64 {
-		return Int64(level) * 1000
+		return 1000*Int64(level*level)
 	}
 
 }
 
+
+
+
 extension Employee: Hashable {
 
-	var hashValue: Int { return self.account.id }
+	var hashValue: Int { return Int(self.account.bid) }
 
 	static func ==(lhs: Employee, rhs: Employee) -> Bool {
 		return lhs.hashValue == rhs.hashValue
 	}
 	
 }
+
+
