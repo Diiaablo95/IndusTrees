@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Employee: Node {
+class Employee/*: Node */{
 	var account: Account
 	var tasks: [Task] = []
 
@@ -16,11 +16,10 @@ class Employee: Node {
 
 	init(account: Account) {
 		self.account = account
+//		super.init(id: self.account.id)
 	}
 
 }
-
-
 
 extension Employee: Hashable {
 
@@ -29,4 +28,5 @@ extension Employee: Hashable {
 	static func ==(lhs: Employee, rhs: Employee) -> Bool {
 		return lhs.hashValue == rhs.hashValue
 	}
+	
 }
