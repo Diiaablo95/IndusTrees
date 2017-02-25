@@ -18,7 +18,7 @@ protocol Improvable {
 
 protocol Evaluatable {
 
-	var currentScore: Int64 { get }
+	var currentScore: Int64 { get set }
 	var achivements: [Achivement] { get }
 
 }

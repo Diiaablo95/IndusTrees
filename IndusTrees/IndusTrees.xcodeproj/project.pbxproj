@@ -17,6 +17,7 @@
 		99F2DF571E61ED6D0044D361 /* Achivement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF561E61ED6D0044D361 /* Achivement.swift */; };
 		99F2DF591E61F06C0044D361 /* Scoreboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF581E61F06C0044D361 /* Scoreboard.swift */; };
 		99F2DF5B1E61F07C0044D361 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF5A1E61F07C0044D361 /* Tree.swift */; };
+		99F2DF5D1E6203A50044D361 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF5C1E6203A50044D361 /* Mocks.swift */; };
 		D38DCEC31E61DB9500FF9126 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCEC21E61DB9500FF9126 /* AppDelegate.swift */; };
 		D38DCEC51E61DB9500FF9126 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCEC41E61DB9500FF9126 /* ViewController.swift */; };
 		D38DCEC81E61DB9500FF9126 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D38DCEC61E61DB9500FF9126 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		99F2DF561E61ED6D0044D361 /* Achivement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Achivement.swift; path = IndusTrees/DataLayer/Achivement.swift; sourceTree = SOURCE_ROOT; };
 		99F2DF581E61F06C0044D361 /* Scoreboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scoreboard.swift; path = DataLayer/Scoreboard.swift; sourceTree = "<group>"; };
 		99F2DF5A1E61F07C0044D361 /* Tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
+		99F2DF5C1E6203A50044D361 /* Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mocks.swift; path = IndusTrees/Mocks.swift; sourceTree = "<group>"; };
 		D38DCEBF1E61DB9500FF9126 /* IndusTrees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IndusTrees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38DCEC21E61DB9500FF9126 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D38DCEC41E61DB9500FF9126 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				99F2DF3E1E61E8A80044D361 /* Task.swift */,
+				99F2DF561E61ED6D0044D361 /* Achivement.swift */,
 				99F2DF491E61EA8F0044D361 /* HRTree */,
 				99F2DF581E61F06C0044D361 /* Scoreboard.swift */,
 			);
@@ -74,7 +77,6 @@
 				99F2DF4D1E61EA8F0044D361 /* ProjectManager.swift */,
 				99F2DF4E1E61EA8F0044D361 /* TeamLeader.swift */,
 				99F2DF541E61ED200044D361 /* EmployeeProtocols.swift */,
-				99F2DF561E61ED6D0044D361 /* Achivement.swift */,
 				99F2DF5A1E61F07C0044D361 /* Tree.swift */,
 			);
 			name = HRTree;
@@ -84,6 +86,7 @@
 		D38DCEB61E61DB9500FF9126 = {
 			isa = PBXGroup;
 			children = (
+				99F2DF5C1E6203A50044D361 /* Mocks.swift */,
 				D38DCEC11E61DB9500FF9126 /* IndusTrees */,
 				D38DCEC01E61DB9500FF9126 /* Products */,
 			);
@@ -189,6 +192,7 @@
 				99F2DF4F1E61EA8F0044D361 /* Account.swift in Sources */,
 				D38DCEC51E61DB9500FF9126 /* ViewController.swift in Sources */,
 				99F2DF511E61EA8F0044D361 /* Node.swift in Sources */,
+				99F2DF5D1E6203A50044D361 /* Mocks.swift in Sources */,
 				99F2DF501E61EA8F0044D361 /* Employee.swift in Sources */,
 				99F2DF521E61EA8F0044D361 /* ProjectManager.swift in Sources */,
 				99F2DF571E61ED6D0044D361 /* Achivement.swift in Sources */,

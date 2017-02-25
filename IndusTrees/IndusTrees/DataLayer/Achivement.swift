@@ -24,6 +24,7 @@ class Achivement {
 
 	var name: String
 	var description: String
+	var hidden: Bool = false
 
 	init(name: String, description: String) {
 		self.name = name

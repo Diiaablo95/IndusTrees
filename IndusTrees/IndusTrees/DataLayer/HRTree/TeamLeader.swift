@@ -10,7 +10,7 @@ import Foundation
 
 class TeamLeader: Employee {
 
-	var team: [Employee] = []
+	var team: [EmployeeType] = []
 	weak var projectManager: ProjectManager?
 
 }

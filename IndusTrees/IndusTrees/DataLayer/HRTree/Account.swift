@@ -11,11 +11,12 @@ import Foundation
 class Account {
 	var id: Int
 	var email: String
-	var token: String
+	private var token: String
 
-	init?(email: String, token: String) {
-
-		return nil
+	init?(id: Int, email: String, token: String) {
+		self.id = id
+		self.email = email
+		self.token = token
 	}
 }
 

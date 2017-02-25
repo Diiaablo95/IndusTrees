@@ -8,6 +8,12 @@
 
 import Foundation
 
+enum TaskState {
+	case unassigned
+	case assigned(EmployeeType)
+	case finished, validated
+}
+
 class Task {
 	var id: Int
 	var name: String

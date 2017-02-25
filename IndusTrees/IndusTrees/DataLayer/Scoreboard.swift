@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+class Scoreboard {
+
+	func sortEmployees(for leader: TeamLeader) -> [EmployeeType] {
+		return leader.team.sorted { $0.currentScore > $1.currentScore }
+	}
+
+}
