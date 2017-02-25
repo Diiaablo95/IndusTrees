@@ -6,8 +6,6 @@
 //  Copyright © 2017 CheeriOS. All rights reserved.
 //
 
-import Foundation
-
 class Node {
 	var id: Int
 	var ancestor: Node?

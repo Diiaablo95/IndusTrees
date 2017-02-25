@@ -8,17 +8,24 @@
 
 import Foundation
 
-class Task {
-	var id: Int
+enum TaskState {
+	case unassigned
+	case assigned(EmployeeType)
+	case finished, validated
+}
+
+class Task: BeaconIndentifiable {
+	var bid: UInt16
 	var name: String
 	var baseScore: Int
 	var description: String
 	var category: String?
 
 	var employees: Set<Employee>?
+	var achivements: Set<Achivement> = []
 
-	init(id: Int, name: String, baseScore: Int, description: String = "") {
-		self.id = id
+	init(id: UInt16, name: String, baseScore: Int, description: String = "") {
+		self.bid = id
 		self.name = name
 		self.baseScore = baseScore
 		self.description = description
@@ -28,7 +35,7 @@ class Task {
 
 extension Task: Hashable {
 
-	var hashValue: Int { return self.id }
+	var hashValue: Int { return Int(self.bid) }
 
 	static func ==(lhs: Task, rhs: Task) -> Bool {
 		return lhs.hashValue == rhs.hashValue
