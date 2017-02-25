@@ -17,8 +17,20 @@ protocol TaskHandlerDelegate {
 	func employee(willMark: Task, completed: Bool)
 	func employee(didMark: Task, completed: Bool)
 
+	func leader(willReopen: Task)
+	func leader(didReopen: Task)
+
+	func leader(willInvite: Employee)
+	func leader(didInvite: Employee)
+
+	func leader(willKick: Employee)
+	func leader(didKick: Employee)
+
 	func leader<T: EmployeeType>(willAssign: Task, to: T)
 	func leader<T: EmployeeType>(didAssign: Task, to: T)
+
+	func leader(willValidate: Task)
+	func leader(didValidate: Task)
 	
 }
 
@@ -26,8 +38,9 @@ protocol TaskHandlerDelegate {
 
 enum TaskState<T: EmployeeType> {
 	case unassigned
-	case assigned(T)
-	case finished, validated
+	case assigned([T])
+	case finished([T])
+	case validated
 }
 
 class Task: BeaconIndentifiable {
@@ -40,7 +53,16 @@ class Task: BeaconIndentifiable {
 	var employees: Set<Employee>?
 	var achivements: Set<Achivement> = []
 
-	var state: TaskState<Employee> = .unassigned
+	var state: TaskState<Employee> = .unassigned {
+		didSet {
+			switch state {
+				case .unassigned: self.employees?.forEach { $0.tasks.remove(self); $0.completedTasks.remove(self) }
+				case let .assigned(e): e.forEach { $0.tasks.insert(self) }
+				case .finished:	self.employees?.forEach { $0.tasks.remove(self) }
+				case .validated: self.employees?.forEach { $0.completedTasks.insert(self) }
+			}
+		}
+	}
 
 	init(id: UInt16, name: String, baseScore: Double, description: String = "") {
 		self.bid = id
@@ -50,20 +72,19 @@ class Task: BeaconIndentifiable {
 	}
 
 	func assign(to employee: Employee) {
-		employee.tasks.insert(self)
-		self.state = .assigned(employee)
+		self.state = .assigned([employee])
+	}
+
+	func assign(to employees: [Employee]) {
+		self.state = .assigned(employees)
 	}
 
 	func revoke(from employee: Employee) {
-		employee.tasks.remove(self)
 		self.state = .unassigned
 	}
 
-	var actualScore: Double? {
-		switch self.state {
-			case let .assigned(employee): return Double(baseScore)/Double(employee.currentExp)
-			default: return nil
-		}
+	func actualScore(for employee: Employee) -> Double? {
+		return Double(baseScore)/Double(employee.currentExp)
 	}
 
 }
@@ -83,6 +104,5 @@ class TaskSet {
 
 	var tasks: [Task] = []
 	var category: String = ""
-
 
 }
