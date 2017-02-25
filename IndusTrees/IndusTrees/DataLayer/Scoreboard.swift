@@ -14,7 +14,7 @@ enum ScoreboardIndex {
 }
 
 extension ScoreboardIndex {
-	func get<T: EmployeeType>(for employee: T) -> Int64 {
+	func get<T: EmployeeType>(for employee: T) -> Double {
 		switch self {
 			case .score: return employee.currentScore
 			case .presenceTime: return employee.presenceTime

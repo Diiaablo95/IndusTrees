@@ -33,7 +33,7 @@ enum TaskState<T: EmployeeType> {
 class Task: BeaconIndentifiable {
 	var bid: UInt16
 	var name: String
-	var baseScore: Int
+	var baseScore: Double
 	var description: String
 	var category: String?
 
@@ -42,7 +42,7 @@ class Task: BeaconIndentifiable {
 
 	var state: TaskState<Employee> = .unassigned
 
-	init(id: UInt16, name: String, baseScore: Int, description: String = "") {
+	init(id: UInt16, name: String, baseScore: Double, description: String = "") {
 		self.bid = id
 		self.name = name
 		self.baseScore = baseScore
@@ -57,6 +57,13 @@ class Task: BeaconIndentifiable {
 	func revoke(from employee: Employee) {
 		employee.tasks.remove(self)
 		self.state = .unassigned
+	}
+
+	var actualScore: Double? {
+		switch self.state {
+			case let .assigned(employee): return Double(baseScore)/Double(employee.currentExp)
+			default: return nil
+		}
 	}
 
 }

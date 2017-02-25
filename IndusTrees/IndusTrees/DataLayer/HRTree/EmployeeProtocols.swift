@@ -10,21 +10,21 @@ import Foundation
 
 protocol Improvable {
 
-	var currentExp: Int64 { get set }
+	var currentExp: Double { get set }
 	var startLevel: Int { get }
 
 }
 
 protocol Evaluatable {
 
-	var currentScore: Int64 { get set }
+	var currentScore: Double { get set }
 	var achivements: Set<Achivement> { get }
 
 }
 
 protocol TimeTraceable {
 
-	var presenceTime: Int64 { get }
+	var presenceTime: Double { get }
 	var badgeHistory: [(presence: Bool, Date)] { get set }
 
 }
@@ -59,13 +59,13 @@ protocol ManagerType: class, EmployeeType {
 
 
 extension Improvable {
-	mutating func train(with experience: Int) { self.currentExp += experience }
-	mutating func forget(experience: Int) { self.currentExp -= experience }
+	mutating func train(with experience: Double) { self.currentExp += experience }
+	mutating func forget(experience: Double) { self.currentExp -= experience }
 }
 
 extension Evaluatable {
-	mutating func add(score: Int) { self.currentScore += score }
-	mutating func subtract(score: Int) { self.currentScore -= score }
+	mutating func add(score: Double) { self.currentScore += score }
+	mutating func subtract(score: Double) { self.currentScore -= score }
 }
 
 extension TimeTraceable {

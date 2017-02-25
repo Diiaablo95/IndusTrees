@@ -32,22 +32,22 @@ class Employee: /*Node,*/ EmployeeType {
 	//MARK: Improvable
 
 	let startLevel: Int
-	var currentExp: Int64
+	var currentExp: Double
 
 	//MARK: Evaluatable
 
-	var currentScore: Int64
+	var currentScore: Double
 	var achivements: Set<Achivement> = []
 
 	//MARK: TimeTraceable
 
 	typealias BadgeEvent = (presence: Bool, Date)
 
-	var presenceTime: Int64 = 0
+	var presenceTime: Double = 0
 	var badgeHistory: [Employee.BadgeEvent] = []
 
 
-	init(account: Account, at level: Int = 1, with score: Int64 = 0) {
+	init(account: Account, at level: Int = 1, with score: Double = 0) {
 		self.account = account
 		self.startLevel = level
 		self.currentScore = score
@@ -55,8 +55,8 @@ class Employee: /*Node,*/ EmployeeType {
 		self.presenceTime = 0
 	}
 
-	static func scoreFunction(for level: Int) -> Int64 {
-		return 1000 * Int64(level*level)
+	static func scoreFunction(for level: Int) -> Double {
+		return 1000 * Double(level * level)
 	}
 
 	func recieve(assignment task: Task) {
