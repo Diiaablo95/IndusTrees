@@ -8,10 +8,10 @@
 
 import UIKit
 
-class PMTeamController: UIViewController {
+class TLTeamController: UIViewController {
     
     @IBOutlet weak var memberTableView: UITableView!
-    fileprivate var teamMembers: [TeamLeader]!
+    fileprivate var teamMembers: [Employee]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,7 @@ class PMTeamController: UIViewController {
     }
 }
 
-extension PMTeamController: UITableViewDataSource, UITableViewDelegate {
+extension TLTeamController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.teamMembers.count
