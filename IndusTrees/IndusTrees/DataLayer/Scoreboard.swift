@@ -14,7 +14,7 @@ enum ScoreboardIndex {
 }
 
 extension ScoreboardIndex {
-	func get(for employee: EmployeeType) -> Int64 {
+	func get<T: EmployeeType>(for employee: T) -> Int64 {
 		switch self {
 			case .score: return employee.currentScore
 			case .presenceTime: return employee.presenceTime
@@ -24,7 +24,7 @@ extension ScoreboardIndex {
 
 class Scoreboard {
 
-	func sortEmployees(for leader: TeamLeader, by index: ScoreboardIndex) -> [EmployeeType] {
+	func sortEmployees(for leader: TeamLeader, by index: ScoreboardIndex) -> [Employee] {
 		return leader.team.sorted { index.get(for: $0) > index.get(for: $1) }
 	}
 

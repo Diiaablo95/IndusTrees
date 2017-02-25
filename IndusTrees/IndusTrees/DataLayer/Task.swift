@@ -8,9 +8,25 @@
 
 import Foundation
 
-enum TaskState {
+
+protocol TaskHandlerDelegate {
+
+	func employee(didRecieve task: Task)
+	func employee(willRecieve task: Task)
+
+	func employee(willMark: Task, completed: Bool)
+	func employee(didMark: Task, completed: Bool)
+
+	func leader<T: EmployeeType>(willAssign: Task, to: T)
+	func leader<T: EmployeeType>(didAssign: Task, to: T)
+	
+}
+
+
+
+enum TaskState<T: EmployeeType> {
 	case unassigned
-	case assigned(EmployeeType)
+	case assigned(T)
 	case finished, validated
 }
 
@@ -24,11 +40,23 @@ class Task: BeaconIndentifiable {
 	var employees: Set<Employee>?
 	var achivements: Set<Achivement> = []
 
+	var state: TaskState<Employee> = .unassigned
+
 	init(id: UInt16, name: String, baseScore: Int, description: String = "") {
 		self.bid = id
 		self.name = name
 		self.baseScore = baseScore
 		self.description = description
+	}
+
+	func assign(to employee: Employee) {
+		employee.tasks.insert(self)
+		self.state = .assigned(employee)
+	}
+
+	func revoke(from employee: Employee) {
+		employee.tasks.remove(self)
+		self.state = .unassigned
 	}
 
 }
@@ -40,6 +68,7 @@ extension Task: Hashable {
 	static func ==(lhs: Task, rhs: Task) -> Bool {
 		return lhs.hashValue == rhs.hashValue
 	}
+
 }
 
 
