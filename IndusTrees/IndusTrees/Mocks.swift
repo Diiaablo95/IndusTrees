@@ -44,9 +44,6 @@ class Mocks {
 		Achivement(id: 1, name: "You improved yourself", description: "By accomplishing this task, you learnt a new technology!"),
 		Achivement(id: 2, name: "Accurate delivery", description: "You delivered at just the right time!")
 	]
-
-
 }
-
 
 typealias DataStore = Mocks														

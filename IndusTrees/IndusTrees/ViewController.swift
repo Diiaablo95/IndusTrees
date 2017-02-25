@@ -9,17 +9,43 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        BluetoothManager.shared.setup()
+        NotificationManager.shared.setup()
+        LocationManager.shared.setup()
+        
+        LocationManager.shared.startMonitoringForBeaconRegions()
+        LocationManager.shared.tasksDelegate = self
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func onCreateTask(_ sender: UIButton) {
+        BluetoothManager.shared.sendNotificationForTaskAdded(taskId: 10)
     }
-
-
+    
+    @IBAction func onCompleteTask(_ sender: UIButton) {
+        BluetoothManager.shared.sendNotificationForTaskCompleted(taskId: 15)
+    }
+    
+    @IBAction func onVerifyTask(_ sender: UIButton) {
+        BluetoothManager.shared.sendNotificationForTaskValidated(taskId: 20)
+    }
 }
 
+extension ViewController: TaskRegionListener {
+    
+    func manager(_ locationManager: LocationManager, didFindTaskCreatedWithId taskId: UInt16) {
+        NotificationManager.shared.scheduleNotificationForTaskAdded(withUserId: taskId)
+    }
+
+    func manager(_ locationManager: LocationManager, didFindTaskCompletedWithId taskId: UInt16) {
+        NotificationManager.shared.scheduleNotificationForTaskCompleted(withTaskId: taskId)
+    }
+    
+    func manager(_ locationManager: LocationManager, didFindTaskValidatedWithId taskId: UInt16) {
+        NotificationManager.shared.scheduleNotificatonForTaskValidated(withTaskId: taskId)
+    }
+    
+}
