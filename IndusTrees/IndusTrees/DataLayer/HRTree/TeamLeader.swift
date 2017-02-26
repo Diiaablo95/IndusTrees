@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TeamLeader: Employee, ManagerType {
+class TeamLeader: Employee, TeamLeaderType {
 
 	var team: Set<Employee> = [] /*{
 		didSet { self.children = self.team.map { $0 as! Node } }

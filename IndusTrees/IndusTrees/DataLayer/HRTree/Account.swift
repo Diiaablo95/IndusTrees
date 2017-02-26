@@ -42,11 +42,16 @@ class Account: BeaconIndentifiable {
 	init?(id: UInt16, email: String, password: String) {
 		self.bid = id
 		self.email = email
+
 		let (surname, name) = Account.nameFrom(email: email)
 		self.surname = surname
 		self.name = name
 		self.birthdate = DataStore.account(withEmail: self.email)!.birthdate
+
 		self.token = Account.authenticate(self, with: password)
+
+
+
 		if self.token == nil { return nil }
 	}
 
@@ -60,6 +65,18 @@ class Account: BeaconIndentifiable {
 
 	static func authenticate(_ account: Account, with password: String) -> String? {
 		return "?=xaijahvi0yoo1loolieghei0ma0mai8aPoongai2Rooy9me3Cheeshef6aehee9t"
+	}
+
+}
+
+
+
+extension Account: Hashable {
+
+	var hashValue: Int { return Int(self.bid) }
+
+	static func ==(lhs: Account, rhs: Account) -> Bool {
+		return lhs.hashValue == rhs.hashValue
 	}
 
 }

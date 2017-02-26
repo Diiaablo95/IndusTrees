@@ -44,8 +44,12 @@ protocol EmployeeType: class, Hashable, Improvable, Evaluatable, TimeTraceable, 
 }
 
 
-protocol ManagerType: class, EmployeeType {
+protocol TeamLeaderType: class, EmployeeType {
 	var team: Set<Employee> { get set }
+}
+
+protocol ManagerType: class, TeamLeaderType {
+	var teamLeaders: Set<TeamLeader> { get set }
 }
 
 
@@ -86,10 +90,14 @@ extension Prizable {
 	mutating func receive(achivement: Achivement) { self.achivements.insert(achivement) }
 }
 
-
-extension ManagerType {
+extension TeamLeaderType {
 	func invite(employee: Employee) { self.team.insert(employee) }
 	func kick(employee: Employee) -> Employee? { return self.team.remove(employee) }
+}
+
+extension ManagerType {
+	func invite(teamLeader: TeamLeader) { self.teamLeaders.insert(teamLeader) }
+	func kick(teamLeader: TeamLeader) -> TeamLeader? { return self.teamLeaders.remove(teamLeader) }
 }
 
 
