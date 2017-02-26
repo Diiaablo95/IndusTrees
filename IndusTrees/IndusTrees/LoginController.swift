@@ -61,7 +61,7 @@ class LoginController: UIViewController {
     
     private func animateView() {
     
-        UIView.animate(withDuration: 1.25, delay: 0, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 1, delay: 0.15, options: .curveEaseIn, animations: {
             
             let logoScaledWidth: CGFloat = self.viewLogo.frame.width * 3/4
 

@@ -19,6 +19,7 @@ class TLProjectsController: UIViewController {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
         self.projectsCollectionView.dataSource = self
         self.projectsCollectionView.delegate = self
+        self.projectsCollectionView.alwaysBounceVertical = true
     }
 
     override func didReceiveMemoryWarning() {
