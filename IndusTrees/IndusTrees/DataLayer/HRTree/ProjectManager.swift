@@ -10,7 +10,6 @@ class Project {
 
 	var name: String
 	weak var manager: ProjectManager!
-	var teamLeaders: Set<TeamLeader> = []
 
 	init(name: String, managedBy manager: ProjectManager) {
 		self.name = name
@@ -19,9 +18,10 @@ class Project {
 
 }
 
-class ProjectManager: TeamLeader {
+class ProjectManager: TeamLeader, ManagerType {
 
 	var project: Project?
+	var teamLeaders: Set<TeamLeader> = []
 
 	convenience init<T: EmployeeType>(employee: T) {
 		self.init(account: employee.account)
