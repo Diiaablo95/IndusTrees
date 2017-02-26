@@ -25,7 +25,6 @@ class LoginController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
         self.animateView()
     }
     
@@ -36,6 +35,8 @@ class LoginController: UIViewController {
             print("Could not find an account for: \(email)")
             return
         }
+        //Storing user id into the LoginManager
+        LoginManager.shared.userId = account.bid
         
         if (Mocks.projectManagers.map { $0.account }.contains { $0.bid == account.bid }) {
             
