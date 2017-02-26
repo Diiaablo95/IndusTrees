@@ -16,20 +16,13 @@ class AchievmentCell: UITableViewCell {
     @IBOutlet weak var badge: UIImageView!
     
     override func awakeFromNib() {
-        super.awakeFromNib()
-        config()
-    }
-    
-    private func config() {
-        
         self.backgroundColor = .clear
-        title.text = "title"
-        intDescription.text = "description"
-        badge = UIImageView(image: #imageLiteral(resourceName: "Trophy"))
-        
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    func config(achievement: Achivement) {
+        
+        self.title.text = achievement.name
+        self.intDescription.text = achievement.description
+        self.badge.image = #imageLiteral(resourceName: "Trophy")
     }
 }

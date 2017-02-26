@@ -42,6 +42,10 @@
 		D3FF89951E62AE5D002BFC67 /* TLTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF89941E62AE5D002BFC67 /* TLTaskController.swift */; };
 		D3FF89971E62B3BB002BFC67 /* EmployeeTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF89961E62B3BB002BFC67 /* EmployeeTaskController.swift */; };
 		D3FF89991E62B4D1002BFC67 /* EmployeeTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF89981E62B4D1002BFC67 /* EmployeeTaskCell.swift */; };
+		D3FF899E1E62BA52002BFC67 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF899A1E62BA52002BFC67 /* BluetoothManager.swift */; };
+		D3FF899F1E62BA52002BFC67 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF899B1E62BA52002BFC67 /* LocationManager.swift */; };
+		D3FF89A01E62BA52002BFC67 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF899C1E62BA52002BFC67 /* LoginManager.swift */; };
+		D3FF89A11E62BA52002BFC67 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF899D1E62BA52002BFC67 /* NotificationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +87,10 @@
 		D3FF89941E62AE5D002BFC67 /* TLTaskController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLTaskController.swift; sourceTree = "<group>"; };
 		D3FF89961E62B3BB002BFC67 /* EmployeeTaskController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeTaskController.swift; sourceTree = "<group>"; };
 		D3FF89981E62B4D1002BFC67 /* EmployeeTaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeTaskCell.swift; sourceTree = "<group>"; };
+		D3FF899A1E62BA52002BFC67 /* BluetoothManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BluetoothManager.swift; path = IndusTrees/BluetoothManager.swift; sourceTree = "<group>"; };
+		D3FF899B1E62BA52002BFC67 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = IndusTrees/LocationManager.swift; sourceTree = "<group>"; };
+		D3FF899C1E62BA52002BFC67 /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginManager.swift; path = IndusTrees/LoginManager.swift; sourceTree = "<group>"; };
+		D3FF899D1E62BA52002BFC67 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationManager.swift; path = IndusTrees/NotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +133,10 @@
 		D38DCEB61E61DB9500FF9126 = {
 			isa = PBXGroup;
 			children = (
+				D3FF899A1E62BA52002BFC67 /* BluetoothManager.swift */,
+				D3FF899B1E62BA52002BFC67 /* LocationManager.swift */,
+				D3FF899C1E62BA52002BFC67 /* LoginManager.swift */,
+				D3FF899D1E62BA52002BFC67 /* NotificationManager.swift */,
 				99F2DF5C1E6203A50044D361 /* Mocks.swift */,
 				D38DCEC11E61DB9500FF9126 /* IndusTrees */,
 				D38DCEC01E61DB9500FF9126 /* Products */,
@@ -290,6 +302,7 @@
 				D3FF89951E62AE5D002BFC67 /* TLTaskController.swift in Sources */,
 				99F2DF551E61ED200044D361 /* EmployeeProtocols.swift in Sources */,
 				D3FF898D1E627E38002BFC67 /* NewProjectCell.swift in Sources */,
+				D3FF899E1E62BA52002BFC67 /* BluetoothManager.swift in Sources */,
 				D38DCEDD1E62269900FF9126 /* TLTeamController.swift in Sources */,
 				99F2DF3F1E61E8A80044D361 /* Task.swift in Sources */,
 				D3FF898F1E62A9D3002BFC67 /* TLAddMemberController.swift in Sources */,
@@ -300,6 +313,7 @@
 				D38DCEEA1E623B0600FF9126 /* EmployeePlusCell.swift in Sources */,
 				99F2DF511E61EA8F0044D361 /* Node.swift in Sources */,
 				99F2DF5D1E6203A50044D361 /* Mocks.swift in Sources */,
+				D3FF899F1E62BA52002BFC67 /* LocationManager.swift in Sources */,
 				D3D1E9A41E6248BB00127184 /* Utilities.swift in Sources */,
 				99F2DF501E61EA8F0044D361 /* Employee.swift in Sources */,
 				19B0B0921E62648D007438FF /* EmployeeAchievmentsViewController.swift in Sources */,
@@ -311,6 +325,8 @@
 				D3FF89971E62B3BB002BFC67 /* EmployeeTaskController.swift in Sources */,
 				D38DCEC31E61DB9500FF9126 /* AppDelegate.swift in Sources */,
 				99F2DF5B1E61F07C0044D361 /* Tree.swift in Sources */,
+				D3FF89A11E62BA52002BFC67 /* NotificationManager.swift in Sources */,
+				D3FF89A01E62BA52002BFC67 /* LoginManager.swift in Sources */,
 				99F2DF591E61F06C0044D361 /* Scoreboard.swift in Sources */,
 				99F2DF531E61EA8F0044D361 /* TeamLeader.swift in Sources */,
 				D38DCEE71E62390D00FF9126 /* TLProjectsController.swift in Sources */,

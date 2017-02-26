@@ -12,12 +12,12 @@ class TLTeamController: UIViewController {
     
     @IBOutlet weak var memberTableView: UITableView!
     
-    fileprivate var teamMembers: [Employee]!
+    var teamMembers: [Employee]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         
-        self.teamMembers = Mocks.employees
         self.memberTableView.dataSource = self
         self.memberTableView.delegate = self
         

@@ -19,7 +19,7 @@ class TLMenuController: UIViewController {
     @IBOutlet weak var sixthView: UIImageView!
     
     var menuViews: [UIImageView]!
-    
+    var project: Project!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +42,17 @@ class TLMenuController: UIViewController {
     
     func showTeam(_ sender: UITapGestureRecognizer) {
         self.performSegue(withIdentifier: "showTeam", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showTeam" {
+            let destVC = segue.destination as! TLTeamController
+            var members: [Employee] = []
+            self.project.manager.teamLeaders.forEach({ leader in
+                members.append(contentsOf: leader.team)
+            })
+            destVC.teamMembers = members
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {

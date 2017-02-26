@@ -25,8 +25,15 @@ class LoginController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
         self.animateView()
+    }
+    
+    private func configure() {
+        self.viewLogo.center = self.view.center
+        self.usernameTextField.tintColor = .white
+        self.passwordTextField.tintColor = .white
+        self.usernameTextField.delegate = self
+        self.passwordTextField.delegate = self
     }
     
     @IBAction func loginDidTap(_ sender: UIButton) {
@@ -36,27 +43,20 @@ class LoginController: UIViewController {
             print("Could not find an account for: \(email)")
             return
         }
+        //Storing user id into the LoginManager
+        LoginManager.shared.userId = account.bid
         
-        if (Mocks.projectManagers.map { $0.account }.contains { $0.bid == account.bid }) {
-            
+        if let manager = (Mocks.projectManagers.first { $0.account.bid == account.bid }) {
             self.performSegue(withIdentifier: "showProjects", sender: nil)
         }
         
-        if (Mocks.teamLeaders.map { $0.account }.contains { $0.bid == account.bid }) {
-            
+        if let leader = (Mocks.teamLeaders.first { $0.account.bid == account.bid }) {
             self.performSegue(withIdentifier: "showProjects", sender: nil)
         }
         
-        if (Mocks.employees.map { $0.account }.contains { $0.bid == account.bid }) {
-            
+        if let employee = (Mocks.employees.first { $0.account.bid == account.bid }) {
             self.performSegue(withIdentifier: "showMenu", sender: nil)
         }
-    }
-    
-    private func configure() {
-        self.viewLogo.center = self.view.center
-        self.usernameTextField.tintColor = .white
-        self.passwordTextField.tintColor = .white
     }
     
     private func animateView() {
@@ -84,9 +84,7 @@ class LoginController: UIViewController {
 extension LoginController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        if textField === self.passwordTextField {
-            textField.resignFirstResponder()
-        }
+        textField.resignFirstResponder()
         
         return true
     }
