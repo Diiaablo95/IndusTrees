@@ -58,6 +58,10 @@ extension Mocks {
 	static func account(withEmail address: String) -> Account? {
 		return DataStore.accounts.first { $0.email == address }
 	}
+    
+    static func account(withId id: UInt16) -> Account? {
+        return DataStore.accounts.first { $0.bid == id }
+    }
 
 	static func employee(with id: UInt16) -> Employee? {
 		return DataStore.employees.first { $0.account.bid == id }

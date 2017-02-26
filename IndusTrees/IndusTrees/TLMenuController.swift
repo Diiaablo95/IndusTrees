@@ -19,7 +19,7 @@ class TLMenuController: UIViewController {
     @IBOutlet weak var sixthView: UIImageView!
     
     var menuViews: [UIImageView]!
-    
+    var project: Project!
     
     override func viewDidLoad() {
         super.viewDidLoad()
