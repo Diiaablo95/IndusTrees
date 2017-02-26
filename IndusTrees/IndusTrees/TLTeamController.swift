@@ -17,8 +17,8 @@ class TLTeamController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         
-        self.teamMembers = Mocks.employees
         self.memberTableView.dataSource = self
         self.memberTableView.delegate = self
         

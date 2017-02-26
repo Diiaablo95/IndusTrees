@@ -48,7 +48,7 @@ class TLMenuController: UIViewController {
         if segue.identifier == "showTeam" {
             let destVC = segue.destination as! TLTeamController
             var members: [Employee] = []
-            self.project.teamLeaders.forEach({ leader in
+            self.project.manager.teamLeaders.forEach({ leader in
                 members.append(contentsOf: leader.team)
             })
             destVC.teamMembers = members

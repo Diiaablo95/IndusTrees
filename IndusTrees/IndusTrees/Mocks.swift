@@ -34,7 +34,7 @@ class Mocks {
 		Account(id: 15, surname: "Sacerdoti",	name: "Francesco",	birthdate: "24/03/1963", token: "rethutahshai6EenoupiN6NuebeeN8ohw0Quais4weingoh1iephocieVah6Jah7")
 	]
 
-	static var employees: Set<Employee> = Set((0..<15).map { Employee(account: Mocks.account(with: $0)!) })
+	static var employees: Set<Employee> = Set((0...15).map { Employee(account: Mocks.account(with: $0)!) })
 	static var teamLeaders: Set<TeamLeader> = Set([0, 5, 11].map { TeamLeader(employee: DataStore.employee(with: $0)!) })
 	static var projectManagers: Set<ProjectManager> = Set([ProjectManager(employee: DataStore.employee(with: 15)!)])
 
@@ -97,13 +97,13 @@ extension Mocks {
 
 	static var projectManager: ProjectManager {
 		let manager = ProjectManager(account: DataStore.account(with: 0)!)
+        _ = manager.createProject(named: "MindMap")
 		manager.teamLeaders = DataStore.teamLeaders
-		(0..<3).forEach { (mId: UInt16) in
-			let leader = DataStore.teamLeader(with: mId)!
-			switch mId {
+		DataStore.teamLeaders.forEach { leader in
+			switch leader.bid {
 				case 0: (0..<5).forEach { leader.invite(employee: DataStore.employee(with: $0)!) }
-				case 1: (5..<11).forEach { leader.invite(employee: DataStore.employee(with: $0)!) }
-				case 2: (11..<15).forEach { leader.invite(employee: DataStore.employee(with: $0)!) }
+				case 5: (5..<11).forEach { leader.invite(employee: DataStore.employee(with: $0)!) }
+				case 11: (11..<15).forEach { leader.invite(employee: DataStore.employee(with: $0)!) }
 				default: break
 			}
 			manager.invite(teamLeader: leader)

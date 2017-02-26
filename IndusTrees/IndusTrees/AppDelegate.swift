@@ -15,11 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        LocationManager.shared.askForPermission(completionHandler: { result in
-            if result {
-                LocationManager.shared.startMonitoringForBeaconRegions()
-            }
-        })
         
         if let id = LoginManager.shared.userId {
             if DataStore.employee(with: id) != nil {

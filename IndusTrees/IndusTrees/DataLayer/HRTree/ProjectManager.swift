@@ -14,6 +14,7 @@ class Project {
 	init(name: String, managedBy manager: ProjectManager) {
 		self.name = name
 		self.manager = manager
+        self.manager.project = self
 	}
 
 }

@@ -46,15 +46,15 @@ class LoginController: UIViewController {
         //Storing user id into the LoginManager
         LoginManager.shared.userId = account.bid
         
-        if (Mocks.projectManagers.map { $0.account }.contains { $0.bid == account.bid }) {
+        if let manager = (Mocks.projectManagers.first { $0.account.bid == account.bid }) {
             self.performSegue(withIdentifier: "showProjects", sender: nil)
         }
         
-        if (Mocks.teamLeaders.map { $0.account }.contains { $0.bid == account.bid }) {
+        if let leader = (Mocks.teamLeaders.first { $0.account.bid == account.bid }) {
             self.performSegue(withIdentifier: "showProjects", sender: nil)
         }
         
-        if (Mocks.employees.map { $0.account }.contains { $0.bid == account.bid }) {
+        if let employee = (Mocks.employees.first { $0.account.bid == account.bid }) {
             self.performSegue(withIdentifier: "showMenu", sender: nil)
         }
     }

@@ -11,7 +11,8 @@ import UIKit
 class TLProjectsController: UIViewController {
     
     @IBOutlet weak var projectsCollectionView: UICollectionView!
-    var projects: [String] = ["MindMap", "M@"]
+    var projectManager: ProjectManager!
+    var projects: [Project] { return [projectManager.project!] }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,17 +20,14 @@ class TLProjectsController: UIViewController {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
         self.projectsCollectionView.dataSource = self
         self.projectsCollectionView.delegate = self
+        
+        self.projectManager = DataStore.projectManager
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showMenu", let destVC = segue.destination as? TLMenuController {
-            var project: Project! = nil
+            let project = self.projectManager.project
             
-            if let mySelf = DataStore.teamLeader(with: LoginManager.shared.userId!) {
-                project = mySelf.projectManager!.project
-            } else if let mySelf = DataStore.employee(with: LoginManager.shared.userId!) {
-                project = mySelf.teamLeader!.projectManager!.project
-            }
             destVC.project = project
         }
     }
@@ -46,7 +44,7 @@ extension TLProjectsController: UICollectionViewDataSource, UICollectionViewDele
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "projectCell", for: indexPath) as! ProjectCell
         
-        cell.projectName.text = self.projects[indexPath.row]
+        cell.projectName.text = self.projects[indexPath.row].name
         
         return cell
     }
