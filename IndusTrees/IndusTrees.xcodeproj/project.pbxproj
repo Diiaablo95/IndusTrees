@@ -30,7 +30,9 @@
 		D38DCEE71E62390D00FF9126 /* TLProjectsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCEE61E62390D00FF9126 /* TLProjectsController.swift */; };
 		D38DCEEA1E623B0600FF9126 /* EmployeePlusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCEE91E623B0600FF9126 /* EmployeePlusCell.swift */; };
 		D38DCEEC1E623B1700FF9126 /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCEEB1E623B1700FF9126 /* EmployeeCell.swift */; };
+		D391D56B1E627E0300FD54EB /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D391D56A1E627E0300FD54EB /* ProjectCell.swift */; };
 		D3D1E9A41E6248BB00127184 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D1E9A31E6248BB00127184 /* Utilities.swift */; };
+		D3FF898D1E627E38002BFC67 /* NewProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF898C1E627E38002BFC67 /* NewProjectCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,7 +62,9 @@
 		D38DCEE91E623B0600FF9126 /* EmployeePlusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeePlusCell.swift; sourceTree = "<group>"; };
 		D38DCEEB1E623B1700FF9126 /* EmployeeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
 		D38DCEED1E62434E00FF9126 /* IndusTrees.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IndusTrees.entitlements; sourceTree = "<group>"; };
+		D391D56A1E627E0300FD54EB /* ProjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
 		D3D1E9A31E6248BB00127184 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		D3FF898C1E627E38002BFC67 /* NewProjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewProjectCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				D38DCEC61E61DB9500FF9126 /* Main.storyboard */,
+				D391D56A1E627E0300FD54EB /* ProjectCell.swift */,
+				D3FF898C1E627E38002BFC67 /* NewProjectCell.swift */,
 				D38DCEE91E623B0600FF9126 /* EmployeePlusCell.swift */,
 				D38DCEEB1E623B1700FF9126 /* EmployeeCell.swift */,
 				D38DCEC91E61DB9500FF9126 /* Assets.xcassets */,
@@ -251,7 +257,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D38DCEE31E622E4A00FF9126 /* EmployeeMenuController.swift in Sources */,
+				D391D56B1E627E0300FD54EB /* ProjectCell.swift in Sources */,
 				99F2DF551E61ED200044D361 /* EmployeeProtocols.swift in Sources */,
+				D3FF898D1E627E38002BFC67 /* NewProjectCell.swift in Sources */,
 				D38DCEDD1E62269900FF9126 /* TLTeamController.swift in Sources */,
 				99F2DF3F1E61E8A80044D361 /* Task.swift in Sources */,
 				99F2DF4F1E61EA8F0044D361 /* Account.swift in Sources */,

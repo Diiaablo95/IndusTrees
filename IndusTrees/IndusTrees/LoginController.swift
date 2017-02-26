@@ -30,8 +30,27 @@ class LoginController: UIViewController {
     }
     
     @IBAction func loginDidTap(_ sender: UIButton) {
+        let email = self.usernameTextField.text!
         
-    
+        guard let account = Mocks.account(withEmail: email) else {
+            print("Could not find an account for: \(email)")
+            return
+        }
+        
+        if (Mocks.projectManagers.map { $0.account }.contains { $0.bid == account.bid }) {
+            
+            self.performSegue(withIdentifier: "showProjects", sender: nil)
+        }
+        
+        if (Mocks.teamLeaders.map { $0.account }.contains { $0.bid == account.bid }) {
+            
+            self.performSegue(withIdentifier: "showProjects", sender: nil)
+        }
+        
+        if (Mocks.employees.map { $0.account }.contains { $0.bid == account.bid }) {
+            
+            self.performSegue(withIdentifier: "showMenu", sender: nil)
+        }
     }
     
     private func configure() {
