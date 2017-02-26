@@ -11,14 +11,33 @@ import UIKit
 class TLTeamController: UIViewController {
     
     @IBOutlet weak var memberTableView: UITableView!
+    @IBOutlet weak var viewTitle: UIView!
+    
     fileprivate var teamMembers: [Employee]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        self.teamMembers = Mocks.employees
         self.memberTableView.dataSource = self
         self.memberTableView.delegate = self
+        
+        self.configure()
+    }
+    
+    func configure() {
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
+        
+        self.configureViewTitle()
+    }
+    
+    func configureViewTitle() {
+        let colors = Colors(colorTop: UIColor(red: 208/255, green: 133/255, blue: 202/255, alpha: 77/100), colorBottom: .clear)
+        
+        self.viewTitle.backgroundColor = .clear
+        let backgroundLayer = colors.gl
+        backgroundLayer.frame = self.viewTitle.frame
+        self.viewTitle.layer.addSublayer(backgroundLayer)
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,6 +53,9 @@ extension TLTeamController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+       
+        let cell = tableView.dequeueReusableCell(withIdentifier: "memberCellPlus", for: indexPath) as! EmployeePlusCell
+        
+        return cell
     }
 }

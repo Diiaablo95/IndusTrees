@@ -19,7 +19,7 @@ class EmployeeCell: UITableViewCell {
     
     private func configureView() {
         
-        let colors = Colors()
+        let colors = Colors(colorTop: UIColor(red: 223/255, green: 233/255, blue: 233/255, alpha: 56/100), colorBottom: .clear)
         
         self.backgroundColor = .clear
         let backgroundLayer = colors.gl
