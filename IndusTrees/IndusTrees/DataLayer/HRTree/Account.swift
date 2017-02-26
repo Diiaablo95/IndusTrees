@@ -19,14 +19,14 @@ class Account: BeaconIndentifiable {
 		self.token = token
 	}
 
-	init?(id: UInt16, email: String) {
+	init?(id: UInt16, email: String, password: String) {
 		self.bid = id
 		self.email = email
-		self.token = Account.authenticate(self)
+		self.token = Account.authenticate(self, with: password)
 	}
 
-	static func authenticate(_ account: Account) -> String? {
-		return "dsfhjfdgioas"
+	static func authenticate(_ account: Account, with password: String) -> String? {
+		return "?=ajgvqsfihgsbjhasdkjsdfu"
 	}
 
 }
