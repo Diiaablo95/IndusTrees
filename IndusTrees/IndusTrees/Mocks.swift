@@ -38,10 +38,10 @@ class Mocks {
 	]
 
 	static var tasks = [
-		Task(id: 0, name: "Estimate project costs.", baseScore: 700),
-		Task(id: 1, name: "Engage market analysis.", baseScore: 500),
-		Task(id: 2, name: "Prepare use cases diagram.", baseScore: 1000),
-		Task(id: 3, name: "Prepare UML class diagram.", baseScore: 1000)
+		Task(id: 0, name: "Estimate project costs.", baseScore: 700, giving: 100),
+		Task(id: 1, name: "Engage market analysis.", baseScore: 500, giving: 100),
+		Task(id: 2, name: "Prepare use cases diagram.", baseScore: 1000, giving: 500),
+		Task(id: 3, name: "Prepare UML class diagram.", baseScore: 1000, giving: 500)
 	]
 
 

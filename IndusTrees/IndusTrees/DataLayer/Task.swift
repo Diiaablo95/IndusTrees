@@ -74,6 +74,7 @@ class Task: BeaconIndentifiable {
 	var bid: UInt16
 	var name: String
 	var baseScore: Double
+	var baseExperience: Double
 	var description: String
 	var category: String?
 
@@ -91,16 +92,21 @@ class Task: BeaconIndentifiable {
 				case .unassigned: self.employees?.forEach { $0.tasks.remove(self); $0.completedTasks.remove(self) }
 				case let .assigned(e): e.forEach { $0.tasks.insert(self) }
 				case .finished:	self.employees?.forEach { $0.tasks.remove(self) }
-				case .validated: self.employees?.forEach { $0.completedTasks.insert(self) }
+				case .validated: for var employee in self.employees ?? [] {
+					employee.completedTasks.insert(self);
+					employee.train(with: self.baseExperience)
+					employee.add(score: self.actualScore(for: employee))
+				}
 			}
 		}
 	}
 
-	init(id: UInt16, name: String, baseScore: Double, description: String = "") {
+	init(id: UInt16, name: String, baseScore: Double, description: String = "", giving experience: Double = 100) {
 		self.bid = id
 		self.name = name
 		self.baseScore = baseScore
 		self.description = description
+		self.baseExperience = experience
 	}
 
 	func assign(to employee: Employee) {
@@ -115,7 +121,7 @@ class Task: BeaconIndentifiable {
 		self.state = .unassigned
 	}
 
-	func actualScore(for employee: Employee) -> Double? {
+	func actualScore(for employee: Employee) -> Double {
 		return Double(baseScore)/Double(employee.currentExp)
 	}
 
