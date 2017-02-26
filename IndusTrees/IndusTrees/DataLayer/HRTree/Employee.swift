@@ -72,6 +72,15 @@ class Employee: /*Node,*/ EmployeeType {
 		self.delegate?.employee(didMark: task, completed: true)
 	}
 
+	func add(comment: String, to task: Task) {
+		if task.comments[self] == nil {
+			task.comments[self] = []
+		}
+		self.delegate?.employee(willCommentOn: task, saying: comment)
+		task.comments[self]!.append(comment, on: Date(timeIntervalSinceNow: 0))
+		self.delegate?.employee(didCommentOn: task, saying: comment)
+	}
+
 }
 
 

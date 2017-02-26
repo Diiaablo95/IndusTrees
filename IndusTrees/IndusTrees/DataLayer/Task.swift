@@ -17,6 +17,9 @@ protocol TaskHandlerDelegate {
 	func employee(willMark: Task, completed: Bool)
 	func employee(didMark: Task, completed: Bool)
 
+	func employee(willCommentOn: Task, saying: String)
+	func employee(didCommentOn: Task, saying: String)
+
 	func leader(willReopen: Task)
 	func leader(didReopen: Task)
 
@@ -31,7 +34,7 @@ protocol TaskHandlerDelegate {
 
 	func leader(willValidate: Task)
 	func leader(didValidate: Task)
-	
+
 }
 
 
@@ -76,6 +79,8 @@ class Task: BeaconIndentifiable {
 
 	var employees: Set<Employee>?
 	var achivements: Set<Achivement> = []
+
+	var comments: [Employee: [(String, on: Date)]] = [:]
 
 	var state: TaskState<Employee> = .unassigned {
 		didSet {
