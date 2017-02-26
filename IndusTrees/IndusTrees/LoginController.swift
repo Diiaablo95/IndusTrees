@@ -10,7 +10,7 @@ import UIKit
 
 class LoginController: UIViewController {
     
-    fileprivate static let logoMinY: CGFloat = UIApplication.shared.statusBarFrame.height * 2
+    fileprivate static let logoMinY: CGFloat = 86
     
     @IBOutlet weak var viewLogo: UIImageView!
     @IBOutlet weak var usernameTextField: UITextField!
@@ -20,6 +20,7 @@ class LoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
         self.configure()
     }
     
@@ -29,16 +30,19 @@ class LoginController: UIViewController {
     }
     
     @IBAction func loginDidTap(_ sender: UIButton) {
-        //instantiate MenuController according to privileges
+        
+    
     }
     
     private func configure() {
         self.viewLogo.center = self.view.center
+        self.usernameTextField.tintColor = .white
+        self.passwordTextField.tintColor = .white
     }
     
     private func animateView() {
     
-        UIView.animate(withDuration: 1.5, delay: 0, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 1.25, delay: 0, options: .curveEaseIn, animations: {
             
             let logoScaledWidth: CGFloat = self.viewLogo.frame.width / 2
 
@@ -48,10 +52,23 @@ class LoginController: UIViewController {
             
             UIView.animate(withDuration: 1, delay: 0, options: .curveLinear, animations: {
                 
-                //AnimateTextField
+                self.usernameTextField.alpha = 1
+                self.passwordTextField.alpha = 1
+                self.loginButton.alpha = 1
             }, completion: nil)
         })
     }
     
     
+}
+
+extension LoginController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField === self.passwordTextField {
+            textField.resignFirstResponder()
+        }
+        
+        return true
+    }
 }
