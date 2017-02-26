@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19B0B0921E62648D007438FF /* EmployeeAchievmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B0B0911E62648D007438FF /* EmployeeAchievmentsViewController.swift */; };
+		19B0B0941E62701E007438FF /* AchievmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B0B0931E62701E007438FF /* AchievmentCell.swift */; };
+		19B0B0961E627E40007438FF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B0B0951E627E40007438FF /* ProfileViewController.swift */; };
 		99F2DF3F1E61E8A80044D361 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF3E1E61E8A80044D361 /* Task.swift */; };
 		99F2DF4F1E61EA8F0044D361 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF4A1E61EA8F0044D361 /* Account.swift */; };
 		99F2DF501E61EA8F0044D361 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF4B1E61EA8F0044D361 /* Employee.swift */; };
@@ -36,6 +39,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19B0B0911E62648D007438FF /* EmployeeAchievmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeAchievmentsViewController.swift; sourceTree = "<group>"; };
+		19B0B0931E62701E007438FF /* AchievmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievmentCell.swift; sourceTree = "<group>"; };
+		19B0B0951E627E40007438FF /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		99F2DF3E1E61E8A80044D361 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Task.swift; path = DataLayer/Task.swift; sourceTree = "<group>"; };
 		99F2DF4A1E61EA8F0044D361 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		99F2DF4B1E61EA8F0044D361 /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
@@ -160,6 +166,8 @@
 			children = (
 				D38DCEE21E622E4A00FF9126 /* EmployeeMenuController.swift */,
 				D38DCEE41E6232CB00FF9126 /* EmployeeTeamController.swift */,
+				19B0B0911E62648D007438FF /* EmployeeAchievmentsViewController.swift */,
+				19B0B0951E627E40007438FF /* ProfileViewController.swift */,
 			);
 			name = Employee;
 			sourceTree = "<group>";
@@ -174,6 +182,7 @@
 				D38DCEEB1E623B1700FF9126 /* EmployeeCell.swift */,
 				D38DCEC91E61DB9500FF9126 /* Assets.xcassets */,
 				D38DCECB1E61DB9500FF9126 /* LaunchScreen.storyboard */,
+				19B0B0931E62701E007438FF /* AchievmentCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -256,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19B0B0941E62701E007438FF /* AchievmentCell.swift in Sources */,
 				D38DCEE31E622E4A00FF9126 /* EmployeeMenuController.swift in Sources */,
 				D391D56B1E627E0300FD54EB /* ProjectCell.swift in Sources */,
 				99F2DF551E61ED200044D361 /* EmployeeProtocols.swift in Sources */,
@@ -263,6 +273,7 @@
 				D38DCEDD1E62269900FF9126 /* TLTeamController.swift in Sources */,
 				99F2DF3F1E61E8A80044D361 /* Task.swift in Sources */,
 				99F2DF4F1E61EA8F0044D361 /* Account.swift in Sources */,
+				19B0B0961E627E40007438FF /* ProfileViewController.swift in Sources */,
 				D38DCEDB1E62269900FF9126 /* LoginController.swift in Sources */,
 				D38DCEEA1E623B0600FF9126 /* EmployeePlusCell.swift in Sources */,
 				99F2DF511E61EA8F0044D361 /* Node.swift in Sources */,
@@ -270,6 +281,7 @@
 				D3D1E9A41E6248BB00127184 /* Utilities.swift in Sources */,
 				D38DCEE51E6232CB00FF9126 /* EmployeeTeamController.swift in Sources */,
 				99F2DF501E61EA8F0044D361 /* Employee.swift in Sources */,
+				19B0B0921E62648D007438FF /* EmployeeAchievmentsViewController.swift in Sources */,
 				99F2DF521E61EA8F0044D361 /* ProjectManager.swift in Sources */,
 				99F2DF571E61ED6D0044D361 /* Achivement.swift in Sources */,
 				D38DCEDC1E62269900FF9126 /* TLMenuController.swift in Sources */,
