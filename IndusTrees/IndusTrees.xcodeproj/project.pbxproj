@@ -33,9 +33,9 @@
 		CF1642F91E6297C8004D48CB /* TLProjectsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1642EA1E6297C8004D48CB /* TLProjectsController.swift */; };
 		CF1642FA1E6297C8004D48CB /* TLTeamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1642EB1E6297C8004D48CB /* TLTeamController.swift */; };
 		CF1642FB1E6297C8004D48CB /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1642EC1E6297C8004D48CB /* Utilities.swift */; };
-		CFD9E0D91E621F900075A020 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD9E0D61E621F900075A020 /* BluetoothManager.swift */; };
-		CFD9E0DA1E621F900075A020 /* MyLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD9E0D71E621F900075A020 /* MyLocationManager.swift */; };
-		CFD9E0DB1E621F900075A020 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD9E0D81E621F900075A020 /* NotificationManager.swift */; };
+		CF1643061E62AE14004D48CB /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1643031E62AE14004D48CB /* BluetoothManager.swift */; };
+		CF1643071E62AE14004D48CB /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1643041E62AE14004D48CB /* LocationManager.swift */; };
+		CF1643081E62AE14004D48CB /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1643051E62AE14004D48CB /* NotificationManager.swift */; };
 		D38DCEC31E61DB9500FF9126 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCEC21E61DB9500FF9126 /* AppDelegate.swift */; };
 		D38DCEC81E61DB9500FF9126 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D38DCEC61E61DB9500FF9126 /* Main.storyboard */; };
 		D38DCECA1E61DB9500FF9126 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D38DCEC91E61DB9500FF9126 /* Assets.xcassets */; };
@@ -69,9 +69,9 @@
 		CF1642EA1E6297C8004D48CB /* TLProjectsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLProjectsController.swift; sourceTree = "<group>"; };
 		CF1642EB1E6297C8004D48CB /* TLTeamController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLTeamController.swift; sourceTree = "<group>"; };
 		CF1642EC1E6297C8004D48CB /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = IndusTrees/Utilities.swift; sourceTree = "<group>"; };
-		CFD9E0D61E621F900075A020 /* BluetoothManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
-		CFD9E0D71E621F900075A020 /* MyLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLocationManager.swift; sourceTree = "<group>"; };
-		CFD9E0D81E621F900075A020 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		CF1643031E62AE14004D48CB /* BluetoothManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+		CF1643041E62AE14004D48CB /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		CF1643051E62AE14004D48CB /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		D38DCEBF1E61DB9500FF9126 /* IndusTrees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IndusTrees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38DCEC21E61DB9500FF9126 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D38DCEC71E61DB9500FF9126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -110,8 +110,8 @@
 				99F2DF4C1E61EA8F0044D361 /* Node.swift */,
 				99F2DF4D1E61EA8F0044D361 /* ProjectManager.swift */,
 				99F2DF4E1E61EA8F0044D361 /* TeamLeader.swift */,
-				99F2DF541E61ED200044D361 /* EmployeeProtocols.swift */,
 				99F2DF5A1E61F07C0044D361 /* Tree.swift */,
+				99F2DF541E61ED200044D361 /* EmployeeProtocols.swift */,
 			);
 			name = HRTree;
 			path = DataLayer/HRTree;
@@ -129,9 +129,9 @@
 			isa = PBXGroup;
 			children = (
 				CF1642E51E6297C8004D48CB /* LoginManager.swift */,
-				CFD9E0D61E621F900075A020 /* BluetoothManager.swift */,
-				CFD9E0D71E621F900075A020 /* MyLocationManager.swift */,
-				CFD9E0D81E621F900075A020 /* NotificationManager.swift */,
+				CF1643031E62AE14004D48CB /* BluetoothManager.swift */,
+				CF1643041E62AE14004D48CB /* LocationManager.swift */,
+				CF1643051E62AE14004D48CB /* NotificationManager.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -279,15 +279,15 @@
 				99F2DF551E61ED200044D361 /* EmployeeProtocols.swift in Sources */,
 				99F2DF3F1E61E8A80044D361 /* Task.swift in Sources */,
 				CF1642F51E6297C8004D48CB /* NewProjectCell.swift in Sources */,
+				CF1643071E62AE14004D48CB /* LocationManager.swift in Sources */,
 				CF1642FB1E6297C8004D48CB /* Utilities.swift in Sources */,
 				CF1642F71E6297C8004D48CB /* ProjectCell.swift in Sources */,
-				CFD9E0DA1E621F900075A020 /* MyLocationManager.swift in Sources */,
 				99F2DF4F1E61EA8F0044D361 /* Account.swift in Sources */,
 				99F2DF511E61EA8F0044D361 /* Node.swift in Sources */,
 				CF1642EE1E6297C8004D48CB /* EmployeeAchievmentsViewController.swift in Sources */,
 				CF1642F81E6297C8004D48CB /* TLMenuController.swift in Sources */,
-				CFD9E0DB1E621F900075A020 /* NotificationManager.swift in Sources */,
 				CF1642FA1E6297C8004D48CB /* TLTeamController.swift in Sources */,
+				CF1643081E62AE14004D48CB /* NotificationManager.swift in Sources */,
 				CF1642F61E6297C8004D48CB /* ProfileViewController.swift in Sources */,
 				CF1642F91E6297C8004D48CB /* TLProjectsController.swift in Sources */,
 				CF1642F31E6297C8004D48CB /* LoginController.swift in Sources */,
@@ -299,7 +299,7 @@
 				99F2DF571E61ED6D0044D361 /* Achivement.swift in Sources */,
 				D38DCEC31E61DB9500FF9126 /* AppDelegate.swift in Sources */,
 				CF1642F41E6297C8004D48CB /* LoginManager.swift in Sources */,
-				CFD9E0D91E621F900075A020 /* BluetoothManager.swift in Sources */,
+				CF1643061E62AE14004D48CB /* BluetoothManager.swift in Sources */,
 				99F2DF5B1E61F07C0044D361 /* Tree.swift in Sources */,
 				99F2DF591E61F06C0044D361 /* Scoreboard.swift in Sources */,
 				CF1642ED1E6297C8004D48CB /* AchievmentCell.swift in Sources */,

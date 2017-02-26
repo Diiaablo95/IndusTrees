@@ -13,7 +13,7 @@ class TLTeamController: UIViewController {
     @IBOutlet weak var memberTableView: UITableView!
     @IBOutlet weak var viewTitle: UIView!
     
-    fileprivate var teamMembers: [Employee]!
+    var teamMembers: [Employee]!
 
     override func viewDidLoad() {
         super.viewDidLoad()

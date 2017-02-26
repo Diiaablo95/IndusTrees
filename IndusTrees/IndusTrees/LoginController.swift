@@ -32,6 +32,8 @@ class LoginController: UIViewController {
         self.viewLogo.center = self.view.center
         self.usernameTextField.tintColor = .white
         self.passwordTextField.tintColor = .white
+        self.usernameTextField.delegate = self
+        self.passwordTextField.delegate = self
     }
     
     @IBAction func loginDidTap(_ sender: UIButton) {
@@ -82,9 +84,7 @@ class LoginController: UIViewController {
 extension LoginController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        if textField === self.passwordTextField {
-            textField.resignFirstResponder()
-        }
+        textField.resignFirstResponder()
         
         return true
     }

@@ -94,11 +94,11 @@ extension Mocks {
 		return DataStore.employees.first { $0.account.bid == id }
 	}
 
-	static func teamLeader(with id: UInt16) -> Employee? {
+	static func teamLeader(with id: UInt16) -> TeamLeader? {
 		return DataStore.teamLeaders.first { $0.account.bid == id }
 	}
 
-	static func projectManagers(with id: UInt16) -> Employee? {
+	static func projectManager(with id: UInt16) -> ProjectManager? {
 		return DataStore.projectManagers.first { $0.account.bid == id }
 	}
 
@@ -111,7 +111,5 @@ extension Mocks {
 	}
 
 }
-
-
 
 typealias DataStore = Mocks														

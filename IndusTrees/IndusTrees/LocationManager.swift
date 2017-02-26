@@ -1,5 +1,5 @@
 //
-//  MyLocationManager.swift
+//  LocationManager.swift
 //  MindTheMap
 //
 //  Created by Antonio Antonino on 25/02/2017.
@@ -12,21 +12,21 @@ import CoreLocation
 import UIKit
 
 protocol TaskRegionListener: class {
-    func manager(_ locationManager: MyLocationManager, didFindTaskCreatedWithId taskId: UInt16, forUser userId: UInt16)
-    func manager(_ locationManager: MyLocationManager, didFindTaskCompletedWithId taskId: UInt16, forUser userId: UInt16)
-    func manager(_ locationManager: MyLocationManager, didFindTaskValidatedWithId taskId: UInt16, forUser userId: UInt16)
+    func manager(_ locationManager: LocationManager, didFindTaskCreatedWithId taskId: UInt16, forUser userId: UInt16)
+    func manager(_ locationManager: LocationManager, didFindTaskCompletedWithId taskId: UInt16, forUser userId: UInt16)
+    func manager(_ locationManager: LocationManager, didFindTaskValidatedWithId taskId: UInt16, forUser userId: UInt16)
 }
 
 protocol PresenceRegionListener: class {
-    func manager(_ locationManager: MyLocationManager, didFindPresenceRegion: CLBeaconRegion)
-    func manager(_ locationManager: MyLocationManager, didReceivePresenceUpdateFromUser userId: UInt16)
+    func manager(_ locationManager: LocationManager, didFindPresenceRegion: CLBeaconRegion)
+    func manager(_ locationManager: LocationManager, didReceivePresenceUpdateFromUser userId: UInt16)
 }
 
 protocol LocationChangeDelegate: class {
     func locationDidChange(to newStatus: CLAuthorizationStatus)
 }
 
-class MyLocationManager: NSObject {
+class LocationManager: NSObject {
     
     static let MAXIMUM_TIME_CACHE = 60.0    //60 s
     
@@ -48,8 +48,8 @@ class MyLocationManager: NSObject {
     //Delegate to which the change in the GPS permissions are communicated
     weak var delegate: LocationChangeDelegate?
     
-    static let shared: MyLocationManager = {
-        let man = MyLocationManager()
+    static let shared: LocationManager = {
+        let man = LocationManager()
         man.manager.delegate = man
         
         return man
@@ -67,7 +67,7 @@ class MyLocationManager: NSObject {
         self.manager.distanceFilter = 100   //100 m
         
         self.regionsMonitored = [
-            CLBeaconRegion(proximityUUID: MyLocationManager.AdditionalRegions.BEACON_PRESENCE_FOUND, identifier: "it.cheerios"),
+            CLBeaconRegion(proximityUUID: LocationManager.AdditionalRegions.BEACON_PRESENCE_FOUND, identifier: "it.cheerios"),
             CLBeaconRegion(proximityUUID: BluetoothManager.BeaconRegions.TASK_ADDED, identifier: "it.cheerios2"),
             CLBeaconRegion(proximityUUID: BluetoothManager.BeaconRegions.TASK_COMPLETED, identifier: "it.cheerios3"),
             CLBeaconRegion(proximityUUID: BluetoothManager.BeaconRegions.TASK_VALIDATED, identifier: "it.cheerios4"),
@@ -114,7 +114,7 @@ class MyLocationManager: NSObject {
     }
 }
 
-extension MyLocationManager: CLLocationManagerDelegate {
+extension LocationManager: CLLocationManagerDelegate {
     
     //If it is the first time the location is asked, then an handler is called, otherwise the delegate's method is called after the user has gone into the settings app to change the privacy settings.
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -166,10 +166,10 @@ extension MyLocationManager: CLLocationManagerDelegate {
                         break
                     }
                 }
-            case MyLocationManager.AdditionalRegions.BEACON_PRESENCE_FOUND, BluetoothManager.BeaconRegions.PRESENCE_REGISTERED:
+            case LocationManager.AdditionalRegions.BEACON_PRESENCE_FOUND, BluetoothManager.BeaconRegions.PRESENCE_REGISTERED:
                 if let delegate = self.presenceDelegate {
                     switch region.proximityUUID {
-                    case MyLocationManager.AdditionalRegions.BEACON_PRESENCE_FOUND:
+                    case LocationManager.AdditionalRegions.BEACON_PRESENCE_FOUND:
                         delegate.manager(self, didFindPresenceRegion: region)
                     case BluetoothManager.BeaconRegions.PRESENCE_REGISTERED:
                         delegate.manager(self, didReceivePresenceUpdateFromUser: UInt16(beacon.major))

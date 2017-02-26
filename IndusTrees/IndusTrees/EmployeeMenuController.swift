@@ -19,10 +19,12 @@ class EmployeeMenuController: UIViewController {
 
     
     var menuViews: [UIImageView]!
-    
+    var project: Project!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.project = DataStore.employee(with: LoginManager.shared.userId!)?.teamLeader?.projectManager?.project
         
         self.menuViews = [firstView, secondView, thirdView, fourthView, fifthView]
         
@@ -30,6 +32,8 @@ class EmployeeMenuController: UIViewController {
             $0.center = self.view.center
             $0.layer.cornerRadius = $0.frame.height/2
         })
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -41,8 +45,19 @@ class EmployeeMenuController: UIViewController {
             y: self.view.center.y + (circRadius * CGFloat(sin(Double(11/10 * M_PI))))
         )
         
-        
         self.animateView(to: firstPosition, with: circRadius)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showAchievements" {
+            let achievementsVC = segue.destination as! EmployeeAchievmentsViewController
+            achievementsVC.achievments = DataStore.employee(with: LoginManager.shared.userId!)?.achivements.filter({ _ in return true })     //Transforms the set into array
+        }
+//        } else if segue.identifier == "showTeamMembers" {
+//            let teamVC = segue.destination as! EmployeeTeamController
+//            let teamMembers = DataStore.employee(with: LoginManager.shared.userId!)?.teamLeader?.team
+//            teamVC.teamMembers = teamMembers?.filter({ _ in return true })
+//        }
     }
     
     private func animateView(to firstPosition: CGPoint, with circRadius: CGFloat) {
@@ -81,12 +96,6 @@ class EmployeeMenuController: UIViewController {
         let circlePath = UIBezierPath(arcCenter: self.view.center, radius: circRadius, startAngle: CGFloat(M_PI * 11/10), endAngle: endAngle, clockwise: true)
         
         return circlePath
-        //        let shapeLayer = CAShapeLayer()
-        //        shapeLayer.path = circlePath.cgPath
-        //
-        //        //Customize here
-        //
-        //        view.layer.addSublayer(shapeLayer)
     }
 }
 

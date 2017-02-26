@@ -19,19 +19,39 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var xpPoints: UILabel!
     @IBOutlet weak var task: UILabel!
     
-    let account: Account? = nil
+    
+    @IBOutlet weak var taskImageView: UIImageView!
+    
+    @IBOutlet weak var teamButton: UIButton!
+    @IBOutlet weak var achievementButton: UIButton!
+    @IBOutlet weak var tasksButton: UIButton!
+    
+    private var account: Account!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let account = account else {
-            return
-        }
         
-        nome.text = account.email
+        self.account = DataStore.account(withId: LoginManager.shared.userId!)
+        
+        self.nome.text = self.account.email
+        self.dataNascita.text = self.account.birthdate
+        if DataStore.projectManager(with: self.account.bid) != nil {
+            self.ruolo.text = "Project manager"
+            self.hideUIElements()
+        } else if DataStore.teamLeader(with: self.account.bid) != nil {
+            self.ruolo.text = "Team Leader"
+            self.hideUIElements()
+        } else {
+            self.ruolo.text = "Employee"
+        }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    private func hideUIElements() {
+        self.taskImageView.isHidden = true
+        
+        self.teamButton.isHidden = true
+        self.achievementButton.isHidden = true
+        self.tasksButton.isHidden = true
     }
     
     @IBAction func taskList(_ sender: UIButton) {

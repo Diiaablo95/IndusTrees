@@ -22,7 +22,7 @@ class LoginManager {
             }
         }
         get {
-            return UserDefaults.standard.integer(forKey: "id") as? UInt16
+            return UInt16(UserDefaults.standard.integer(forKey: "id"))
         }
     }
 }

@@ -23,12 +23,14 @@ class TLProjectsController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showMenu", let destVC = segue.destination as? TLMenuController {
-            let mySelf = DataStore.account(withId: LoginManager.shared.userId!)
-            let project: Project!
+            var project: Project! = nil
             
-            if let instance = mySelf as? Employee {
-                project =
+            if let mySelf = DataStore.teamLeader(with: LoginManager.shared.userId!) {
+                project = mySelf.projectManager!.project
+            } else if let mySelf = DataStore.employee(with: LoginManager.shared.userId!) {
+                project = mySelf.teamLeader!.projectManager!.project
             }
+            destVC.project = project
         }
     }
 }
@@ -44,7 +46,7 @@ extension TLProjectsController: UICollectionViewDataSource, UICollectionViewDele
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "projectCell", for: indexPath) as! ProjectCell
         
-        cell.projectName.text = self.projects[indexPath.row - 1]
+        cell.projectName.text = self.projects[indexPath.row]
         
         return cell
     }

@@ -13,12 +13,12 @@ class EmployeeTeamController: UIViewController {
     
     @IBOutlet weak var viewTitle: UIView!
     @IBOutlet weak var memberTableView: UITableView!
-    fileprivate var teamMembers: [Employee]!
+    
+    var teamMembers: [Employee]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.teamMembers = Mocks.employees
         self.memberTableView.dataSource = self
         self.memberTableView.delegate = self
 
@@ -33,14 +33,10 @@ class EmployeeTeamController: UIViewController {
         backgroundLayer.frame = self.viewTitle.frame
         self.viewTitle.layer.insertSublayer(backgroundLayer, at: 0)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 }
 
 extension EmployeeTeamController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.teamMembers.count
     }

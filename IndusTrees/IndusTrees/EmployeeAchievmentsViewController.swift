@@ -9,40 +9,41 @@
 import Foundation
 import UIKit
 
-class EmployeeAchievmentsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class EmployeeAchievmentsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    var achievments: [Achivement] = Mocks.achivements
+    var achievments: [Achivement]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        self.tableView.isScrollEnabled = false
         self.tableView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "backTable"))
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+}
+
+extension EmployeeAchievmentsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(achievments.count)
-        return achievments.count
+        return self.achievments.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "achievmentCell", for: indexPath) as! AchievmentCell
-        let achi = achievments[indexPath.row]
+        let achivement = self.achievments[indexPath.row]
         
-        cell.title.text = achi.name
-        cell.intDescription.text = achi.description
-        cell.badge = UIImageView(image: #imageLiteral(resourceName: "Trophy"))
-        
+        cell.config(achievement: achivement)
         
         return cell
     }
-    
+}
+
+extension EmployeeAchievmentsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        return nil
+    }
 }
