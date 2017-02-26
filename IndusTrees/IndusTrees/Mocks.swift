@@ -3,7 +3,7 @@
 //  IndusTrees
 //
 //  Created by Gianluca Salvato on 25/02/2017.
-//  Copyright © 2017 Saltarelli. All rights reserved.
+//  Copyright © 2017 CherriOS. All rights reserved.
 //
 
 import Foundation
@@ -54,6 +54,10 @@ class Mocks {
 }
 
 extension Mocks {
+
+	static func account(withEmail address: String) -> Account? {
+		return DataStore.accounts.first { $0.email == address }
+	}
 
 	static func employee(with id: UInt16) -> Employee? {
 		return DataStore.employees.first { $0.account.bid == id }
