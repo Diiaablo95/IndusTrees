@@ -59,15 +59,17 @@ class Employee: /*Node,*/ EmployeeType {
 		return 1000 * Double(level * level)
 	}
 
-	func recieve(assignment task: Task) {
+	func recieve(assignment task: Task, dueOn date: Date) {
 		self.delegate?.employee(willRecieve: task)
 			self.tasks.insert(task)
+			task.state = .assigned([self], within: date)
 		self.delegate?.employee(willRecieve: task)
 	}
 
 	func complete(task: Task) {
 		self.delegate?.employee(willMark: task, completed: true)
 			self.tasks.remove(task)
+			task.state = .finished([self], on: Date(timeIntervalSinceNow: 0))
 			self.completedTasks.insert(task)
 		self.delegate?.employee(didMark: task, completed: true)
 	}
@@ -77,7 +79,7 @@ class Employee: /*Node,*/ EmployeeType {
 			task.comments[self] = []
 		}
 		self.delegate?.employee(willCommentOn: task, saying: comment)
-		task.comments[self]!.append(comment, on: Date(timeIntervalSinceNow: 0))
+			task.comments[self]!.append(comment, on: Date(timeIntervalSinceNow: 0))
 		self.delegate?.employee(didCommentOn: task, saying: comment)
 	}
 

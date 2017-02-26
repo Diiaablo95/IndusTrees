@@ -6,7 +6,7 @@
 //  Copyright © 2017 CheeriOS. All rights reserved.
 //
 
-import Foundation
+import UIKit.UIImage
 
 protocol BeaconIndentifiable {
 	var bid: UInt16 { get }
@@ -33,6 +33,8 @@ class Achivement: BeaconIndentifiable {
 	var description: String
 	var hidden: Bool = false
 	var condition: Condition
+
+	var image: UIImage?
 
 	init(id: UInt16, name: String, description: String, condition: @escaping Condition = { true }) {
 		self.bid = id
