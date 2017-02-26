@@ -1,0 +1,6 @@
+framework module Pods_IndusTrees {
+  umbrella header "Pods-IndusTrees-umbrella.h"
+
+  export *
+  module * { export * }
+}

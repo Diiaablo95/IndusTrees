@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		195E74AE1E62B40900EA4A07 /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195E74AD1E62B40900EA4A07 /* AnalyticsViewController.swift */; };
 		19B0B0921E62648D007438FF /* EmployeeAchievmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B0B0911E62648D007438FF /* EmployeeAchievmentsViewController.swift */; };
 		19B0B0941E62701E007438FF /* AchievmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B0B0931E62701E007438FF /* AchievmentCell.swift */; };
 		19B0B0961E627E40007438FF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B0B0951E627E40007438FF /* ProfileViewController.swift */; };
 		19DCC5BE1E62A92C00D87C19 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DCC5BD1E62A92C00D87C19 /* SettingsViewController.swift */; };
+		2B980F1BE9F50F987A63215A /* Pods_IndusTrees.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA10EFAD0D39377DF101D78 /* Pods_IndusTrees.framework */; };
 		99F2DF3F1E61E8A80044D361 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF3E1E61E8A80044D361 /* Task.swift */; };
 		99F2DF4F1E61EA8F0044D361 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF4A1E61EA8F0044D361 /* Account.swift */; };
 		99F2DF501E61EA8F0044D361 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF4B1E61EA8F0044D361 /* Employee.swift */; };
@@ -40,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		195E74AD1E62B40900EA4A07 /* AnalyticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
 		19B0B0911E62648D007438FF /* EmployeeAchievmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeAchievmentsViewController.swift; sourceTree = "<group>"; };
 		19B0B0931E62701E007438FF /* AchievmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievmentCell.swift; sourceTree = "<group>"; };
 		19B0B0951E627E40007438FF /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +58,8 @@
 		99F2DF581E61F06C0044D361 /* Scoreboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scoreboard.swift; path = DataLayer/Scoreboard.swift; sourceTree = "<group>"; };
 		99F2DF5A1E61F07C0044D361 /* Tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 		99F2DF5C1E6203A50044D361 /* Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mocks.swift; path = IndusTrees/Mocks.swift; sourceTree = "<group>"; };
+		AF373BE5A78F5ED0565AEE80 /* Pods-IndusTrees.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IndusTrees.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IndusTrees/Pods-IndusTrees.debug.xcconfig"; sourceTree = "<group>"; };
+		B753BAE69BC177FB93DEC166 /* Pods-IndusTrees.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IndusTrees.release.xcconfig"; path = "Pods/Target Support Files/Pods-IndusTrees/Pods-IndusTrees.release.xcconfig"; sourceTree = "<group>"; };
 		D38DCEBF1E61DB9500FF9126 /* IndusTrees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IndusTrees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38DCEC21E61DB9500FF9126 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D38DCEC71E61DB9500FF9126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -73,6 +78,7 @@
 		D391D56A1E627E0300FD54EB /* ProjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
 		D3D1E9A31E6248BB00127184 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		D3FF898C1E627E38002BFC67 /* NewProjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewProjectCell.swift; sourceTree = "<group>"; };
+		EFA10EFAD0D39377DF101D78 /* Pods_IndusTrees.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IndusTrees.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,12 +86,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B980F1BE9F50F987A63215A /* Pods_IndusTrees.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F98761F1306915F798A0A77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFA10EFAD0D39377DF101D78 /* Pods_IndusTrees.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		99F2DF3B1E61DC610044D361 /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,12 +127,23 @@
 			path = DataLayer/HRTree;
 			sourceTree = "<group>";
 		};
+		C05267115F31B680C4D081DE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF373BE5A78F5ED0565AEE80 /* Pods-IndusTrees.debug.xcconfig */,
+				B753BAE69BC177FB93DEC166 /* Pods-IndusTrees.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D38DCEB61E61DB9500FF9126 = {
 			isa = PBXGroup;
 			children = (
 				99F2DF5C1E6203A50044D361 /* Mocks.swift */,
 				D38DCEC11E61DB9500FF9126 /* IndusTrees */,
 				D38DCEC01E61DB9500FF9126 /* Products */,
+				C05267115F31B680C4D081DE /* Pods */,
+				2F98761F1306915F798A0A77 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,6 +176,7 @@
 				D38DCEE11E622E1200FF9126 /* Employee */,
 				D38DCEDF1E62289600FF9126 /* TL */,
 				19DCC5BD1E62A92C00D87C19 /* SettingsViewController.swift */,
+				195E74AD1E62B40900EA4A07 /* AnalyticsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -197,9 +224,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D38DCED11E61DB9500FF9126 /* Build configuration list for PBXNativeTarget "IndusTrees" */;
 			buildPhases = (
+				C3C9C60B20EF74FBC0A30479 /* [CP] Check Pods Manifest.lock */,
 				D38DCEBB1E61DB9500FF9126 /* Sources */,
 				D38DCEBC1E61DB9500FF9126 /* Frameworks */,
 				D38DCEBD1E61DB9500FF9126 /* Resources */,
+				37AB2D17A073CF3BD59E1F80 /* [CP] Embed Pods Frameworks */,
+				6F83734A986E4ECC16F35085 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -263,6 +293,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		37AB2D17A073CF3BD59E1F80 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IndusTrees/Pods-IndusTrees-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F83734A986E4ECC16F35085 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IndusTrees/Pods-IndusTrees-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3C9C60B20EF74FBC0A30479 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D38DCEBB1E61DB9500FF9126 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -291,6 +369,7 @@
 				D38DCEEC1E623B1700FF9126 /* EmployeeCell.swift in Sources */,
 				D38DCEC31E61DB9500FF9126 /* AppDelegate.swift in Sources */,
 				99F2DF5B1E61F07C0044D361 /* Tree.swift in Sources */,
+				195E74AE1E62B40900EA4A07 /* AnalyticsViewController.swift in Sources */,
 				99F2DF591E61F06C0044D361 /* Scoreboard.swift in Sources */,
 				99F2DF531E61EA8F0044D361 /* TeamLeader.swift in Sources */,
 				D38DCEE71E62390D00FF9126 /* TLProjectsController.swift in Sources */,
@@ -413,6 +492,7 @@
 		};
 		D38DCED21E61DB9500FF9126 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF373BE5A78F5ED0565AEE80 /* Pods-IndusTrees.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = IndusTrees/IndusTrees.entitlements;
@@ -428,6 +508,7 @@
 		};
 		D38DCED31E61DB9500FF9126 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B753BAE69BC177FB93DEC166 /* Pods-IndusTrees.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = IndusTrees/IndusTrees.entitlements;
