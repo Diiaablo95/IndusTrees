@@ -13,11 +13,11 @@ class Mocks {
 	private init() {}
 
 	static var accounts = [
-		Account(id: 0, email: "salvato.gianluca@cherios.it",	token: "?=ajgvqsfihgsbjhasdkjsdfu"),
-		Account(id: 1, email: "vultaggio.andrea@cherios.it",	token: "?=pkinbhfsajcxmbvhuigkjvs"),
-		Account(id: 2, email: "antonino.antonio@cherios.it",	token: "?=uvjcljbvnbwqdfjhnbsdjhb"),
-		Account(id: 3, email: "saltarelli.alberto@cherios.it",	token: "?=oihkcsvdjhgijdigjvbcsvd"),
-		Account(id: 4, email: "dalenasimone@cherios.it",		token: "?=fhbrjhtbmnfvkjsdhkbausg")
+		Account(id: 0, email: "salvato.gianluca@cherios.it", token: "?=ajgvqsfihgsbjhasdkjsdfu"),
+		Account(id: 1, email: "vultaggio.andrea@cherios.it", token: "?=pkinbhfsajcxmbvhuigkjvs"),
+		Account(id: 2, email: "antonino.antonio@cherios.it", token: "?=uvjcljbvnbwqdfjhnbsdjhb"),
+		Account(id: 3, email: "saltarelli.alberto@cherios.it", token: "?=oihkcsvdjhgijdigjvbcsvd"),
+		Account(id: 4, email: "dalenasimone@cherios.it", token: "?=fhbrjhtbmnfvkjsdhkbausg")
 	]
 
 	static var employees = [

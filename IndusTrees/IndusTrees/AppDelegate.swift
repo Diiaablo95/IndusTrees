@@ -15,7 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
         MyLocationManager.shared.askForPermission(completionHandler: { result in
             if result {
                 MyLocationManager.shared.startMonitoringForBeaconRegions()

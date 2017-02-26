@@ -11,7 +11,6 @@ import UIKit
 class TLProjectsController: UIViewController {
     
     @IBOutlet weak var projectsCollectionView: UICollectionView!
-    var projects: [String] = ["MindMap", "M@"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

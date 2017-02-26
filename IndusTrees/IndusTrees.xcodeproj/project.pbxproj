@@ -18,11 +18,25 @@
 		99F2DF591E61F06C0044D361 /* Scoreboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF581E61F06C0044D361 /* Scoreboard.swift */; };
 		99F2DF5B1E61F07C0044D361 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF5A1E61F07C0044D361 /* Tree.swift */; };
 		99F2DF5D1E6203A50044D361 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF5C1E6203A50044D361 /* Mocks.swift */; };
+		CF1642ED1E6297C8004D48CB /* AchievmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1642DE1E6297C8004D48CB /* AchievmentCell.swift */; };
+		CF1642EE1E6297C8004D48CB /* EmployeeAchievmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1642DF1E6297C8004D48CB /* EmployeeAchievmentsViewController.swift */; };
+		CF1642EF1E6297C8004D48CB /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1642E01E6297C8004D48CB /* EmployeeCell.swift */; };
+		CF1642F01E6297C8004D48CB /* EmployeeMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1642E11E6297C8004D48CB /* EmployeeMenuController.swift */; };
+		CF1642F11E6297C8004D48CB /* EmployeePlusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1642E21E6297C8004D48CB /* EmployeePlusCell.swift */; };
+		CF1642F21E6297C8004D48CB /* EmployeeTeamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1642E31E6297C8004D48CB /* EmployeeTeamController.swift */; };
+		CF1642F31E6297C8004D48CB /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1642E41E6297C8004D48CB /* LoginController.swift */; };
+		CF1642F41E6297C8004D48CB /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1642E51E6297C8004D48CB /* LoginManager.swift */; };
+		CF1642F51E6297C8004D48CB /* NewProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1642E61E6297C8004D48CB /* NewProjectCell.swift */; };
+		CF1642F61E6297C8004D48CB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1642E71E6297C8004D48CB /* ProfileViewController.swift */; };
+		CF1642F71E6297C8004D48CB /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1642E81E6297C8004D48CB /* ProjectCell.swift */; };
+		CF1642F81E6297C8004D48CB /* TLMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1642E91E6297C8004D48CB /* TLMenuController.swift */; };
+		CF1642F91E6297C8004D48CB /* TLProjectsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1642EA1E6297C8004D48CB /* TLProjectsController.swift */; };
+		CF1642FA1E6297C8004D48CB /* TLTeamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1642EB1E6297C8004D48CB /* TLTeamController.swift */; };
+		CF1642FB1E6297C8004D48CB /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1642EC1E6297C8004D48CB /* Utilities.swift */; };
 		CFD9E0D91E621F900075A020 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD9E0D61E621F900075A020 /* BluetoothManager.swift */; };
 		CFD9E0DA1E621F900075A020 /* MyLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD9E0D71E621F900075A020 /* MyLocationManager.swift */; };
 		CFD9E0DB1E621F900075A020 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD9E0D81E621F900075A020 /* NotificationManager.swift */; };
 		D38DCEC31E61DB9500FF9126 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCEC21E61DB9500FF9126 /* AppDelegate.swift */; };
-		D38DCEC51E61DB9500FF9126 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCEC41E61DB9500FF9126 /* ViewController.swift */; };
 		D38DCEC81E61DB9500FF9126 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D38DCEC61E61DB9500FF9126 /* Main.storyboard */; };
 		D38DCECA1E61DB9500FF9126 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D38DCEC91E61DB9500FF9126 /* Assets.xcassets */; };
 		D38DCECD1E61DB9500FF9126 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D38DCECB1E61DB9500FF9126 /* LaunchScreen.storyboard */; };
@@ -40,12 +54,26 @@
 		99F2DF581E61F06C0044D361 /* Scoreboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scoreboard.swift; path = DataLayer/Scoreboard.swift; sourceTree = "<group>"; };
 		99F2DF5A1E61F07C0044D361 /* Tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 		99F2DF5C1E6203A50044D361 /* Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mocks.swift; path = IndusTrees/Mocks.swift; sourceTree = "<group>"; };
+		CF1642DE1E6297C8004D48CB /* AchievmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievmentCell.swift; sourceTree = "<group>"; };
+		CF1642DF1E6297C8004D48CB /* EmployeeAchievmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeAchievmentsViewController.swift; sourceTree = "<group>"; };
+		CF1642E01E6297C8004D48CB /* EmployeeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
+		CF1642E11E6297C8004D48CB /* EmployeeMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeMenuController.swift; sourceTree = "<group>"; };
+		CF1642E21E6297C8004D48CB /* EmployeePlusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeePlusCell.swift; sourceTree = "<group>"; };
+		CF1642E31E6297C8004D48CB /* EmployeeTeamController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeTeamController.swift; sourceTree = "<group>"; };
+		CF1642E41E6297C8004D48CB /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		CF1642E51E6297C8004D48CB /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		CF1642E61E6297C8004D48CB /* NewProjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewProjectCell.swift; sourceTree = "<group>"; };
+		CF1642E71E6297C8004D48CB /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CF1642E81E6297C8004D48CB /* ProjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
+		CF1642E91E6297C8004D48CB /* TLMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLMenuController.swift; sourceTree = "<group>"; };
+		CF1642EA1E6297C8004D48CB /* TLProjectsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLProjectsController.swift; sourceTree = "<group>"; };
+		CF1642EB1E6297C8004D48CB /* TLTeamController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLTeamController.swift; sourceTree = "<group>"; };
+		CF1642EC1E6297C8004D48CB /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = IndusTrees/Utilities.swift; sourceTree = "<group>"; };
 		CFD9E0D61E621F900075A020 /* BluetoothManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		CFD9E0D71E621F900075A020 /* MyLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLocationManager.swift; sourceTree = "<group>"; };
 		CFD9E0D81E621F900075A020 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		D38DCEBF1E61DB9500FF9126 /* IndusTrees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IndusTrees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38DCEC21E61DB9500FF9126 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D38DCEC41E61DB9500FF9126 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D38DCEC71E61DB9500FF9126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D38DCEC91E61DB9500FF9126 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D38DCECC1E61DB9500FF9126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -89,9 +117,18 @@
 			path = DataLayer/HRTree;
 			sourceTree = "<group>";
 		};
+		CF1642FC1E6297D0004D48CB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CF1642EC1E6297C8004D48CB /* Utilities.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		CFD9E0DC1E621F990075A020 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				CF1642E51E6297C8004D48CB /* LoginManager.swift */,
 				CFD9E0D61E621F900075A020 /* BluetoothManager.swift */,
 				CFD9E0D71E621F900075A020 /* MyLocationManager.swift */,
 				CFD9E0D81E621F900075A020 /* NotificationManager.swift */,
@@ -102,7 +139,14 @@
 		CFD9E0DD1E621FAD0075A020 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D38DCEC41E61DB9500FF9126 /* ViewController.swift */,
+				CF1642DF1E6297C8004D48CB /* EmployeeAchievmentsViewController.swift */,
+				CF1642E11E6297C8004D48CB /* EmployeeMenuController.swift */,
+				CF1642E31E6297C8004D48CB /* EmployeeTeamController.swift */,
+				CF1642E41E6297C8004D48CB /* LoginController.swift */,
+				CF1642E71E6297C8004D48CB /* ProfileViewController.swift */,
+				CF1642E91E6297C8004D48CB /* TLMenuController.swift */,
+				CF1642EA1E6297C8004D48CB /* TLProjectsController.swift */,
+				CF1642EB1E6297C8004D48CB /* TLTeamController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -110,6 +154,11 @@
 		CFD9E0DE1E621FB30075A020 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CF1642DE1E6297C8004D48CB /* AchievmentCell.swift */,
+				CF1642E01E6297C8004D48CB /* EmployeeCell.swift */,
+				CF1642E21E6297C8004D48CB /* EmployeePlusCell.swift */,
+				CF1642E81E6297C8004D48CB /* ProjectCell.swift */,
+				CF1642E61E6297C8004D48CB /* NewProjectCell.swift */,
 				D38DCECB1E61DB9500FF9126 /* LaunchScreen.storyboard */,
 				D38DCEC61E61DB9500FF9126 /* Main.storyboard */,
 			);
@@ -121,6 +170,7 @@
 			children = (
 				99F2DF5C1E6203A50044D361 /* Mocks.swift */,
 				D38DCEC11E61DB9500FF9126 /* IndusTrees */,
+				CF1642FC1E6297D0004D48CB /* Utils */,
 				D38DCEC01E61DB9500FF9126 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -225,21 +275,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF1642F01E6297C8004D48CB /* EmployeeMenuController.swift in Sources */,
 				99F2DF551E61ED200044D361 /* EmployeeProtocols.swift in Sources */,
 				99F2DF3F1E61E8A80044D361 /* Task.swift in Sources */,
+				CF1642F51E6297C8004D48CB /* NewProjectCell.swift in Sources */,
+				CF1642FB1E6297C8004D48CB /* Utilities.swift in Sources */,
+				CF1642F71E6297C8004D48CB /* ProjectCell.swift in Sources */,
 				CFD9E0DA1E621F900075A020 /* MyLocationManager.swift in Sources */,
 				99F2DF4F1E61EA8F0044D361 /* Account.swift in Sources */,
-				D38DCEC51E61DB9500FF9126 /* ViewController.swift in Sources */,
 				99F2DF511E61EA8F0044D361 /* Node.swift in Sources */,
+				CF1642EE1E6297C8004D48CB /* EmployeeAchievmentsViewController.swift in Sources */,
+				CF1642F81E6297C8004D48CB /* TLMenuController.swift in Sources */,
 				CFD9E0DB1E621F900075A020 /* NotificationManager.swift in Sources */,
+				CF1642FA1E6297C8004D48CB /* TLTeamController.swift in Sources */,
+				CF1642F61E6297C8004D48CB /* ProfileViewController.swift in Sources */,
+				CF1642F91E6297C8004D48CB /* TLProjectsController.swift in Sources */,
+				CF1642F31E6297C8004D48CB /* LoginController.swift in Sources */,
+				CF1642F11E6297C8004D48CB /* EmployeePlusCell.swift in Sources */,
 				99F2DF5D1E6203A50044D361 /* Mocks.swift in Sources */,
 				99F2DF501E61EA8F0044D361 /* Employee.swift in Sources */,
+				CF1642F21E6297C8004D48CB /* EmployeeTeamController.swift in Sources */,
 				99F2DF521E61EA8F0044D361 /* ProjectManager.swift in Sources */,
 				99F2DF571E61ED6D0044D361 /* Achivement.swift in Sources */,
 				D38DCEC31E61DB9500FF9126 /* AppDelegate.swift in Sources */,
+				CF1642F41E6297C8004D48CB /* LoginManager.swift in Sources */,
 				CFD9E0D91E621F900075A020 /* BluetoothManager.swift in Sources */,
 				99F2DF5B1E61F07C0044D361 /* Tree.swift in Sources */,
 				99F2DF591E61F06C0044D361 /* Scoreboard.swift in Sources */,
+				CF1642ED1E6297C8004D48CB /* AchievmentCell.swift in Sources */,
+				CF1642EF1E6297C8004D48CB /* EmployeeCell.swift in Sources */,
 				99F2DF531E61EA8F0044D361 /* TeamLeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
