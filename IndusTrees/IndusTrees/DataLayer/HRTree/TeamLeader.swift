@@ -44,7 +44,7 @@ class TeamLeader: Employee, ManagerType {
 		switch task.state {
 			case .finished:
 				self.delegate?.leader(willValidate: task)
-					task.state = .validated
+					task.state = .validated(self)
 				self.delegate?.leader(didValidate: task)
 			default: return
 		}

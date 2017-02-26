@@ -40,7 +40,31 @@ enum TaskState<T: EmployeeType> {
 	case unassigned
 	case assigned([T])
 	case finished([T])
-	case validated
+	case validated(T)
+
+	var value: Int {
+		switch self {
+			case .unassigned: return 0
+			case .assigned(_): return 1
+			case .finished(_): return 2
+			case .validated(_): return 3
+		}
+	}
+
+	var employeeId: [UInt16]? {
+		switch self {
+			case let .assigned(e): return e.map{ $0.bid }
+			case let .finished(e): return e.map{ $0.bid }
+			default: return nil
+		}
+	}
+
+	var managerId: UInt16? {
+		switch self {
+			case let .validated(e): return e.bid
+			default: return nil
+		}
+	}
 }
 
 class Task: BeaconIndentifiable {
