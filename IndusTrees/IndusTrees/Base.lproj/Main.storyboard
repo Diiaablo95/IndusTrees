@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dGx-qg-RIt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dFc-iV-Zaq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -444,10 +444,11 @@
                             <constraint firstItem="wT4-h5-jdm" firstAttribute="leading" secondItem="725-O7-4Bz" secondAttribute="leadingMargin" constant="4" id="y64-SU-qBP"/>
                         </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N1C-rd-kU2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2989.5999999999999" y="1160.8695652173915"/>
+            <point key="canvasLocation" x="2990" y="1138"/>
         </scene>
         <!--Employee Menu Controller-->
         <scene sceneID="yCb-B1-GeF">
@@ -846,6 +847,7 @@
                             <constraint firstItem="i7t-gj-HRM" firstAttribute="leading" secondItem="jpl-kG-h88" secondAttribute="leading" constant="10" id="zSu-8T-Qed"/>
                         </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="Profile" destination="bBB-Wv-yRl" id="Vri-4j-4qp"/>
                         <outlet property="dataNascita" destination="5nl-gp-DLP" id="Bc7-EH-41G"/>
@@ -955,6 +957,7 @@
                             <constraint firstItem="eTo-0j-1aQ" firstAttribute="top" secondItem="IPe-yk-3QV" secondAttribute="bottom" constant="8" id="yXf-5g-bcu"/>
                         </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="tableView" destination="Wxi-35-coM" id="rbM-de-VIG"/>
                     </connections>
