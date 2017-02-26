@@ -82,6 +82,9 @@ class Task: BeaconIndentifiable {
 
 	var comments: [Employee: [(String, on: Date)]] = [:]
 
+	var checklist: [String: Bool] = [:]
+	var reminder: [String: (Date, text: String)] = [:]
+
 	var state: TaskState<Employee> = .unassigned {
 		didSet {
 			switch state {
