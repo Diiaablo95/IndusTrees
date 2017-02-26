@@ -6,66 +6,79 @@
 //  Copyright © 2017 CheeriOS. All rights reserved.
 //
 
-protocol TimeTraceable {
-	var presenceTime: Int64 { get }
-}
-
-protocol Prizable {
-	var achivements: Set<Achivement> { get set }
-}
-
-protocol EmployeeType: Improvable, Evaluatable, TimeTraceable {
-	var account: Account { get }
-}
 
 
+import Foundation
 
+class Employee: /*Node,*/ EmployeeType {
 
+	//MARK: TaskHandlerDelegate
+	var delegate: TaskHandlerDelegate?
 
-extension Improvable {
-	mutating func train(with experience: Int) { self.currentExp += experience }
-	mutating func forget(experience: Int) { self.currentExp -= experience }
-}
+	//MARK: EmployeeType
 
-extension Evaluatable {
-	mutating func add(score: Int) { self.currentScore += score }
-	mutating func subtract(score: Int) { self.currentScore -= score }
-}
+	let account: Account
+	var tasks: Set<Task> = []
+	var completedTasks: Set<Task> = []
 
-extension Prizable {
-	mutating func receive(achivement: Achivement) { self.achivements.insert(achivement) }
-}
+	var bid: UInt16 { return self.account.bid }
 
+	weak var teamLeader: TeamLeader? /*{
+		didSet {
+			self.ancestor = teamLeader
+		}
+	}*/
 
-
-
-
-
-
-class Employee: EmployeeType, Improvable, Evaluatable/*: Node */{
-	var account: Account
-	var tasks: [Task] = []
-
-	weak var teamLeader: TeamLeader?
-
-	var currentExp: Int64
-	var currentScore: Int64
-	var presenceTime: Int64
+	//MARK: Improvable
 
 	let startLevel: Int
-	var achivements: [Achivement] = []
+	var currentExp: Double
 
-	init(account: Account, at level: Int = 1, with score: Int64 = 0) {
+	//MARK: Evaluatable
+
+	var currentScore: Double
+	var achivements: Set<Achivement> = []
+
+	//MARK: TimeTraceable
+
+	typealias BadgeEvent = (presence: Bool, Date)
+
+	var presenceTime: Double = 0
+	var badgeHistory: [Employee.BadgeEvent] = []
+
+
+	init(account: Account, at level: Int = 1, with score: Double = 0) {
 		self.account = account
 		self.startLevel = level
 		self.currentScore = score
 		self.currentExp = Employee.scoreFunction(for: level)
 		self.presenceTime = 0
-//		super.init(id: self.account.id)
 	}
 
-	static func scoreFunction(for level: Int) -> Int64 {
-		return 1000*Int64(level*level)
+	static func scoreFunction(for level: Int) -> Double {
+		return 1000 * Double(level * level)
+	}
+
+	func recieve(assignment task: Task) {
+		self.delegate?.employee(willRecieve: task)
+			self.tasks.insert(task)
+		self.delegate?.employee(willRecieve: task)
+	}
+
+	func complete(task: Task) {
+		self.delegate?.employee(willMark: task, completed: true)
+			self.tasks.remove(task)
+			self.completedTasks.insert(task)
+		self.delegate?.employee(didMark: task, completed: true)
+	}
+
+	func add(comment: String, to task: Task) {
+		if task.comments[self] == nil {
+			task.comments[self] = []
+		}
+		self.delegate?.employee(willCommentOn: task, saying: comment)
+		task.comments[self]!.append(comment, on: Date(timeIntervalSinceNow: 0))
+		self.delegate?.employee(didCommentOn: task, saying: comment)
 	}
 
 }
