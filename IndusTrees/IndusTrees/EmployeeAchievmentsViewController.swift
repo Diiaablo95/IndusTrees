@@ -39,7 +39,7 @@ class EmployeeAchievmentsViewController: UIViewController, UITableViewDelegate, 
         
         cell.title.text = achi.name
         cell.intDescription.text = achi.description
-        cell.badge = UIImageView(image: #imageLiteral(resourceName: "hiddenImg"))
+        cell.badge = UIImageView(image: #imageLiteral(resourceName: "Trophy"))
         
         
         return cell

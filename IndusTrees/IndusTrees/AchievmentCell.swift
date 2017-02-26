@@ -25,7 +25,7 @@ class AchievmentCell: UITableViewCell {
         self.backgroundColor = .clear
         title.text = "title"
         intDescription.text = "description"
-        badge = UIImageView(image: #imageLiteral(resourceName: "hiddenImg"))
+        badge = UIImageView(image: #imageLiteral(resourceName: "Trophy"))
         
     }
     
