@@ -24,6 +24,14 @@ class EmployeeMenuController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        BluetoothManager.shared.setup()
+        NotificationManager.shared.setup()
+        LocationManager.shared.askForPermission(completionHandler: { result in
+            if result {
+                LocationManager.shared.startMonitoringForBeaconRegions()
+            }
+        })
+        
         self.project = DataStore.employee(with: LoginManager.shared.userId!)?.teamLeader?.projectManager?.project
         
         self.menuViews = [firstView, secondView, thirdView, fourthView, fifthView]

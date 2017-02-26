@@ -10,7 +10,7 @@
 		19B0B0921E62648D007438FF /* EmployeeAchievmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B0B0911E62648D007438FF /* EmployeeAchievmentsViewController.swift */; };
 		19B0B0941E62701E007438FF /* AchievmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B0B0931E62701E007438FF /* AchievmentCell.swift */; };
 		19B0B0961E627E40007438FF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B0B0951E627E40007438FF /* ProfileViewController.swift */; };
-		19DCC5BE1E62A92C00D87C19 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DCC5BD1E62A92C00D87C19 /* SettingsViewController.swift */; };
+		19DCC5BE1E62A92C00D87C19 /* BeaconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DCC5BD1E62A92C00D87C19 /* BeaconViewController.swift */; };
 		99F2DF3F1E61E8A80044D361 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF3E1E61E8A80044D361 /* Task.swift */; };
 		99F2DF4F1E61EA8F0044D361 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF4A1E61EA8F0044D361 /* Account.swift */; };
 		99F2DF501E61EA8F0044D361 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF4B1E61EA8F0044D361 /* Employee.swift */; };
@@ -22,9 +22,9 @@
 		99F2DF591E61F06C0044D361 /* Scoreboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF581E61F06C0044D361 /* Scoreboard.swift */; };
 		99F2DF5B1E61F07C0044D361 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF5A1E61F07C0044D361 /* Tree.swift */; };
 		99F2DF5D1E6203A50044D361 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF5C1E6203A50044D361 /* Mocks.swift */; };
+		CF12A05F1E62BDF600E21B04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF12A05E1E62BDF600E21B04 /* Assets.xcassets */; };
 		D38DCEC31E61DB9500FF9126 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCEC21E61DB9500FF9126 /* AppDelegate.swift */; };
 		D38DCEC81E61DB9500FF9126 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D38DCEC61E61DB9500FF9126 /* Main.storyboard */; };
-		D38DCECA1E61DB9500FF9126 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D38DCEC91E61DB9500FF9126 /* Assets.xcassets */; };
 		D38DCECD1E61DB9500FF9126 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D38DCECB1E61DB9500FF9126 /* LaunchScreen.storyboard */; };
 		D38DCEDB1E62269900FF9126 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCED81E62269900FF9126 /* LoginController.swift */; };
 		D38DCEDC1E62269900FF9126 /* TLMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCED91E62269900FF9126 /* TLMenuController.swift */; };
@@ -52,7 +52,7 @@
 		19B0B0911E62648D007438FF /* EmployeeAchievmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeAchievmentsViewController.swift; sourceTree = "<group>"; };
 		19B0B0931E62701E007438FF /* AchievmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievmentCell.swift; sourceTree = "<group>"; };
 		19B0B0951E627E40007438FF /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		19DCC5BD1E62A92C00D87C19 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		19DCC5BD1E62A92C00D87C19 /* BeaconViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconViewController.swift; sourceTree = "<group>"; };
 		99F2DF3E1E61E8A80044D361 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Task.swift; path = DataLayer/Task.swift; sourceTree = "<group>"; };
 		99F2DF4A1E61EA8F0044D361 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		99F2DF4B1E61EA8F0044D361 /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
@@ -64,10 +64,10 @@
 		99F2DF581E61F06C0044D361 /* Scoreboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scoreboard.swift; path = DataLayer/Scoreboard.swift; sourceTree = "<group>"; };
 		99F2DF5A1E61F07C0044D361 /* Tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 		99F2DF5C1E6203A50044D361 /* Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mocks.swift; path = IndusTrees/Mocks.swift; sourceTree = "<group>"; };
+		CF12A05E1E62BDF600E21B04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D38DCEBF1E61DB9500FF9126 /* IndusTrees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IndusTrees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38DCEC21E61DB9500FF9126 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D38DCEC71E61DB9500FF9126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D38DCEC91E61DB9500FF9126 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D38DCECC1E61DB9500FF9126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D38DCECE1E61DB9500FF9126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D38DCED81E62269900FF9126 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -130,13 +130,21 @@
 			path = DataLayer/HRTree;
 			sourceTree = "<group>";
 		};
-		D38DCEB61E61DB9500FF9126 = {
+		CF12A05B1E62BC2600E21B04 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				D3FF899A1E62BA52002BFC67 /* BluetoothManager.swift */,
 				D3FF899B1E62BA52002BFC67 /* LocationManager.swift */,
 				D3FF899C1E62BA52002BFC67 /* LoginManager.swift */,
 				D3FF899D1E62BA52002BFC67 /* NotificationManager.swift */,
+			);
+			name = Managers;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		D38DCEB61E61DB9500FF9126 = {
+			isa = PBXGroup;
+			children = (
 				99F2DF5C1E6203A50044D361 /* Mocks.swift */,
 				D38DCEC11E61DB9500FF9126 /* IndusTrees */,
 				D38DCEC01E61DB9500FF9126 /* Products */,
@@ -156,11 +164,13 @@
 			children = (
 				D38DCEED1E62434E00FF9126 /* IndusTrees.entitlements */,
 				99F2DF3B1E61DC610044D361 /* DataLayer */,
+				CF12A05B1E62BC2600E21B04 /* Managers */,
 				D38DCEDE1E6226AC00FF9126 /* Controller */,
-				D38DCEC21E61DB9500FF9126 /* AppDelegate.swift */,
 				D38DCEE81E623A3F00FF9126 /* View */,
 				D38DCECE1E61DB9500FF9126 /* Info.plist */,
 				D3D1E9A31E6248BB00127184 /* Utilities.swift */,
+				CF12A05E1E62BDF600E21B04 /* Assets.xcassets */,
+				D38DCEC21E61DB9500FF9126 /* AppDelegate.swift */,
 			);
 			path = IndusTrees;
 			sourceTree = "<group>";
@@ -171,7 +181,6 @@
 				D38DCED81E62269900FF9126 /* LoginController.swift */,
 				D38DCEE11E622E1200FF9126 /* Employee */,
 				D38DCEDF1E62289600FF9126 /* TL */,
-				19DCC5BD1E62A92C00D87C19 /* SettingsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -179,6 +188,7 @@
 		D38DCEDF1E62289600FF9126 /* TL */ = {
 			isa = PBXGroup;
 			children = (
+				19DCC5BD1E62A92C00D87C19 /* BeaconViewController.swift */,
 				D38DCEE61E62390D00FF9126 /* TLProjectsController.swift */,
 				D38DCED91E62269900FF9126 /* TLMenuController.swift */,
 				D38DCEDA1E62269900FF9126 /* TLTeamController.swift */,
@@ -210,7 +220,6 @@
 				D3FF89921E62AD7C002BFC67 /* TLTaskCell.swift */,
 				D3FF89981E62B4D1002BFC67 /* EmployeeTaskCell.swift */,
 				D38DCEEB1E623B1700FF9126 /* EmployeeCell.swift */,
-				D38DCEC91E61DB9500FF9126 /* Assets.xcassets */,
 				D38DCECB1E61DB9500FF9126 /* LaunchScreen.storyboard */,
 				19B0B0931E62701E007438FF /* AchievmentCell.swift */,
 			);
@@ -250,10 +259,10 @@
 					D38DCEBE1E61DB9500FF9126 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 32GQG5U36S;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -283,7 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D38DCECD1E61DB9500FF9126 /* LaunchScreen.storyboard in Resources */,
-				D38DCECA1E61DB9500FF9126 /* Assets.xcassets in Resources */,
+				CF12A05F1E62BDF600E21B04 /* Assets.xcassets in Resources */,
 				D38DCEC81E61DB9500FF9126 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,7 +339,7 @@
 				99F2DF591E61F06C0044D361 /* Scoreboard.swift in Sources */,
 				99F2DF531E61EA8F0044D361 /* TeamLeader.swift in Sources */,
 				D38DCEE71E62390D00FF9126 /* TLProjectsController.swift in Sources */,
-				19DCC5BE1E62A92C00D87C19 /* SettingsViewController.swift in Sources */,
+				19DCC5BE1E62A92C00D87C19 /* BeaconViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,13 +460,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = IndusTrees/IndusTrees.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 32GQG5U36S;
 				INFOPLIST_FILE = IndusTrees/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.saltarelli.IndusTrees;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bb043682-e743-465c-b2d6-0dd2990db91b";
+				PROVISIONING_PROFILE_SPECIFIER = Testing_push_notifications;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -466,9 +476,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = IndusTrees/IndusTrees.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 32GQG5U36S;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IndusTrees/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.saltarelli.IndusTrees;

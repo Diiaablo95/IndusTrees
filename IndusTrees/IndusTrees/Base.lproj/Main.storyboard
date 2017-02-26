@@ -1147,6 +1147,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UfH-En-A31">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                            </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="31d-TD-5hV">
                                 <rect key="frame" x="20" y="180" width="336" height="398"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1219,16 +1222,14 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJv-9h-Qjt">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJv-9h-Qjt">
                                 <rect key="frame" x="104" y="601" width="167" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <state key="normal" title="Add a Member" backgroundImage="Add Member Button"/>
                                 <state key="highlighted" backgroundImage="Add Member Button Highlited"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="headbox" translatesAutoresizingMaskIntoConstraints="NO" id="hVF-x2-7k7">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="headbox" translatesAutoresizingMaskIntoConstraints="NO" id="hVF-x2-7k7">
                                 <rect key="frame" x="-38" y="35" width="450" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tasks" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="rxW-W9-6v7">
                                 <rect key="frame" x="20" y="42" width="158" height="36"/>
@@ -1239,6 +1240,12 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="UfH-En-A31" secondAttribute="trailing" id="3l6-P2-Sea"/>
+                            <constraint firstItem="UfH-En-A31" firstAttribute="top" secondItem="hVF-x2-7k7" secondAttribute="bottom" id="7zK-br-c3B"/>
+                            <constraint firstItem="BJv-9h-Qjt" firstAttribute="top" secondItem="UfH-En-A31" secondAttribute="bottom" id="KIj-9h-oDz"/>
+                            <constraint firstItem="UfH-En-A31" firstAttribute="leading" secondItem="UWK-Wd-M9C" secondAttribute="leadingMargin" id="Y8p-g7-0pk"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="memberTableView" destination="LCu-us-u4F" id="LTv-Ub-3Hs"/>

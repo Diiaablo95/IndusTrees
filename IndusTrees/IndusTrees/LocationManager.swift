@@ -28,7 +28,6 @@ protocol LocationChangeDelegate: class {
 
 class LocationManager: NSObject {
     
-    static let MAXIMUM_TIME_CACHE = 60.0    //60 s
     
     fileprivate var manager: CLLocationManager!
     //Used to give back to client the result of the permission alert shown when the GPS is required for the first time to the OS
@@ -68,10 +67,7 @@ class LocationManager: NSObject {
         
         self.regionsMonitored = [
             CLBeaconRegion(proximityUUID: LocationManager.AdditionalRegions.BEACON_PRESENCE_FOUND, identifier: "it.cheerios"),
-            CLBeaconRegion(proximityUUID: BluetoothManager.BeaconRegions.TASK_ADDED, identifier: "it.cheerios2"),
-            CLBeaconRegion(proximityUUID: BluetoothManager.BeaconRegions.TASK_COMPLETED, identifier: "it.cheerios3"),
-            CLBeaconRegion(proximityUUID: BluetoothManager.BeaconRegions.TASK_VALIDATED, identifier: "it.cheerios4"),
-            CLBeaconRegion(proximityUUID: BluetoothManager.BeaconRegions.PRESENCE_REGISTERED, identifier: "it.cheerios5")
+            CLBeaconRegion(proximityUUID: BluetoothManager.BeaconRegions.PRESENCE_REGISTERED, identifier: "it.cheerios2")
         ]
     }
     
@@ -140,7 +136,9 @@ extension LocationManager: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
         print("Manager started monitoring for region: \(region)")
-        print(self.monitoredRegions)
+        if self.monitoredRegions.count == 5 {
+            print(self.monitoredRegions)
+        }
     }
     
     //Since this method gets called every second, we need to keep trace of the reports already handled (if more than one report at every speciic time)

@@ -1,17 +1,17 @@
 //
-//  ViewController.swift
-//  BeaconSimulator
+//  BeaconViewController.swift
+//  IndusTrees
 //
-//  Created by Antonio Antonino on 25/02/2017.
-//  Copyright © 2017 diiaablo. All rights reserved.
+//  Created by Andrea Vultaggio on 26/02/2017.
+//  Copyright © 2017 Saltarelli. All rights reserved.
 //
 
 import UIKit
 import CoreBluetooth
 import CoreLocation
 
-class ViewController: UIViewController {
-
+class BeaconViewController: UIViewController {
+    
     private var beaconManager: CBPeripheralManager!
     
     fileprivate let beaconRegion = CLBeaconRegion(proximityUUID: UUID(uuidString: "33EFC68F-7042-4BB6-B0B2-A0A5C8637A76")!, identifier: "it.cheerios")
@@ -45,10 +45,10 @@ class ViewController: UIViewController {
         }
         sender.isSelected = !sender.isSelected
     }
-
+    
 }
 
-extension ViewController: CBPeripheralManagerDelegate {
+extension BeaconViewController: CBPeripheralManagerDelegate {
     
     public func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
         print("New status for bluetooth: \(peripheral.state)")

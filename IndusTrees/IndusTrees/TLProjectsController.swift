@@ -17,7 +17,14 @@ class TLProjectsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
+        BluetoothManager.shared.setup()
+        NotificationManager.shared.setup()
+        LocationManager.shared.askForPermission(completionHandler: { result in
+            if result {
+                LocationManager.shared.startMonitoringForBeaconRegions()
+            }
+        })
+        
         self.projectsCollectionView.dataSource = self
         self.projectsCollectionView.delegate = self
         

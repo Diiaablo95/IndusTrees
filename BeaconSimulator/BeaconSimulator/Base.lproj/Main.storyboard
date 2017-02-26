@@ -21,21 +21,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="md9-0T-Tnj">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="vCU-xp-8AI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="md9-0T-Tnj">
                                 <rect key="frame" x="90" y="237" width="194" height="192"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="192" id="GAd-uw-v0b"/>
+                                    <constraint firstAttribute="width" constant="194" id="QdO-Sn-GO6"/>
+                                </constraints>
                                 <state key="normal" title="Beacon" image="Beacon Icon"/>
-                                <state key="selected" image="Beacon Icon On"/>
+                                <state key="selected" image="Vector Smart Object"/>
                                 <connections>
                                     <action selector="onBeaconPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MS3-fp-Ois"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Static Brackground" translatesAutoresizingMaskIntoConstraints="NO" id="vCU-xp-8AI">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="md9-0T-Tnj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BE5-Xm-12t"/>
+                            <constraint firstItem="md9-0T-Tnj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NAb-WE-mo4"/>
+                            <constraint firstItem="vCU-xp-8AI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NQs-A9-ZLD"/>
+                            <constraint firstItem="vCU-xp-8AI" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="vM9-lY-kSm"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="vCU-xp-8AI" id="6c3-nA-VJL"/>
@@ -47,8 +55,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Background" width="375" height="667"/>
         <image name="Beacon Icon" width="194" height="192"/>
-        <image name="Beacon Icon On" width="194" height="192"/>
-        <image name="Static Brackground" width="375" height="667"/>
+        <image name="Vector Smart Object" width="194" height="192"/>
     </resources>
 </document>

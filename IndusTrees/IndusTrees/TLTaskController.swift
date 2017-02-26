@@ -18,7 +18,6 @@ class TLTaskController: UIViewController {
 
         self.taskTableView.dataSource = self
         self.taskTableView.delegate = self
-        // Do any additional setup after loading the view.
     }
 
 }
@@ -32,8 +31,6 @@ extension TLTaskController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "tlTaskCell") as! TLTaskCell
-        
-        //Configure
         
         return cell
     }

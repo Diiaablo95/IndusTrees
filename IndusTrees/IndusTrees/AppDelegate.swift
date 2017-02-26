@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,19 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        if let id = LoginManager.shared.userId {
-            if DataStore.employee(with: id) != nil {
-                let mainController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tlProjectsController") as! TLProjectsController
-                let previousRootController = self.window?.rootViewController
-                self.window?.rootViewController = mainController
-                previousRootController?.dismiss(animated: false, completion: nil)
-            } else if DataStore.teamLeader(with: id) != nil {
-                let mainController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EmployeeMenuController") as! EmployeeMenuController
-                let previousRootController = self.window?.rootViewController
-                self.window?.rootViewController = mainController
-                previousRootController?.dismiss(animated: false, completion: nil)
+        BluetoothManager.shared.setup()
+        NotificationManager.shared.setup()
+        LocationManager.shared.askForPermission(completionHandler: { result in
+            if result {
+                LocationManager.shared.startMonitoringForBeaconRegions()
             }
-        }
+        })
         
         UIApplication.shared.statusBarStyle = .lightContent
         
@@ -37,3 +32,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate: PresenceRegionListener {
+    
+    func manager(_ locationManager: LocationManager, didReceivePresenceUpdateFromUser userId: UInt16) {
+        NotificationManager.shared.shced
+    }
+
+    
+    func manager(_ locationManager: LocationManager, didFindPresenceRegion: CLBeaconRegion) {
+        BluetoothManager.shared.sendNotificationForPresenceToRegister(forUserId: LoginManager.shared.userId!)
+    }
+
+    
+}

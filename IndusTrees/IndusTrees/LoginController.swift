@@ -20,7 +20,6 @@ class LoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
         self.configure()
     }
     
@@ -38,25 +37,26 @@ class LoginController: UIViewController {
     
     @IBAction func loginDidTap(_ sender: UIButton) {
         let email = self.usernameTextField.text!
-        
-        guard let account = Mocks.account(withEmail: email) else {
-            print("Could not find an account for: \(email)")
-            return
-        }
-        //Storing user id into the LoginManager
-        LoginManager.shared.userId = account.bid
-        
-        if let manager = (Mocks.projectManagers.first { $0.account.bid == account.bid }) {
-            self.performSegue(withIdentifier: "showProjects", sender: nil)
-        }
-        
-        if let leader = (Mocks.teamLeaders.first { $0.account.bid == account.bid }) {
-            self.performSegue(withIdentifier: "showProjects", sender: nil)
-        }
-        
-        if let employee = (Mocks.employees.first { $0.account.bid == account.bid }) {
-            self.performSegue(withIdentifier: "showMenu", sender: nil)
-        }
+        BluetoothManager.shared.sendNotificationForTaskAdded(taskId: 12, forUserId: 12)
+//        
+//        guard let account = Mocks.account(withEmail: email) else {
+//            print("Could not find an account for: \(email)")
+//            return
+//        }
+//        //Storing user id into the LoginManager
+//        LoginManager.shared.userId = account.bid
+//        
+//        if let manager = (Mocks.projectManagers.first { $0.account.bid == account.bid }) {
+//            self.performSegue(withIdentifier: "showProjects", sender: nil)
+//        }
+//        
+//        if let leader = (Mocks.teamLeaders.first { $0.account.bid == account.bid }) {
+//            self.performSegue(withIdentifier: "showProjects", sender: nil)
+//        }
+//        
+//        if let employee = (Mocks.employees.first { $0.account.bid == account.bid }) {
+//            self.performSegue(withIdentifier: "showMenu", sender: nil)
+//        }
     }
     
     private func animateView() {
