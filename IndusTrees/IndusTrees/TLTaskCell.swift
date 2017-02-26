@@ -10,7 +10,6 @@ import UIKit
 
 class TLTaskCell: UITableViewCell {
 
-    @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var taskTitle: UILabel!
     @IBOutlet weak var taskDescription: UILabel!
 

@@ -11,8 +11,9 @@ import UIKit
 class TLTeamController: UIViewController {
     
     @IBOutlet weak var memberTableView: UITableView!
+    @IBOutlet weak var imageTextField: UIImageView!
     
-    var teamMembers: [Employee]!
+    var teamMembers: [Employee] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,26 @@ extension TLTeamController: UITableViewDataSource, UITableViewDelegate {
        
         let cell = tableView.dequeueReusableCell(withIdentifier: "memberCellPlus", for: indexPath) as! EmployeePlusCell
         
+        cell.logo.image = self.teamMembers[indexPath.row].account.image
+        cell.labelName.text = self.teamMembers[indexPath.row].account.name + " " + self.teamMembers[indexPath.row].account.surname
+        
         return cell
+    }
+}
+
+extension TLTeamController: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.imageTextField.isHidden = true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.imageTextField.isHidden = false
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        return true
     }
 }

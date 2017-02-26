@@ -24,6 +24,8 @@ class EmployeeMenuController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
+
         self.project = DataStore.employee(with: LoginManager.shared.userId!)?.teamLeader?.projectManager?.project
         
         self.menuViews = [firstView, secondView, thirdView, fourthView, fifthView]
@@ -82,12 +84,15 @@ class EmployeeMenuController: UIViewController {
             
             let endAngle: CGFloat = CGFloat(11/10 * M_PI) + (CGFloat(2 * M_PI) * CGFloat(index) / CGFloat(self.menuViews.count))
             
+//            let finalPosition = CGPoint(x: view.center.x + (circRadius * cos(endAngle)), y: view.center.y + (circRadius * sin(endAngle)))
+            
             keyFrameAnimation.path = self.drawCircularPath(circRadius: circRadius, with: endAngle).cgPath
             keyFrameAnimation.duration = 1.3
             keyFrameAnimation.fillMode = kCAFillModeForwards
             keyFrameAnimation.isRemovedOnCompletion = false
             
-            view.layer.add(keyFrameAnimation, forKey: nil)
+            view.layer.add(keyFrameAnimation, forKey: "animation")
+
         }
     }
     

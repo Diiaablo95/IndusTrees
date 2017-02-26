@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d18-Ua-2WW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IMQ-t8-HLy">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -153,7 +153,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="newProjectCell" id="X9V-9Q-Qda" customClass="NewProjectCell" customModule="IndusTrees" customModuleProvider="target">
-                                        <rect key="frame" x="127" y="8" width="102" height="145"/>
+                                        <rect key="frame" x="126.5" y="8" width="102" height="145"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="102" height="145"/>
@@ -236,38 +236,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tasks" translatesAutoresizingMaskIntoConstraints="NO" id="Pjn-YI-j4I">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tasks" translatesAutoresizingMaskIntoConstraints="NO" id="Pjn-YI-j4I">
                                 <rect key="frame" x="16" y="66" width="82" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Achievements" translatesAutoresizingMaskIntoConstraints="NO" id="F49-Oe-dvw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Achievements" translatesAutoresizingMaskIntoConstraints="NO" id="F49-Oe-dvw">
                                 <rect key="frame" x="146" y="66" width="82" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Profile" translatesAutoresizingMaskIntoConstraints="NO" id="ULm-rl-Jkh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Profile" translatesAutoresizingMaskIntoConstraints="NO" id="ULm-rl-Jkh">
                                 <rect key="frame" x="277" y="66" width="82" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Settings" translatesAutoresizingMaskIntoConstraints="NO" id="R0G-al-SjA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Settings" translatesAutoresizingMaskIntoConstraints="NO" id="R0G-al-SjA">
                                 <rect key="frame" x="16" y="195" width="82" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Analytics" translatesAutoresizingMaskIntoConstraints="NO" id="R0a-GB-ceD">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Analytics" translatesAutoresizingMaskIntoConstraints="NO" id="R0a-GB-ceD">
                                 <rect key="frame" x="146" y="195" width="82" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Team" translatesAutoresizingMaskIntoConstraints="NO" id="jJW-jl-Vgh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Team" translatesAutoresizingMaskIntoConstraints="NO" id="jJW-jl-Vgh">
                                 <rect key="frame" x="277" y="195" width="82" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dzj-Mi-dBN">
+                                <rect key="frame" x="0.0" y="318" width="98" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="dGx-qg-RIt" kind="presentation" identifier="showTeam" id="ubo-fG-cHA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RU5-ET-Y4K">
+                                <rect key="frame" x="138" y="363" width="98" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ce-5A-16L">
+                                <rect key="frame" x="277" y="318" width="98" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="dFc-iV-Zaq" kind="presentation" identifier="showSettings" id="Xfl-8i-MJq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEU-8U-TeT">
+                                <rect key="frame" x="277" y="156" width="98" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="kHF-uw-8G0" kind="presentation" identifier="showProfile" id="uvM-Dv-TQn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILB-0T-Kqx">
+                                <rect key="frame" x="138" y="79" width="98" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lg-Zb-FBK">
+                                <rect key="frame" x="0.0" y="147" width="98" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="Idi-R0-geD" kind="presentation" identifier="showTasks" id="TDn-D8-PrJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -278,15 +314,11 @@
                         <outlet property="secondView" destination="F49-Oe-dvw" id="rFN-ga-Tqt"/>
                         <outlet property="sixthView" destination="jJW-jl-Vgh" id="m7A-ed-CPz"/>
                         <outlet property="thirdView" destination="ULm-rl-Jkh" id="hEq-Vb-XTY"/>
-                        <segue destination="dGx-qg-RIt" kind="presentation" identifier="showTeam" id="OKb-KT-vSc"/>
-                        <segue destination="kHF-uw-8G0" kind="presentation" identifier="showProfile" id="pRh-a1-O7o"/>
-                        <segue destination="Idi-R0-geD" kind="presentation" identifier="showTasks" id="lcv-LP-fq2"/>
-                        <segue destination="dFc-iV-Zaq" kind="presentation" identifier="showSettings" id="18A-Ld-NkF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="efd-H3-7h5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="583" y="-1185"/>
+            <point key="canvasLocation" x="581.60000000000002" y="-1185.1574212893554"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="1jp-MU-tuO">
@@ -425,6 +457,38 @@
                                     <outletCollection property="gestureRecognizers" destination="9cV-TI-8OK" appends="YES" id="80O-Sq-mcs"/>
                                 </connections>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOe-BN-mMa">
+                                <rect key="frame" x="16" y="372" width="142" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHi-ru-y4M">
+                                <rect key="frame" x="217" y="372" width="142" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="dFc-iV-Zaq" kind="presentation" identifier="showSettings" id="fOU-Az-t73"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbd-W3-XNb">
+                                <rect key="frame" x="233" y="236" width="142" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="kHF-uw-8G0" kind="presentation" identifier="showProfile" id="WT7-Rx-djR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ia-gk-XhP">
+                                <rect key="frame" x="127" y="100" width="142" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="hxh-9q-60A" kind="presentation" identifier="showAchievement" id="LKW-3R-bYU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezT-8j-uSn">
+                                <rect key="frame" x="0.0" y="224" width="142" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="hdT-Ce-Bri" kind="presentation" identifier="showTasks" id="rCs-da-FVG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -434,16 +498,12 @@
                         <outlet property="fourthView" destination="KEY-11-MNk" id="R5K-VQ-x4U"/>
                         <outlet property="secondView" destination="5FA-BY-N2B" id="hnu-YP-p8w"/>
                         <outlet property="thirdView" destination="AKF-cU-vnO" id="AHi-o7-ELI"/>
-                        <segue destination="hxh-9q-60A" kind="presentation" id="nmz-Rk-JXd"/>
-                        <segue destination="kHF-uw-8G0" kind="presentation" identifier="showProfile" id="PdW-0E-NbX"/>
-                        <segue destination="hdT-Ce-Bri" kind="presentation" identifier="showTasks" id="ets-6p-fKe"/>
-                        <segue destination="dFc-iV-Zaq" kind="presentation" identifier="showSettings" id="0ad-UU-VRB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MFM-RN-w8g" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="9cV-TI-8OK"/>
             </objects>
-            <point key="canvasLocation" x="689" y="404"/>
+            <point key="canvasLocation" x="688.79999999999995" y="403.44827586206901"/>
         </scene>
         <!--Team Controller-->
         <scene sceneID="X7M-Z6-6A7">
@@ -511,6 +571,10 @@
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <connections>
+                                                    <outlet property="buttonAchievement" destination="pzY-FO-GyA" id="0Ae-ln-32B"/>
+                                                    <outlet property="buttonTasks" destination="Uiy-Dz-16k" id="EPa-Cb-d9j"/>
+                                                    <outlet property="labelName" destination="vtG-h5-lGZ" id="YN4-OM-1ee"/>
+                                                    <outlet property="logo" destination="cBw-oo-bgL" id="jYH-Kl-szA"/>
                                                     <outlet property="viewCell" destination="wcQ-v1-jTu" id="qJ5-PA-ydN"/>
                                                 </connections>
                                             </tableViewCell>
@@ -550,12 +614,15 @@
                                 <rect key="frame" x="-38" y="35" width="450" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Team Name" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="vfh-0X-pbq">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="CheeriOS" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="vfh-0X-pbq">
                                 <rect key="frame" x="20" y="42" width="158" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="dGx-qg-RIt" id="nTI-0P-Mjw"/>
+                                </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ionicons" translatesAutoresizingMaskIntoConstraints="NO" id="Fpf-ed-DoH">
                                 <rect key="frame" x="194" y="51" width="18" height="21"/>
@@ -565,6 +632,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
+                        <outlet property="imageTextField" destination="Fpf-ed-DoH" id="SIg-sS-Fdb"/>
                         <outlet property="memberTableView" destination="9ow-tp-zUB" id="XJY-vE-hZh"/>
                     </connections>
                 </viewController>
@@ -782,12 +850,16 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="Profile" destination="bBB-Wv-yRl" id="Vri-4j-4qp"/>
+                        <outlet property="achievementButton" destination="6AT-Xm-SML" id="dTH-je-59b"/>
                         <outlet property="dataNascita" destination="5nl-gp-DLP" id="Bc7-EH-41G"/>
                         <outlet property="foto" destination="fYa-ld-fLN" id="EuA-Nd-4VJ"/>
                         <outlet property="level" destination="KV5-md-cxH" id="YBU-uV-Zsa"/>
                         <outlet property="nome" destination="uZF-4d-uqO" id="TOQ-kU-AlN"/>
                         <outlet property="ruolo" destination="2Il-f7-qbE" id="qsL-74-N3V"/>
                         <outlet property="task" destination="qnu-KF-IVK" id="U1g-TG-NSm"/>
+                        <outlet property="taskImageView" destination="qK1-BP-Gp8" id="3an-QH-UFi"/>
+                        <outlet property="tasksButton" destination="cV9-N1-GXd" id="53p-3d-mFn"/>
+                        <outlet property="teamButton" destination="xFa-Fh-dBQ" id="elR-Jx-Dkk"/>
                         <outlet property="xpPoints" destination="x5k-6q-mgh" id="VJW-5p-2Bh"/>
                     </connections>
                 </viewController>
@@ -896,7 +968,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3mb-Of-OGk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="689" y="1165"/>
+            <point key="canvasLocation" x="1158" y="1227"/>
         </scene>
         <!--Add Member Controller-->
         <scene sceneID="QhO-Ok-gOd">
@@ -919,7 +991,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="memberCellPlusAdd" id="gob-th-hbd" customClass="EmployeePlusAddCell" customModule="IndusTrees" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="employeePlusAddCell" id="gob-th-hbd" customClass="EmployeePlusAddCell" customModule="IndusTrees" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="336" height="58"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gob-th-hbd" id="ycM-6w-nNs">
@@ -967,7 +1039,6 @@
                                                     <outlet property="imageToHidden" destination="V0L-5g-IBs" id="CY2-JS-FLD"/>
                                                     <outlet property="imageVIew" destination="duq-yx-OEH" id="5il-S6-eQf"/>
                                                     <outlet property="labelName" destination="YrZ-Wi-iSl" id="yPK-Le-aCs"/>
-                                                    <outlet property="viewCell" destination="Q0X-2X-SeM" id="ez3-A7-dG0"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -985,13 +1056,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xan-hW-esF">
-                                <rect key="frame" x="104" y="601" width="167" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
-                                <state key="normal" title="Add a Member" backgroundImage="Add Member Button"/>
-                                <state key="highlighted" backgroundImage="Add Member Button Highlited"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Members" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25c-9f-Cty">
                                 <rect key="frame" x="127" y="133" width="121" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1084,10 +1148,8 @@
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <connections>
-                                                    <outlet property="logoImage" destination="NkM-0c-n0a" id="KgT-4h-Ibb"/>
                                                     <outlet property="taskDescription" destination="Ovl-dT-NBW" id="FRw-8G-xcV"/>
                                                     <outlet property="taskTitle" destination="lIz-xe-SCZ" id="N6P-KY-pMI"/>
-                                                    <outlet property="viewCell" destination="Svs-TN-yw8" id="W9Y-JF-Yet"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -1109,8 +1171,11 @@
                                 <rect key="frame" x="104" y="601" width="167" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
-                                <state key="normal" title="Add a Member" backgroundImage="Add Member Button"/>
+                                <state key="normal" title="Add a Task" backgroundImage="Add Member Button"/>
                                 <state key="highlighted" backgroundImage="Add Member Button Highlited"/>
+                                <connections>
+                                    <segue destination="Rfa-YV-9f2" kind="presentation" id="6B7-3y-wBQ"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="headbox" translatesAutoresizingMaskIntoConstraints="NO" id="Bw3-Dh-hnG">
                                 <rect key="frame" x="-38" y="35" width="450" height="57"/>
@@ -1127,7 +1192,6 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <outlet property="memberTableView" destination="2sK-Hy-lCs" id="392-kP-UBe"/>
                         <outlet property="taskTableView" destination="2sK-Hy-lCs" id="fQV-xP-GNh"/>
                     </connections>
                 </viewController>
@@ -1249,6 +1313,116 @@
             </objects>
             <point key="canvasLocation" x="1878" y="403"/>
         </scene>
+        <!--Add Task Controller-->
+        <scene sceneID="ygv-XG-2lm">
+            <objects>
+                <viewController id="Rfa-YV-9f2" customClass="TLAddTaskController" customModule="IndusTrees" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MhT-Bl-XTQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="iGW-o9-SjM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j4w-fY-Gjl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Z0-kx-css">
+                                <rect key="frame" x="20" y="180" width="336" height="398"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="58" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y0v-eZ-6iX">
+                                        <rect key="frame" x="0.0" y="12" width="336" height="378"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="memberCellPlusAdd" id="c69-c1-uDl" customClass="AddTaskCell" customModule="IndusTrees" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="336" height="58"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c69-c1-uDl" id="wgl-s5-bb8">
+                                                    <rect key="frame" x="0.0" y="0.0" width="336" height="58"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dcQ-dW-7Fu">
+                                                            <rect key="frame" x="20" y="8" width="296" height="46"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YOk-dL-QEo">
+                                                                    <rect key="frame" x="10" y="3" width="40" height="40"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                </imageView>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xs-1R-O5E">
+                                                                    <rect key="frame" x="260" y="4" width="28" height="41"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" image="MemberPlus"/>
+                                                                    <connections>
+                                                                        <action selector="addTask:" destination="c69-c1-uDl" eventType="touchUpInside" id="dCM-rk-96A"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="eia-Gk-QVs">
+                                                                    <rect key="frame" x="57" y="2" width="188" height="20"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="eZQ-xe-vqj">
+                                                                    <rect key="frame" x="57" y="24" width="188" height="20"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="1" green="0.81960784310000001" blue="0.99215686270000003" alpha="0.16" colorSpace="calibratedRGB"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="20"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <outlet property="logo" destination="YOk-dL-QEo" id="535-71-X5c"/>
+                                                    <outlet property="taskDescription" destination="eZQ-xe-vqj" id="OBg-T8-ctE"/>
+                                                    <outlet property="title" destination="eia-Gk-QVs" id="RDk-xO-0ba"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="37"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.20392156859999999" green="0.12941176469999999" blue="0.20392156859999999" alpha="0.39000000000000001" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="headbox" translatesAutoresizingMaskIntoConstraints="NO" id="7y7-a2-Kjf">
+                                <rect key="frame" x="-38" y="35" width="450" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Add Task" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="7hm-4d-9kK">
+                                <rect key="frame" x="20" y="45" width="158" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JB3-Vj-Rlu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2768.8000000000002" y="-1130.2848575712144"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Achievements" width="88" height="88"/>
@@ -1280,7 +1454,7 @@
         <image name="teamButton" width="88" height="88"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pRh-a1-O7o"/>
-        <segue reference="18A-Ld-NkF"/>
+        <segue reference="WT7-Rx-djR"/>
+        <segue reference="fOU-Az-t73"/>
     </inferredMetricsTieBreakers>
 </document>
