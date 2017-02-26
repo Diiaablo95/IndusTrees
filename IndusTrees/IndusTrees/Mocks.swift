@@ -21,11 +21,11 @@ class Mocks {
 	]
 
 	static var employees = [
-		Employee(account: DataStore.accounts[0]!),
-		Employee(account: DataStore.accounts[1]!),
-		Employee(account: DataStore.accounts[2]!),
-		Employee(account: DataStore.accounts[3]!),
-		Employee(account: DataStore.accounts[4]!)
+		Employee(account: DataStore.accounts[0]),
+		Employee(account: DataStore.accounts[1]),
+		Employee(account: DataStore.accounts[2]),
+		Employee(account: DataStore.accounts[3]),
+		Employee(account: DataStore.accounts[4])
 	]
 
 	static var teamLeaders = [
