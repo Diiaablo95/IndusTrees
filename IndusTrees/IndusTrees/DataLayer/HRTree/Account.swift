@@ -6,12 +6,15 @@
 //  Copyright © 2017 CheeriOS. All rights reserved.
 //
 
+import UIKit.UIImage
 
 class Account: BeaconIndentifiable {
 
 	var bid: UInt16
 	var email: String
 	private var token: String?
+
+	var image: UIImage?
 
 	init(id: UInt16, email: String, token: String) {
 		self.bid = id

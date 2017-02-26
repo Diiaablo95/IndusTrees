@@ -6,6 +6,8 @@
 //  Copyright © 2017 CheeriOS. All rights reserved.
 //
 
+import Foundation
+
 class TeamLeader: Employee, ManagerType {
 
 	var team: Set<Employee> = [] /*{
@@ -34,9 +36,9 @@ class TeamLeader: Employee, ManagerType {
 		return e
 	}
 
-	func assign(task: Task, to employee: Employee) {
+	func assign(task: Task, to employee: Employee, dueOn date: Date) {
 		self.delegate?.leader(willAssign: task, to: employee)
-		employee.recieve(assignment: task)
+		employee.recieve(assignment: task, dueOn: date)
 		self.delegate?.leader(didAssign: task, to: employee)
 	}
 
@@ -50,16 +52,16 @@ class TeamLeader: Employee, ManagerType {
 		}
 	}
 
-	func reassign(task: Task, to employee: Employee) {
-		self.reassign(task: task, to: [employee])
+	func reassign(task: Task, to employee: Employee, within date: Date) {
+		self.reassign(task: task, to: [employee], within: date)
 	}
 
 
-	func reassign(task: Task, to employees: [Employee]) {
+	func reassign(task: Task, to employees: [Employee], within date: Date) {
 		switch task.state {
 		case .finished:
 			self.delegate?.leader(willReopen: task)
-			task.state = .assigned(employees)
+			task.state = .assigned(employees, within: date)
 			self.delegate?.leader(didReopen: task)
 		default: return
 		}
