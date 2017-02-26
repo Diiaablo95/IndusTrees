@@ -24,8 +24,17 @@ class EmployeeMenuController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        BluetoothManager.shared.setup()
+        NotificationManager.shared.setup()
+        LocationManager.shared.askForPermission(completionHandler: { result in
+            if result {
+                LocationManager.shared.presenceDelegate = UIApplication.shared.delegate as! AppDelegate
+                LocationManager.shared.startMonitoringForBeaconRegions()
+            }
+        })
+        
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
-
+        
         self.project = DataStore.employee(with: LoginManager.shared.userId!)?.teamLeader?.projectManager?.project
         
         self.menuViews = [firstView, secondView, thirdView, fourthView, fifthView]
@@ -55,11 +64,6 @@ class EmployeeMenuController: UIViewController {
             let achievementsVC = segue.destination as! EmployeeAchievmentsViewController
             achievementsVC.achievments = DataStore.employee(with: LoginManager.shared.userId!)?.achivements.filter({ _ in return true })     //Transforms the set into array
         }
-//        } else if segue.identifier == "showTeamMembers" {
-//            let teamVC = segue.destination as! EmployeeTeamController
-//            let teamMembers = DataStore.employee(with: LoginManager.shared.userId!)?.teamLeader?.team
-//            teamVC.teamMembers = teamMembers?.filter({ _ in return true })
-//        }
     }
     
     private func animateView(to firstPosition: CGPoint, with circRadius: CGFloat) {

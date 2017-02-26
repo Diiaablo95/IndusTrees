@@ -21,6 +21,15 @@ class TLProjectsController: UIViewController {
         self.projectsCollectionView.dataSource = self
         self.projectsCollectionView.delegate = self
         
+        BluetoothManager.shared.setup()
+        NotificationManager.shared.setup()
+        LocationManager.shared.askForPermission(completionHandler: { result in
+            if result {
+                LocationManager.shared.presenceDelegate = UIApplication.shared.delegate as! AppDelegate
+                LocationManager.shared.startMonitoringForBeaconRegions()
+            }
+        })
+        
         self.projectManager = DataStore.projectManager
     }
     
