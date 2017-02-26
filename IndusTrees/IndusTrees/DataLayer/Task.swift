@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 protocol TaskHandlerDelegate {
 
 	func employee(didRecieve task: Task)
@@ -41,8 +40,8 @@ protocol TaskHandlerDelegate {
 
 enum TaskState<T: EmployeeType> {
 	case unassigned
-	case assigned([T])
-	case finished([T])
+	case assigned([T], within: Date)
+	case finished([T], on: Date)
 	case validated(T)
 
 	var value: Int {
@@ -56,8 +55,8 @@ enum TaskState<T: EmployeeType> {
 
 	var employeeId: [UInt16]? {
 		switch self {
-			case let .assigned(e): return e.map{ $0.bid }
-			case let .finished(e): return e.map{ $0.bid }
+			case let .assigned(e, _): return e.map{ $0.bid }
+			case let .finished(e, _): return e.map{ $0.bid }
 			default: return nil
 		}
 	}
@@ -90,7 +89,7 @@ class Task: BeaconIndentifiable {
 		didSet {
 			switch state {
 				case .unassigned: self.employees?.forEach { $0.tasks.remove(self); $0.completedTasks.remove(self) }
-				case let .assigned(e): e.forEach { $0.tasks.insert(self) }
+				case let .assigned(e, _): e.forEach { $0.tasks.insert(self) }
 				case .finished:	self.employees?.forEach { $0.tasks.remove(self) }
 				case .validated: for var employee in self.employees ?? [] {
 					employee.completedTasks.insert(self);
@@ -109,12 +108,12 @@ class Task: BeaconIndentifiable {
 		self.baseExperience = experience
 	}
 
-	func assign(to employee: Employee) {
-		self.state = .assigned([employee])
+	func assign(to employee: Employee, within date: Date) {
+		self.state = .assigned([employee], within: date)
 	}
 
-	func assign(to employees: [Employee]) {
-		self.state = .assigned(employees)
+	func assign(to employees: [Employee], within date: Date) {
+		self.state = .assigned(employees, within: date)
 	}
 
 	func revoke(from employee: Employee) {
