@@ -19,7 +19,7 @@
 		99F2DF5B1E61F07C0044D361 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF5A1E61F07C0044D361 /* Tree.swift */; };
 		99F2DF5D1E6203A50044D361 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF5C1E6203A50044D361 /* Mocks.swift */; };
 		CFD9E0D91E621F900075A020 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD9E0D61E621F900075A020 /* BluetoothManager.swift */; };
-		CFD9E0DA1E621F900075A020 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD9E0D71E621F900075A020 /* LocationManager.swift */; };
+		CFD9E0DA1E621F900075A020 /* MyLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD9E0D71E621F900075A020 /* MyLocationManager.swift */; };
 		CFD9E0DB1E621F900075A020 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD9E0D81E621F900075A020 /* NotificationManager.swift */; };
 		D38DCEC31E61DB9500FF9126 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCEC21E61DB9500FF9126 /* AppDelegate.swift */; };
 		D38DCEC51E61DB9500FF9126 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCEC41E61DB9500FF9126 /* ViewController.swift */; };
@@ -41,7 +41,7 @@
 		99F2DF5A1E61F07C0044D361 /* Tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 		99F2DF5C1E6203A50044D361 /* Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mocks.swift; path = IndusTrees/Mocks.swift; sourceTree = "<group>"; };
 		CFD9E0D61E621F900075A020 /* BluetoothManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
-		CFD9E0D71E621F900075A020 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		CFD9E0D71E621F900075A020 /* MyLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLocationManager.swift; sourceTree = "<group>"; };
 		CFD9E0D81E621F900075A020 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		D38DCEBF1E61DB9500FF9126 /* IndusTrees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IndusTrees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38DCEC21E61DB9500FF9126 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				CFD9E0D61E621F900075A020 /* BluetoothManager.swift */,
-				CFD9E0D71E621F900075A020 /* LocationManager.swift */,
+				CFD9E0D71E621F900075A020 /* MyLocationManager.swift */,
 				CFD9E0D81E621F900075A020 /* NotificationManager.swift */,
 			);
 			name = Managers;
@@ -227,7 +227,7 @@
 			files = (
 				99F2DF551E61ED200044D361 /* EmployeeProtocols.swift in Sources */,
 				99F2DF3F1E61E8A80044D361 /* Task.swift in Sources */,
-				CFD9E0DA1E621F900075A020 /* LocationManager.swift in Sources */,
+				CFD9E0DA1E621F900075A020 /* MyLocationManager.swift in Sources */,
 				99F2DF4F1E61EA8F0044D361 /* Account.swift in Sources */,
 				D38DCEC51E61DB9500FF9126 /* ViewController.swift in Sources */,
 				99F2DF511E61EA8F0044D361 /* Node.swift in Sources */,
