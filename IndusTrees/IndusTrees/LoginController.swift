@@ -10,7 +10,7 @@ import UIKit
 
 class LoginController: UIViewController {
     
-    fileprivate static let logoMinY: CGFloat = 86
+    fileprivate static let logoMinY: CGFloat = 80
     
     @IBOutlet weak var viewLogo: UIImageView!
     @IBOutlet weak var usernameTextField: UITextField!
@@ -63,7 +63,7 @@ class LoginController: UIViewController {
     
         UIView.animate(withDuration: 1.25, delay: 0, options: .curveEaseIn, animations: {
             
-            let logoScaledWidth: CGFloat = self.viewLogo.frame.width / 2
+            let logoScaledWidth: CGFloat = self.viewLogo.frame.width * 3/4
 
             self.viewLogo.bounds.size = CGSize(width: logoScaledWidth, height: logoScaledWidth)
             self.viewLogo.center.y = (logoScaledWidth / 2) + LoginController.logoMinY

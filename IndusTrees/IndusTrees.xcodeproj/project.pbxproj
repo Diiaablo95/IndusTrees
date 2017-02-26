@@ -29,13 +29,18 @@
 		D38DCEDC1E62269900FF9126 /* TLMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCED91E62269900FF9126 /* TLMenuController.swift */; };
 		D38DCEDD1E62269900FF9126 /* TLTeamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCEDA1E62269900FF9126 /* TLTeamController.swift */; };
 		D38DCEE31E622E4A00FF9126 /* EmployeeMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCEE21E622E4A00FF9126 /* EmployeeMenuController.swift */; };
-		D38DCEE51E6232CB00FF9126 /* EmployeeTeamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCEE41E6232CB00FF9126 /* EmployeeTeamController.swift */; };
 		D38DCEE71E62390D00FF9126 /* TLProjectsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCEE61E62390D00FF9126 /* TLProjectsController.swift */; };
 		D38DCEEA1E623B0600FF9126 /* EmployeePlusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCEE91E623B0600FF9126 /* EmployeePlusCell.swift */; };
 		D38DCEEC1E623B1700FF9126 /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DCEEB1E623B1700FF9126 /* EmployeeCell.swift */; };
 		D391D56B1E627E0300FD54EB /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D391D56A1E627E0300FD54EB /* ProjectCell.swift */; };
 		D3D1E9A41E6248BB00127184 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D1E9A31E6248BB00127184 /* Utilities.swift */; };
 		D3FF898D1E627E38002BFC67 /* NewProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF898C1E627E38002BFC67 /* NewProjectCell.swift */; };
+		D3FF898F1E62A9D3002BFC67 /* TLAddMemberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF898E1E62A9D3002BFC67 /* TLAddMemberController.swift */; };
+		D3FF89911E62AC02002BFC67 /* EmployeePlusAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF89901E62AC02002BFC67 /* EmployeePlusAddCell.swift */; };
+		D3FF89931E62AD7C002BFC67 /* TLTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF89921E62AD7C002BFC67 /* TLTaskCell.swift */; };
+		D3FF89951E62AE5D002BFC67 /* TLTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF89941E62AE5D002BFC67 /* TLTaskController.swift */; };
+		D3FF89971E62B3BB002BFC67 /* EmployeeTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF89961E62B3BB002BFC67 /* EmployeeTaskController.swift */; };
+		D3FF89991E62B4D1002BFC67 /* EmployeeTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF89981E62B4D1002BFC67 /* EmployeeTaskCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,7 +68,6 @@
 		D38DCED91E62269900FF9126 /* TLMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLMenuController.swift; sourceTree = "<group>"; };
 		D38DCEDA1E62269900FF9126 /* TLTeamController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLTeamController.swift; sourceTree = "<group>"; };
 		D38DCEE21E622E4A00FF9126 /* EmployeeMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeMenuController.swift; sourceTree = "<group>"; };
-		D38DCEE41E6232CB00FF9126 /* EmployeeTeamController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeTeamController.swift; sourceTree = "<group>"; };
 		D38DCEE61E62390D00FF9126 /* TLProjectsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLProjectsController.swift; sourceTree = "<group>"; };
 		D38DCEE91E623B0600FF9126 /* EmployeePlusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeePlusCell.swift; sourceTree = "<group>"; };
 		D38DCEEB1E623B1700FF9126 /* EmployeeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
@@ -71,6 +75,12 @@
 		D391D56A1E627E0300FD54EB /* ProjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
 		D3D1E9A31E6248BB00127184 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		D3FF898C1E627E38002BFC67 /* NewProjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewProjectCell.swift; sourceTree = "<group>"; };
+		D3FF898E1E62A9D3002BFC67 /* TLAddMemberController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLAddMemberController.swift; sourceTree = "<group>"; };
+		D3FF89901E62AC02002BFC67 /* EmployeePlusAddCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeePlusAddCell.swift; sourceTree = "<group>"; };
+		D3FF89921E62AD7C002BFC67 /* TLTaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLTaskCell.swift; sourceTree = "<group>"; };
+		D3FF89941E62AE5D002BFC67 /* TLTaskController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLTaskController.swift; sourceTree = "<group>"; };
+		D3FF89961E62B3BB002BFC67 /* EmployeeTaskController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeTaskController.swift; sourceTree = "<group>"; };
+		D3FF89981E62B4D1002BFC67 /* EmployeeTaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeTaskCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +167,8 @@
 				D38DCEE61E62390D00FF9126 /* TLProjectsController.swift */,
 				D38DCED91E62269900FF9126 /* TLMenuController.swift */,
 				D38DCEDA1E62269900FF9126 /* TLTeamController.swift */,
+				D3FF898E1E62A9D3002BFC67 /* TLAddMemberController.swift */,
+				D3FF89941E62AE5D002BFC67 /* TLTaskController.swift */,
 			);
 			name = TL;
 			sourceTree = "<group>";
@@ -165,9 +177,9 @@
 			isa = PBXGroup;
 			children = (
 				D38DCEE21E622E4A00FF9126 /* EmployeeMenuController.swift */,
-				D38DCEE41E6232CB00FF9126 /* EmployeeTeamController.swift */,
 				19B0B0911E62648D007438FF /* EmployeeAchievmentsViewController.swift */,
 				19B0B0951E627E40007438FF /* ProfileViewController.swift */,
+				D3FF89961E62B3BB002BFC67 /* EmployeeTaskController.swift */,
 			);
 			name = Employee;
 			sourceTree = "<group>";
@@ -179,6 +191,9 @@
 				D391D56A1E627E0300FD54EB /* ProjectCell.swift */,
 				D3FF898C1E627E38002BFC67 /* NewProjectCell.swift */,
 				D38DCEE91E623B0600FF9126 /* EmployeePlusCell.swift */,
+				D3FF89901E62AC02002BFC67 /* EmployeePlusAddCell.swift */,
+				D3FF89921E62AD7C002BFC67 /* TLTaskCell.swift */,
+				D3FF89981E62B4D1002BFC67 /* EmployeeTaskCell.swift */,
 				D38DCEEB1E623B1700FF9126 /* EmployeeCell.swift */,
 				D38DCEC91E61DB9500FF9126 /* Assets.xcassets */,
 				D38DCECB1E61DB9500FF9126 /* LaunchScreen.storyboard */,
@@ -268,24 +283,29 @@
 				19B0B0941E62701E007438FF /* AchievmentCell.swift in Sources */,
 				D38DCEE31E622E4A00FF9126 /* EmployeeMenuController.swift in Sources */,
 				D391D56B1E627E0300FD54EB /* ProjectCell.swift in Sources */,
+				D3FF89911E62AC02002BFC67 /* EmployeePlusAddCell.swift in Sources */,
+				D3FF89951E62AE5D002BFC67 /* TLTaskController.swift in Sources */,
 				99F2DF551E61ED200044D361 /* EmployeeProtocols.swift in Sources */,
 				D3FF898D1E627E38002BFC67 /* NewProjectCell.swift in Sources */,
 				D38DCEDD1E62269900FF9126 /* TLTeamController.swift in Sources */,
 				99F2DF3F1E61E8A80044D361 /* Task.swift in Sources */,
+				D3FF898F1E62A9D3002BFC67 /* TLAddMemberController.swift in Sources */,
 				99F2DF4F1E61EA8F0044D361 /* Account.swift in Sources */,
 				19B0B0961E627E40007438FF /* ProfileViewController.swift in Sources */,
 				D38DCEDB1E62269900FF9126 /* LoginController.swift in Sources */,
+				D3FF89991E62B4D1002BFC67 /* EmployeeTaskCell.swift in Sources */,
 				D38DCEEA1E623B0600FF9126 /* EmployeePlusCell.swift in Sources */,
 				99F2DF511E61EA8F0044D361 /* Node.swift in Sources */,
 				99F2DF5D1E6203A50044D361 /* Mocks.swift in Sources */,
 				D3D1E9A41E6248BB00127184 /* Utilities.swift in Sources */,
-				D38DCEE51E6232CB00FF9126 /* EmployeeTeamController.swift in Sources */,
 				99F2DF501E61EA8F0044D361 /* Employee.swift in Sources */,
 				19B0B0921E62648D007438FF /* EmployeeAchievmentsViewController.swift in Sources */,
 				99F2DF521E61EA8F0044D361 /* ProjectManager.swift in Sources */,
 				99F2DF571E61ED6D0044D361 /* Achivement.swift in Sources */,
 				D38DCEDC1E62269900FF9126 /* TLMenuController.swift in Sources */,
 				D38DCEEC1E623B1700FF9126 /* EmployeeCell.swift in Sources */,
+				D3FF89931E62AD7C002BFC67 /* TLTaskCell.swift in Sources */,
+				D3FF89971E62B3BB002BFC67 /* EmployeeTaskController.swift in Sources */,
 				D38DCEC31E61DB9500FF9126 /* AppDelegate.swift in Sources */,
 				99F2DF5B1E61F07C0044D361 /* Tree.swift in Sources */,
 				99F2DF591E61F06C0044D361 /* Scoreboard.swift in Sources */,
