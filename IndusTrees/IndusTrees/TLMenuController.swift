@@ -24,12 +24,24 @@ class TLMenuController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
+        self.configureImageView()
+
         self.menuViews = [firstView, secondView, thirdView, fourthView, fifthView, sixthView]
         
         self.menuViews.forEach({
             $0.center = self.view.center
             $0.layer.cornerRadius = $0.frame.height/2
         })
+    }
+    
+    func configureImageView() {
+       
+        self.sixthView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showTeam(_:))))
+    }
+    
+    func showTeam(_ sender: UITapGestureRecognizer) {
+        self.performSegue(withIdentifier: "showTeam", sender: nil)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -68,12 +80,17 @@ class TLMenuController: UIViewController {
             let endAngle: CGFloat = CGFloat(7/6 * M_PI) + (CGFloat(2 * M_PI) * CGFloat(index) / CGFloat(self.menuViews.count))
             
             keyFrameAnimation.path = self.drawCircularPath(circRadius: circRadius, with: endAngle).cgPath
-            keyFrameAnimation.duration = 2.0
+            keyFrameAnimation.duration = 1.3
             keyFrameAnimation.fillMode = kCAFillModeForwards
             keyFrameAnimation.isRemovedOnCompletion = false
             
+            if index == 0 {
+                keyFrameAnimation.delegate = self
+            }
+            
             view.layer.add(keyFrameAnimation, forKey: nil)
         }
+        
     }
     
     private func drawCircularPath(circRadius: CGFloat, with endPosition: CGFloat) -> UIBezierPath {
@@ -88,4 +105,14 @@ class TLMenuController: UIViewController {
 //        
 //        view.layer.addSublayer(shapeLayer)
     }
+}
+
+extension TLMenuController: CAAnimationDelegate {
+    
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        self.menuViews.forEach({
+            $0.frame = $0.layer.frame
+        })
+    }
+    
 }
