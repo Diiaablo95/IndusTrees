@@ -68,7 +68,7 @@ class EmployeeMenuController: UIViewController {
             let endAngle: CGFloat = CGFloat(11/10 * M_PI) + (CGFloat(2 * M_PI) * CGFloat(index) / CGFloat(self.menuViews.count))
             
             keyFrameAnimation.path = self.drawCircularPath(circRadius: circRadius, with: endAngle).cgPath
-            keyFrameAnimation.duration = 2.0
+            keyFrameAnimation.duration = 1.3
             keyFrameAnimation.fillMode = kCAFillModeForwards
             keyFrameAnimation.isRemovedOnCompletion = false
             

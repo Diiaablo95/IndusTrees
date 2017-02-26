@@ -11,11 +11,12 @@ import UIKit
 class TLProjectsController: UIViewController {
     
     @IBOutlet weak var projectsCollectionView: UICollectionView!
-    var projects: [String] = ["MindTheMap", "M@"]
+    var projects: [String] = ["MindMap", "M@"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
         self.projectsCollectionView.dataSource = self
         self.projectsCollectionView.delegate = self
     }
@@ -49,8 +50,8 @@ extension TLProjectsController: UICollectionViewDataSource, UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        if indexPath.item == 0 {
-            collectionView.insertItems(at: [indexPath])
-        }
+        guard indexPath.item != 0 else {return}
+        
+        self.performSegue(withIdentifier: "showMenu", sender: nil)
     }
 }
