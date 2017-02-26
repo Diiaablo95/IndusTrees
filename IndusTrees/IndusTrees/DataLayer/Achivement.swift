@@ -26,16 +26,22 @@ class AchivementStore {
 
 class Achivement: BeaconIndentifiable {
 
+	typealias Condition = () -> Bool
+
 	var bid: UInt16
 	var name: String
 	var description: String
 	var hidden: Bool = false
+	var condition: Condition
 
-	init(id: UInt16, name: String, description: String) {
+	init(id: UInt16, name: String, description: String, condition: @escaping Condition = { true }) {
 		self.bid = id
 		self.name = name
 		self.description = description
+		self.condition = condition
 	}
+
+	var assigned: Bool { return condition() }
 
 }
 

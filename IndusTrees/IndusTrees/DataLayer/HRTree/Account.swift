@@ -11,12 +11,23 @@ class Account: BeaconIndentifiable {
 
 	var bid: UInt16
 	var email: String
-	private var token: String
+	private var token: String?
 
-	init?(id: UInt16, email: String, token: String) {
+	init(id: UInt16, email: String, token: String) {
 		self.bid = id
 		self.email = email
 		self.token = token
+	}
+
+	init?(id: UInt16, email: String, password: String) {
+		self.bid = id
+		self.email = email
+		self.token = Account.authenticate(self, with: password)
+		if self.token == nil { return nil }
+	}
+
+	static func authenticate(_ account: Account, with password: String) -> String? {
+		return "?=ajgvqsfihgsbjhasdkjsdfu"
 	}
 
 }

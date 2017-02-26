@@ -3,7 +3,7 @@
 //  IndusTrees
 //
 //  Created by Gianluca Salvato on 25/02/2017.
-//  Copyright © 2017 Saltarelli. All rights reserved.
+//  Copyright © 2017 CherriOS. All rights reserved.
 //
 
 import Foundation
@@ -13,19 +13,19 @@ class Mocks {
 	private init() {}
 
 	static var accounts = [
-		Account(id: 0, email: "salvato.gianluca@hostname.it",	token: "?=ajgvqsfihgsbjhasdkjsdfu"),
-		Account(id: 2, email: "vultaggio.andrea@hostname.it",	token: "?=pkinbhfsajcxmbvhuigkjvs"),
-		Account(id: 3, email: "antonino.antonio@hostname.it",	token: "?=uvjcljbvnbwqdfjhnbsdjhb"),
-		Account(id: 4, email: "saltarelli.alberto@hostname.it",	token: "?=oihkcsvdjhgijdigjvbcsvd"),
-		Account(id: 5, email: "dalenasimone@hostname.it",		token: "?=fhbrjhtbmnfvkjsdhkbausg")
+		Account(id: 0, email: "salvato.gianluca@cherios.it",	token: "?=ajgvqsfihgsbjhasdkjsdfu"),
+		Account(id: 1, email: "vultaggio.andrea@cherios.it",	token: "?=pkinbhfsajcxmbvhuigkjvs"),
+		Account(id: 2, email: "antonino.antonio@cherios.it",	token: "?=uvjcljbvnbwqdfjhnbsdjhb"),
+		Account(id: 3, email: "saltarelli.alberto@cherios.it",	token: "?=oihkcsvdjhgijdigjvbcsvd"),
+		Account(id: 4, email: "dalenasimone@cherios.it",		token: "?=fhbrjhtbmnfvkjsdhkbausg")
 	]
 
 	static var employees = [
-		Employee(account: DataStore.accounts[0]!),
-		Employee(account: DataStore.accounts[1]!),
-		Employee(account: DataStore.accounts[2]!),
-		Employee(account: DataStore.accounts[3]!),
-		Employee(account: DataStore.accounts[4]!)
+		Employee(account: DataStore.accounts[0]),
+		Employee(account: DataStore.accounts[1]),
+		Employee(account: DataStore.accounts[2]),
+		Employee(account: DataStore.accounts[3]),
+		Employee(account: DataStore.accounts[4])
 	]
 
 	static var teamLeaders = [
@@ -38,10 +38,10 @@ class Mocks {
 	]
 
 	static var tasks = [
-		Task(id: 0, name: "Estimate project costs.", baseScore: 700),
-		Task(id: 1, name: "Engage market analysis.", baseScore: 500),
-		Task(id: 2, name: "Prepare use cases diagram.", baseScore: 1000),
-		Task(id: 3, name: "Prepare UML class diagram.", baseScore: 1000)
+		Task(id: 0, name: "Estimate project costs.", baseScore: 700, giving: 100),
+		Task(id: 1, name: "Engage market analysis.", baseScore: 500, giving: 100),
+		Task(id: 2, name: "Prepare use cases diagram.", baseScore: 1000, giving: 500),
+		Task(id: 3, name: "Prepare UML class diagram.", baseScore: 1000, giving: 500)
 	]
 
 
@@ -54,6 +54,10 @@ class Mocks {
 }
 
 extension Mocks {
+
+	static func account(withEmail address: String) -> Account? {
+		return DataStore.accounts.first { $0.email == address }
+	}
 
 	static func employee(with id: UInt16) -> Employee? {
 		return DataStore.employees.first { $0.account.bid == id }
