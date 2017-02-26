@@ -10,6 +10,7 @@
 		19B0B0921E62648D007438FF /* EmployeeAchievmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B0B0911E62648D007438FF /* EmployeeAchievmentsViewController.swift */; };
 		19B0B0941E62701E007438FF /* AchievmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B0B0931E62701E007438FF /* AchievmentCell.swift */; };
 		19B0B0961E627E40007438FF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B0B0951E627E40007438FF /* ProfileViewController.swift */; };
+		19DCC5BE1E62A92C00D87C19 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DCC5BD1E62A92C00D87C19 /* SettingsViewController.swift */; };
 		99F2DF3F1E61E8A80044D361 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF3E1E61E8A80044D361 /* Task.swift */; };
 		99F2DF4F1E61EA8F0044D361 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF4A1E61EA8F0044D361 /* Account.swift */; };
 		99F2DF501E61EA8F0044D361 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F2DF4B1E61EA8F0044D361 /* Employee.swift */; };
@@ -42,6 +43,7 @@
 		19B0B0911E62648D007438FF /* EmployeeAchievmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeAchievmentsViewController.swift; sourceTree = "<group>"; };
 		19B0B0931E62701E007438FF /* AchievmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievmentCell.swift; sourceTree = "<group>"; };
 		19B0B0951E627E40007438FF /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		19DCC5BD1E62A92C00D87C19 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		99F2DF3E1E61E8A80044D361 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Task.swift; path = DataLayer/Task.swift; sourceTree = "<group>"; };
 		99F2DF4A1E61EA8F0044D361 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		99F2DF4B1E61EA8F0044D361 /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				D38DCED81E62269900FF9126 /* LoginController.swift */,
 				D38DCEE11E622E1200FF9126 /* Employee */,
 				D38DCEDF1E62289600FF9126 /* TL */,
+				19DCC5BD1E62A92C00D87C19 /* SettingsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				99F2DF591E61F06C0044D361 /* Scoreboard.swift in Sources */,
 				99F2DF531E61EA8F0044D361 /* TeamLeader.swift in Sources */,
 				D38DCEE71E62390D00FF9126 /* TLProjectsController.swift in Sources */,
+				19DCC5BE1E62A92C00D87C19 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
