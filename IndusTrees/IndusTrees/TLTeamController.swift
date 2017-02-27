@@ -13,7 +13,7 @@ class TLTeamController: UIViewController {
     @IBOutlet weak var memberTableView: UITableView!
     @IBOutlet weak var imageTextField: UIImageView!
     
-    var teamMembers: [Employee] = []
+    var teamMembers: [Employee]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +28,9 @@ class TLTeamController: UIViewController {
     func configure() {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
         
+    }
+    @IBAction func chiydi(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 

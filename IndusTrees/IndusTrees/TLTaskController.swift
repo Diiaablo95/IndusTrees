@@ -24,6 +24,10 @@ class TLTaskController: UIViewController {
         
         self.tasks = DataStore.tasks.sorted { $0.0.bid < $0.1.bid }
     }
+    
+    @IBAction func chiydi(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
 
 }
 

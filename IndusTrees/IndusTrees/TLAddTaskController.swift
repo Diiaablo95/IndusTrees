@@ -23,6 +23,8 @@ class TLAddTaskController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func chiydi(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
 
 }

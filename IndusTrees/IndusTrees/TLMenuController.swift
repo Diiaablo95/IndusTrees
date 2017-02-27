@@ -18,6 +18,8 @@ class TLMenuController: UIViewController {
     @IBOutlet weak var fifthView: UIImageView!
     @IBOutlet weak var sixthView: UIImageView!
     
+    var isStoCazzo = false
+    
     var menuViews: [UIImageView]!
     var project: Project!
     
@@ -56,16 +58,19 @@ class TLMenuController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
+        if !self.isStoCazzo {
+            let circRadius: CGFloat = (UIScreen.main.bounds.width - self.menuViews.first!.bounds.width) / 2
+            
+            let firstPosition = CGPoint(
+                x: self.view.center.x + (circRadius * CGFloat(cos(Double(7/6 * M_PI)))),
+                y: self.view.center.y + (circRadius * CGFloat(sin(Double(7/6 * M_PI))))
+            )
+            
+            
+            self.animateView(to: firstPosition, with: circRadius)
+        }
         
-        let circRadius: CGFloat = (UIScreen.main.bounds.width - self.menuViews.first!.bounds.width) / 2
-        
-        let firstPosition = CGPoint(
-            x: self.view.center.x + (circRadius * CGFloat(cos(Double(7/6 * M_PI)))),
-            y: self.view.center.y + (circRadius * CGFloat(sin(Double(7/6 * M_PI))))
-        )
-        
-        
-        self.animateView(to: firstPosition, with: circRadius)
+        self.isStoCazzo = true
     }
     
     private func animateView(to firstPosition: CGPoint, with circRadius: CGFloat) {

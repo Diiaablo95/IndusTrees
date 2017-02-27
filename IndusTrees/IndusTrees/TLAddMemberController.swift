@@ -25,6 +25,10 @@ class TLAddMemberController: UIViewController {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func chiydi(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
