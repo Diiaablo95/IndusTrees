@@ -60,9 +60,29 @@ class EmployeeMenuController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let leader = (DataStore.projectManager.teamLeaders.first {
+            $0.team.contains(DataStore.employee(with: LoginManager.shared.userId!)!)
+        }) else { return }
+        
+        let team = leader.team.sorted { $0.0.bid < $0.1.bid }
+        
         if segue.identifier == "showAchievements" {
+            
             let achievementsVC = segue.destination as! EmployeeAchievmentsViewController
-            achievementsVC.achievments = DataStore.employee(with: LoginManager.shared.userId!)?.achivements.filter({ _ in return true })     //Transforms the set into array
+            achievementsVC.achievments = DataStore.achivements.enumerated().dropLast(10).map { $0.element }
+        }
+        
+        if segue.identifier == "showTeam" {
+            let destVC = segue.destination as! TLTeamController
+            
+            destVC.teamMembers = team
+        }
+        
+        if segue.identifier == "showTasks" {
+            let destVC = segue.destination as! EmployeeTaskController
+            
+            destVC.tasks = DataStore.tasks.enumerated().dropLast(4).map {$0.element}
         }
     }
     

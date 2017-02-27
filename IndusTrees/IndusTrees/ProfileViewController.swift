@@ -46,6 +46,10 @@ class ProfileViewController: UIViewController {
         }
     }
     
+    @IBAction func chiydi(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     private func hideUIElements() {
         self.taskImageView.isHidden = true
         

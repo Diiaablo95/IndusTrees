@@ -27,7 +27,7 @@ class EmployeeAchievmentsViewController: UIViewController {
 extension EmployeeAchievmentsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(achievments.count)
+        
         return self.achievments.count
     }
     

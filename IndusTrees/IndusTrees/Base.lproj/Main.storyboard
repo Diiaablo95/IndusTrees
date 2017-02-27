@@ -28,7 +28,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Placeholder" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gQi-l7-ooX">
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gQi-l7-ooX">
                                 <rect key="frame" x="59" y="341" width="258" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.32000000000000001" colorSpace="calibratedRGB"/>
@@ -58,7 +58,7 @@
                                     <action selector="loginDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4TB-KU-Dr9"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rlq-Wx-Vd9">
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rlq-Wx-Vd9">
                                 <rect key="frame" x="59" y="282" width="258" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.32000000000000001" colorSpace="calibratedRGB"/>
@@ -458,6 +458,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOe-BN-mMa">
                                 <rect key="frame" x="16" y="372" width="142" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="dGx-qg-RIt" kind="presentation" identifier="showTeam" id="7gh-39-MIm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHi-ru-y4M">
                                 <rect key="frame" x="217" y="372" width="142" height="128"/>
@@ -477,7 +480,7 @@
                                 <rect key="frame" x="127" y="100" width="142" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="hxh-9q-60A" kind="presentation" identifier="showAchievement" id="LKW-3R-bYU"/>
+                                    <segue destination="hxh-9q-60A" kind="presentation" identifier="showAchievements" id="LKW-3R-bYU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezT-8j-uSn">
@@ -515,6 +518,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mP0-wE-oN5">
+                                <rect key="frame" x="0.0" y="0.0" width="132" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="chiydi:" destination="dGx-qg-RIt" eventType="touchUpInside" id="sfd-Dl-huW"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TI3-lh-sjS">
                                 <rect key="frame" x="20" y="180" width="336" height="398"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -636,7 +646,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vCg-Dy-r9s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1364" y="-1871"/>
+            <point key="canvasLocation" x="1364" y="-1871.5142428785609"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="AAg-I3-DLr">
@@ -787,6 +797,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jcn-NW-qwT">
+                                <rect key="frame" x="0.0" y="0.0" width="102" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="chiydi:" destination="kHF-uw-8G0" eventType="touchUpInside" id="sJY-pt-AAs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -863,7 +880,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0xE-ib-Skn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1878" y="-366"/>
+            <point key="canvasLocation" x="1877.5999999999999" y="-366.56671664167919"/>
         </scene>
         <!--Employee Achievments View Controller-->
         <scene sceneID="MFA-Fk-ZIR">
@@ -881,9 +898,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headbox" translatesAutoresizingMaskIntoConstraints="NO" id="eTo-0j-1aQ">
-                                <rect key="frame" x="0.0" y="28" width="375" height="57"/>
+                                <rect key="frame" x="-38" y="26" width="450" height="57"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="eTo-0j-1aQ" secondAttribute="height" multiplier="125:19" id="9cB-6j-nF6"/>
+                                    <constraint firstAttribute="width" secondItem="eTo-0j-1aQ" secondAttribute="height" multiplier="125:19" constant="75" id="9cB-6j-nF6"/>
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="110" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wxi-35-coM">
@@ -943,6 +960,13 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7y-IE-To4">
+                                <rect key="frame" x="20" y="42" width="158" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -952,11 +976,11 @@
                             <constraint firstItem="Wxi-35-coM" firstAttribute="leading" secondItem="4Gb-Ji-F2h" secondAttribute="leading" constant="10" id="Dd2-Oh-FGZ"/>
                             <constraint firstAttribute="trailing" secondItem="Wxi-35-coM" secondAttribute="trailing" constant="10" id="E00-Ds-8NL"/>
                             <constraint firstAttribute="trailing" secondItem="KSJ-az-nx7" secondAttribute="trailing" id="K71-LR-Wnn"/>
-                            <constraint firstItem="Wxi-35-coM" firstAttribute="top" secondItem="eTo-0j-1aQ" secondAttribute="bottom" constant="28" id="Nhp-tY-mxp"/>
+                            <constraint firstItem="Wxi-35-coM" firstAttribute="top" secondItem="eTo-0j-1aQ" secondAttribute="bottom" constant="30" id="Nhp-tY-mxp"/>
                             <constraint firstItem="7FZ-2T-QYF" firstAttribute="top" secondItem="Wxi-35-coM" secondAttribute="bottom" constant="34" id="Xz5-RS-OIQ"/>
-                            <constraint firstItem="eTo-0j-1aQ" firstAttribute="leading" secondItem="4Gb-Ji-F2h" secondAttribute="leading" id="Zoa-c8-1Wg"/>
-                            <constraint firstAttribute="trailing" secondItem="eTo-0j-1aQ" secondAttribute="trailing" id="rfL-Da-84Y"/>
-                            <constraint firstItem="eTo-0j-1aQ" firstAttribute="top" secondItem="IPe-yk-3QV" secondAttribute="bottom" constant="8" id="yXf-5g-bcu"/>
+                            <constraint firstItem="eTo-0j-1aQ" firstAttribute="leading" secondItem="4Gb-Ji-F2h" secondAttribute="leading" constant="-38" id="Zoa-c8-1Wg"/>
+                            <constraint firstAttribute="trailing" secondItem="eTo-0j-1aQ" secondAttribute="trailing" constant="-37" id="rfL-Da-84Y"/>
+                            <constraint firstItem="eTo-0j-1aQ" firstAttribute="top" secondItem="IPe-yk-3QV" secondAttribute="bottom" constant="6" id="yXf-5g-bcu"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -966,7 +990,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3mb-Of-OGk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1158" y="1227"/>
+            <point key="canvasLocation" x="1157.5999999999999" y="1226.5367316341831"/>
         </scene>
         <!--Add Member Controller-->
         <scene sceneID="QhO-Ok-gOd">
@@ -1072,6 +1096,13 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMi-Q3-txv">
+                                <rect key="frame" x="0.0" y="-3" width="154" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="chiydi:" destination="veA-I7-tq5" eventType="touchUpInside" id="ryy-fJ-OV4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -1186,6 +1217,13 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojO-w6-5JW">
+                                <rect key="frame" x="0.0" y="0.0" width="148" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="chiydi:" destination="Idi-R0-geD" eventType="touchUpInside" id="od6-cO-0af"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -1260,9 +1298,11 @@
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <connections>
+                                                    <outlet property="labeldescription" destination="9kC-MI-tCw" id="sm6-xI-EpN"/>
                                                     <outlet property="logoImage" destination="lK2-Ju-XRg" id="2eF-Mb-Huw"/>
                                                     <outlet property="taskDescription" destination="9kC-MI-tCw" id="y7g-eT-pUU"/>
                                                     <outlet property="taskTitle" destination="VRa-kx-yGU" id="02X-YD-SGf"/>
+                                                    <outlet property="title" destination="VRa-kx-yGU" id="siw-us-ZGB"/>
                                                     <outlet property="viewCell" destination="mH0-Dh-dRm" id="LaV-kp-jW9"/>
                                                 </connections>
                                             </tableViewCell>
@@ -1413,6 +1453,13 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyw-0d-1bg">
+                                <rect key="frame" x="0.0" y="0.0" width="140" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="chiydi:" destination="Rfa-YV-9f2" eventType="touchUpInside" id="opz-Zj-0a0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -1455,7 +1502,8 @@
         <image name="teamButton" width="88" height="88"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WT7-Rx-djR"/>
-        <segue reference="fOU-Az-t73"/>
+        <segue reference="7gh-39-MIm"/>
+        <segue reference="uvM-Dv-TQn"/>
+        <segue reference="Xfl-8i-MJq"/>
     </inferredMetricsTieBreakers>
 </document>

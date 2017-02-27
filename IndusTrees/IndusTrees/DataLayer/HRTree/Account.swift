@@ -25,7 +25,7 @@ class Account: BeaconIndentifiable {
 		self.surname = surname
 		self.name = name
 		self.birthdate = birthdate
-		self.email = "\(name).\(surname)@hackhaton.org"
+		self.email = "\(name).\(surname)@hackathon.org"
 		self.token = token
 	}
 

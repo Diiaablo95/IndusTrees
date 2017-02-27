@@ -12,6 +12,8 @@ class EmployeeTaskController: UIViewController {
     
     @IBOutlet weak var taskTableView: UITableView!
     
+    var tasks: [Task]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,14 +32,15 @@ class EmployeeTaskController: UIViewController {
 extension EmployeeTaskController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return tasks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "employeeTaskCell") as! EmployeeTaskCell
         
-        //Configure
+        cell.title.text = tasks[indexPath.row].name
+        cell.labeldescription.text = tasks[indexPath.row].description
         
         return cell
     }
