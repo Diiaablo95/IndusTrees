@@ -91,8 +91,17 @@ extension Prizable {
 }
 
 extension TeamLeaderType {
-	func invite(employee: Employee) { self.team.insert(employee) }
-	func kick(employee: Employee) -> Employee? { return self.team.remove(employee) }
+	func invite(employee: Employee) {
+		if let leader = self as? TeamLeader {
+			employee.teamLeader = leader
+		}
+
+		self.team.insert(employee)
+	}
+	func kick(employee: Employee) -> Employee? {
+		employee.teamLeader = nil
+		return self.team.remove(employee)
+	}
 }
 
 extension ManagerType {
