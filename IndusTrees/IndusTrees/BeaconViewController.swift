@@ -81,16 +81,14 @@ extension BeaconViewController: CBPeripheralManagerDelegate {
 extension BeaconViewController: PresenceRegionListener {
     
     func manager(_ locationManager: LocationManager, didReceivePresenceUpdateFromUser userId: UInt16) {
-        self.nameLabel.text = DataStore.account(with: userId)!.name
-        self.surnameLabel.text = DataStore.account(with: userId)!.surname
         self.dateLabel.text = dateFormatterWithTime.string(from: Date())
         self.newEmployeeView.alpha = 0
         self.newEmployeeView.isHidden = false
         UIView.animate(withDuration: 1, animations: {
-            self.newEmployeeView.alpha = 1
+            self.newEmployeeView.alpha = 0.4
         }, completion: { completed in
             if completed {
-                UIView.animate(withDuration: 1, delay: 3, options: [], animations: {
+                UIView.animate(withDuration: 1, delay: 1.5, options: [], animations: {
                     self.newEmployeeView.alpha = 0
                 }, completion: { completed in
                     if completed {

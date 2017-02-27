@@ -33,17 +33,7 @@ class ProfileViewController: UIViewController {
         
         self.account = DataStore.account(withId: LoginManager.shared.userId!)
         
-        self.nome.text = self.account.email
-        self.dataNascita.text = self.account.birthdate
-        if DataStore.projectManager(with: self.account.bid) != nil {
-            self.ruolo.text = "Project manager"
-            self.hideUIElements()
-        } else if DataStore.teamLeader(with: self.account.bid) != nil {
-            self.ruolo.text = "Team Leader"
-            self.hideUIElements()
-        } else {
-            self.ruolo.text = "Employee"
-        }
+        self.foto.layer.cornerRadius = self.foto.frame.height / 2
     }
     
     @IBAction func chiydi(_ sender: UIButton) {
