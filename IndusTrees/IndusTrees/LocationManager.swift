@@ -68,10 +68,6 @@ class LocationManager: NSObject {
         
         self.regionsMonitored = [
             CLBeaconRegion(proximityUUID: LocationManager.AdditionalRegions.BEACON_PRESENCE_FOUND, identifier: "it.cheerios"),
-            CLBeaconRegion(proximityUUID: BluetoothManager.BeaconRegions.TASK_ADDED, identifier: "it.cheerios2"),
-            CLBeaconRegion(proximityUUID: BluetoothManager.BeaconRegions.TASK_COMPLETED, identifier: "it.cheerios3"),
-            CLBeaconRegion(proximityUUID: BluetoothManager.BeaconRegions.TASK_VALIDATED, identifier: "it.cheerios4"),
-            CLBeaconRegion(proximityUUID: BluetoothManager.BeaconRegions.PRESENCE_REGISTERED, identifier: "it.cheerios5")
         ]
     }
     

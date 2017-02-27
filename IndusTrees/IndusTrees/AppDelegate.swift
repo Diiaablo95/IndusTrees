@@ -23,18 +23,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
-
-extension AppDelegate: PresenceRegionListener {
-    
-    func manager(_ locationManager: LocationManager, didReceivePresenceUpdateFromUser userId: UInt16) {
-        print("OK")
-    }
-
-    
-    func manager(_ locationManager: LocationManager, didFindPresenceRegion: CLBeaconRegion) {
-        BluetoothManager.shared.sendNotificationForPresenceToRegister(forUserId: LoginManager.shared.userId!)
-    }
-    
-    
-    
-}

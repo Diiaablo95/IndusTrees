@@ -23,7 +23,7 @@ class BeaconViewController: UIViewController {
     
     private var beaconManager: CBPeripheralManager!
     
-    private var peripheralData: [String: Any]!
+    private var dataToSend: [String: Any]!
     
     @IBOutlet weak var newEmployeeView: UIView!
     
@@ -32,8 +32,8 @@ class BeaconViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var surnameLabel: UILabel!
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         
         LocationManager.shared.presenceDelegate = self.previousDelegate
     }
@@ -41,17 +41,18 @@ class BeaconViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.beaconManager = CBPeripheralManager(delegate: self, queue: nil)
         self.previousDelegate = LocationManager.shared.presenceDelegate
         LocationManager.shared.presenceDelegate = self
         
-        let peripheralData = beaconRegion.peripheralData(withMeasuredPower: nil)
+        let peripheralData = self.beaconRegion.peripheralData(withMeasuredPower: nil)
         var actualData: [String: Any] = [:]
         
         for (key, value) in peripheralData {
             actualData.updateValue(value, forKey: key as! String)
         }
         
-        print("Peripheral data correctly set up")
+        self.dataToSend = actualData
     }
     
     @IBAction func onBeaconPressed(_ sender: UIButton) {
@@ -60,7 +61,10 @@ class BeaconViewController: UIViewController {
             self.beaconManager.stopAdvertising()
         } else {
             print("Beacon button pressed to start advertising")
-            self.beaconManager.startAdvertising(self.peripheralData)
+            self.beaconManager.startAdvertising(self.dataToSend)
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { _ in
+                self.manager(LocationManager.shared, didReceivePresenceUpdateFromUser: 15)
+            })
         }
         sender.isSelected = !sender.isSelected
     }

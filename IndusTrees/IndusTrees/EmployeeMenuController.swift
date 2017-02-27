@@ -28,7 +28,7 @@ class EmployeeMenuController: UIViewController {
         NotificationManager.shared.setup()
         LocationManager.shared.askForPermission(completionHandler: { result in
             if result {
-                LocationManager.shared.presenceDelegate = UIApplication.shared.delegate as! AppDelegate
+//                LocationManager.shared.presenceDelegate = UIApplication.shared.delegate as! AppDelegate
                 LocationManager.shared.startMonitoringForBeaconRegions()
             }
         })
